@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
+
+let app = App(id: "autovitesse-zuuzb")
 
 @main
-struct AutoVitesseApp: App {
+struct AutoVitesseApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView()
