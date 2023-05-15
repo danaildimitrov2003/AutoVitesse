@@ -13,10 +13,6 @@ struct ContentView: View {
     @State private var isSignUpFormViewActive = false
     @State private var isSignInFormViewActive = false
     
-    init(){
-        let realm = try! Realm()
-        //print(Realm.Configuration.defaultConfiguration.fileURL!)
-    }
     var body: some View {
         VStack {
             Text("Welcome to AutoVitesse!")
@@ -28,14 +24,14 @@ struct ContentView: View {
             Button(action: {
                 isSignInFormViewActive = true
             }) {
-                Text("Sign Ip")
+                Text("Sign In")
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
             .sheet(isPresented: $isSignInFormViewActive) {
-                SignInFormView(user: User())
+                SignInFormView()
             }
             Button(action: {
                 isSignUpFormViewActive = true

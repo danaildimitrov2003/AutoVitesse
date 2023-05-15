@@ -9,26 +9,28 @@ import SwiftUI
 import RealmSwift
 
 struct SignInFormView: View {
-    @Environment(\.dismiss) var dismiss
-    @Environment(\.realm) var realm
-    @ObservedRealmObject var user: User
+    @State private var username = ""
+    @State private var password = ""
+    @EnvironmentObject var appSession: AppSession
+    @State var errorMessage = ""
     
     var body: some View {
         NavigationView{
             Form {
-                TextField("Username", text: $user.username)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                TextField("Password", text: $user.password)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                TextField("Username", text: $username)
+                    .disableAutocorrectAndAutocapitalize()
+                SecureField("Password", text: $password)
+                if(errorMessage != ""){
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                }
             }
             .navigationTitle("Sign in")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Sign in") {
-                        
+                        signIn(username: username, password: password)
                     }
                     //.disabled(true)
                 }
@@ -39,6 +41,6 @@ struct SignInFormView: View {
 
 struct SignInForm_Previews: PreviewProvider {
     static var previews: some View {
-        SignInFormView(user: User())
+        SignInFormView()
     }
 }

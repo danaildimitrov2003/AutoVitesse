@@ -13,45 +13,59 @@ struct SignUpFormView: View {
     @Environment(\.realm) var realm
     @ObservedRealmObject var user: User
     
-    @State private var username = ""
-    @State private var email = ""
-    @State private var password = ""
-    @State private var confirmPassword = ""
-    @State private var country = ""
-    @State private var city = ""
+    @State var username = ""
+    @State var email = ""
+    @State var password = ""
+    @State var confirmPassword = ""
+    @State var country = ""
+    @State var city = ""
+    @State var isEmailConfirmed = false
+    @State var errorMessage = ""
+    //@State var isUsernameCompleted = false
+    @State var isEmailCompleted = false
+    @State var isPasswordCompleted = false
+    @State var isConfirmPasswordCompleted = false
+    //@State var isCountryCompleted = false
     
     var body: some View {
         NavigationView {
             Form {
                 TextField("Username", text: $username)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                    .disableAutocorrectAndAutocapitalize()
                 TextField("Email", text: $email)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                    .disableAutocorrectAndAutocapitalize()
+                    .onChange(of: email) { newValue in
+                        handleEmailChange(email)
+                    }
                 SecureField("Password", text: $password)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                    .onChange(of: password){ newValue in
+                        handlePasswordChange(password)
+                    }
                 SecureField("Confirm Password", text: $confirmPassword)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                    .onChange(of: confirmPassword){ newValue in
+                        handleConfirmPasswordChange(password, confirmPassword)
+                    }
                 Picker("Country", selection: $country) {
                     ForEach(countries, id: \.self) { option in
                         Text("\(option)")
                     }
                 }
                 TextField("City", text: $city)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
+                    .disableAutocorrectAndAutocapitalize()
+                Toggle(isOn: $isEmailConfirmed) {
+                    Text("I confirm that this is my email")
+                }
+                if(errorMessage != ""){
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                }
             }
             .navigationTitle("Sign Up")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Sign Up") {
-                        if(password == confirmPassword){
-                            signUp(username: username, email: email, password: password, country: country, city: city)
-                        }
+                        handleSubmitButton()
                     }
                     //.disabled(true)
                 }

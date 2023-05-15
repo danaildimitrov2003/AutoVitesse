@@ -16,3 +16,7 @@ class User: Object, ObjectKeyIdentifiable {
     @Persisted var country = ""
     @Persisted var city = ""
 }
+
+class AppSession: ObservableObject {
+    @Published var currentUser: User?
+}

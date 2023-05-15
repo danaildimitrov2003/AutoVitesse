@@ -8,13 +8,13 @@
 import SwiftUI
 import RealmSwift
 
-let app = App(id: "autovitesse-zuuzb")
+let appSession = AppSession()
 
 @main
 struct AutoVitesseApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(appSession)
         }
     }
 }
