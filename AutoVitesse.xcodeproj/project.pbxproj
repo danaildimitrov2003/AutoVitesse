@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22C02CC02A0E6DD1004FB233 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CBF2A0E6DD1004FB233 /* AuthenticationTextField.swift */; };
 		22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC12A0E71B9004FB233 /* SignInForm.swift */; };
 		22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC32A0E737B004FB233 /* SignUpExtension.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
@@ -22,10 +21,16 @@
 		22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A762A0D2E1200B21FD8 /* Countries.swift */; };
 		22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94B2A12406E0088B869 /* SignInExtension.swift */; };
 		22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94E2A1247560088B869 /* TextFieldExtension.swift */; };
+		22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9502A1385BC0088B869 /* HomeView.swift */; };
+		22E5D9532A1386010088B869 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9522A1386010088B869 /* ProfileView.swift */; };
+		22E5D9552A139AD00088B869 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9542A139AD00088B869 /* Navbar.swift */; };
+		22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9562A139BC20088B869 /* LogOutButton.swift */; };
+		22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */; };
+		22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D95C2A13AAB10088B869 /* SideMenuButton.swift */; };
+		22E5D95F2A13B41D0088B869 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D95E2A13B41D0088B869 /* FavouritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22C02CBF2A0E6DD1004FB233 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		22C02CC32A0E737B004FB233 /* SignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExtension.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +44,13 @@
 		22E26A762A0D2E1200B21FD8 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		22E5D94B2A12406E0088B869 /* SignInExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtension.swift; sourceTree = "<group>"; };
 		22E5D94E2A1247560088B869 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D9502A1385BC0088B869 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		22E5D9522A1386010088B869 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		22E5D9542A139AD00088B869 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
+		22E5D9562A139BC20088B869 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
+		22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonExtension.swift; sourceTree = "<group>"; };
+		22E5D95C2A13AAB10088B869 /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
+		22E5D95E2A13B41D0088B869 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +119,13 @@
 			children = (
 				22E26A5C2A0D11E300B21FD8 /* ContentView.swift */,
 				22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */,
-				22C02CBF2A0E6DD1004FB233 /* AuthenticationTextField.swift */,
 				22C02CC12A0E71B9004FB233 /* SignInForm.swift */,
+				22E5D9502A1385BC0088B869 /* HomeView.swift */,
+				22E5D9522A1386010088B869 /* ProfileView.swift */,
+				22E5D9542A139AD00088B869 /* Navbar.swift */,
+				22E5D9562A139BC20088B869 /* LogOutButton.swift */,
+				22E5D95C2A13AAB10088B869 /* SideMenuButton.swift */,
+				22E5D95E2A13B41D0088B869 /* FavouritesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +135,7 @@
 			children = (
 				22C02CC32A0E737B004FB233 /* SignUpExtension.swift */,
 				22E5D94B2A12406E0088B869 /* SignInExtension.swift */,
+				22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,13 +225,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C02CC02A0E6DD1004FB233 /* AuthenticationTextField.swift in Sources */,
 				22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */,
 				22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */,
+				22E5D95F2A13B41D0088B869 /* FavouritesView.swift in Sources */,
 				22E26A752A0D27CC00B21FD8 /* SignUpForm.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
+				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
+				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,
+				22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
+				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
+				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
+				22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */,
 				22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */,
 				22E26A732A0D234800B21FD8 /* Car.swift in Sources */,
 				22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */,

@@ -14,6 +14,7 @@ extension SignInFormView {
         let realm = try! Realm()
         if let user = realm.objects(User.self).filter("username = %@ AND password = %@", username, password).first {
             appSession.currentUser = user
+            showHomeView = true 
         }else{
             errorMessage = "Didn't find this username and password combination!"
         }

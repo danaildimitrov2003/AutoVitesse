@@ -25,6 +25,7 @@ struct SignUpFormView: View {
     @State var isEmailCompleted = false
     @State var isPasswordCompleted = false
     @State var isConfirmPasswordCompleted = false
+    @State var showHomeView = false
     //@State var isCountryCompleted = false
     
     var body: some View {
@@ -69,6 +70,9 @@ struct SignUpFormView: View {
                     }
                     //.disabled(true)
                 }
+            }
+            .fullScreenCover(isPresented: $showHomeView) {
+                HomeView()
             }
         }
     }

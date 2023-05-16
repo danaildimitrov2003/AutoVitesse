@@ -13,6 +13,7 @@ struct SignInFormView: View {
     @State private var password = ""
     @EnvironmentObject var appSession: AppSession
     @State var errorMessage = ""
+    @State var showHomeView = false
     
     var body: some View {
         NavigationView{
@@ -34,6 +35,9 @@ struct SignInFormView: View {
                     }
                     //.disabled(true)
                 }
+            }
+            .fullScreenCover(isPresented: $showHomeView) {
+                HomeView()
             }
         }
     }

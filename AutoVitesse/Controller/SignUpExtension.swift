@@ -18,7 +18,8 @@ extension SignUpFormView {
         try? realm.write {
             realm.add(user)
         }
-        dismiss()
+        //dismiss()
+        appSession.currentUser = user
     }
     
     func handleEmailChange(_ email: String){
@@ -79,6 +80,7 @@ extension SignUpFormView {
         if(isFormCompleted){
             errorMessage = ""
             signUp()
+            showHomeView = true
         }
        
     }
