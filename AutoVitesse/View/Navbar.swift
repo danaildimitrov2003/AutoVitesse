@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Navbar: View {
+    let toggleMenu: () -> Void
     var body: some View {
         HStack{
             LogOutButton()
@@ -17,7 +18,7 @@ struct Navbar: View {
                 .font(.title)
                 .foregroundColor(.white)
             Spacer()
-            SideMenuButton()
+            SideMenuButton(toggleMenu: toggleMenu)
                 .padding(.trailing)
         }
         .background(Color.mint)
@@ -25,8 +26,8 @@ struct Navbar: View {
     }
 }
 
-struct Navbar_Previews: PreviewProvider {
-    static var previews: some View {
-        Navbar()
-    }
-}
+//struct Navbar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Navbar()
+//    }
+//}

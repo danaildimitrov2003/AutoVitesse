@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct ProfileView: View {
+    @State private var isEditFormActive = false
+    @State var user = appSession.currentUser
     var body: some View {
         VStack{
             Label(appSession.currentUser?.username ?? "username", systemImage: "person.fill")
@@ -20,6 +22,12 @@ struct ProfileView: View {
             if(appSession.currentUser?.city != "" ){
                 Label(appSession.currentUser?.city ?? "city", systemImage: "mappin")
                     .font(.title)
+            }
+            Button("Edit profile data") {
+                isEditFormActive = true
+            }
+            .sheet(isPresented: $isEditFormActive) {
+                EditForm(userEdit: setEditUser())
             }
         }
     }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SideMenuButton: View {
+    let toggleMenu: () -> Void
     var body: some View {
-        Button(action: {}) {
+        Button(action: toggleMenu) {
             Image(systemName: "line.horizontal.3")
                 .imageScale(.large)
                 .frame(width: 24, height: 24)
@@ -20,8 +21,8 @@ struct SideMenuButton: View {
     }
 }
 
-struct SideMenuButton_Previews: PreviewProvider {
-    static var previews: some View {
-        SideMenuButton()
-    }
-}
+//struct SideMenuButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SideMenuButton(menuOpened: )
+//    }
+//}

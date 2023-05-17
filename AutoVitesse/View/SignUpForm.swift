@@ -72,7 +72,9 @@ struct SignUpFormView: View {
                 }
             }
             .fullScreenCover(isPresented: $showHomeView) {
-                HomeView()
+                NavbarContainerView{
+                    HomeView()
+                }
             }
         }
     }

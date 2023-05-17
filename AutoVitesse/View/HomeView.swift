@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var menuOpened = false
     var body: some View {
-        VStack{
-            Navbar()
-            ProfileView()
-                .padding()
-            FavouritesView()
-            Spacer()
+        ZStack {
+            VStack{
+                //Navbar(menuOpened: $menuOpened)
+                ProfileView()
+                    .padding()
+                FavouritesView()
+                Spacer()
+            }
+            //SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
         }
     }
 }

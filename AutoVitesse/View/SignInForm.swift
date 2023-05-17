@@ -37,7 +37,9 @@ struct SignInFormView: View {
                 }
             }
             .fullScreenCover(isPresented: $showHomeView) {
-                HomeView()
+                NavbarContainerView{
+                    HomeView()
+                }
             }
         }
     }
