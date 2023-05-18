@@ -9,11 +9,15 @@ import SwiftUI
 
 struct PasswordTextField: View {
     @Binding var password : String
+    @State var passwordState = ""
+    @Binding var errorMessage : String
+    @Binding var isPasswordCompleted : Bool
+    
     var body: some View {
-        SecureField("Password", text: $password)
-            .onChange(of: password){ newValue in
-                //handlePasswordChange(password)
-                print($password)
+        SecureField("Password", text: $passwordState)
+            .onChange(of: passwordState){ newValue in
+                password = passwordState
+                handlePasswordChange(password)
             }
     }
 }

@@ -11,6 +11,10 @@ import RealmSwift
 struct EditForm: View {
     @State var userEdit = User()
     @State var showHomeView = false
+    @State var errorMessage = ""
+    @State var isPasswordCompleted = true
+    @State var isEmailCompleted = true
+    
     
     var body: some View {
         NavigationView {
@@ -19,9 +23,8 @@ struct EditForm: View {
                     .disableAutocorrectAndAutocapitalize()
                     .disabled(true)
                     .foregroundColor(.gray)
-                TextField("Email", text: $userEdit.email)
-                    .disableAutocorrectAndAutocapitalize()
-                SecureField("Password", text: $userEdit.password)
+                EmailTextField(email: $userEdit.email, emailState: userEdit.email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
+                PasswordTextField(password: $userEdit.password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
                 Picker("Country", selection: $userEdit.country) {
                     ForEach(countries, id: \.self) { option in
                         Text("\(option)")
@@ -29,22 +32,25 @@ struct EditForm: View {
                 }
                 TextField("City", text: $userEdit.city)
                     .disableAutocorrectAndAutocapitalize()
-                    .fullScreenCover(isPresented: $showHomeView) {
-                        NavbarContainerView{
-                            HomeView()
-                        }
+                if(errorMessage != ""){
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                }
+            }
+            .fullScreenCover(isPresented: $showHomeView) {
+                NavbarContainerView{
+                    HomeView()
+                }
+            }
+            .navigationTitle("Edit user data")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        handleSaveButton()
                     }
-                    .navigationTitle("Edit user data")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .confirmationAction) {
-                            Button("Save") {
-                                saveUserEdit()
-                            }
-                            //.disabled(true)
-                        }
-                    }
-                    
+                    //.disabled(true)
+                }
             }
         }
     }

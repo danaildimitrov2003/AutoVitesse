@@ -35,6 +35,14 @@
 		22E5D9692A14CF1C0088B869 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9682A14CF1C0088B869 /* SideMenu.swift */; };
 		22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */; };
 		22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */; };
+		22E5D9702A1622ED0088B869 /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */; };
+		22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */; };
+		22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */; };
+		22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */; };
+		22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9772A164B8C0088B869 /* EmailTextField.swift */; };
+		22E5D97A2A164C800088B869 /* EmailTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9792A164C800088B869 /* EmailTextFieldExtension.swift */; };
+		22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D97B2A1658200088B869 /* UsernameTextField.swift */; };
+		22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +73,14 @@
 		22E5D9682A14CF1C0088B869 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarContainerView.swift; sourceTree = "<group>"; };
 		22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarContainerViewExtension.swift; sourceTree = "<group>"; };
+		22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
+		22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordTextField.swift; sourceTree = "<group>"; };
+		22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordTextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D9772A164B8C0088B869 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		22E5D9792A164C800088B869 /* EmailTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D97B2A1658200088B869 /* UsernameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextField.swift; sourceTree = "<group>"; };
+		22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,19 +147,16 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22E5D97F2A165AD80088B869 /* TextFields */,
+				22E5D96E2A1622A40088B869 /* Navbar */,
 				22E26A5C2A0D11E300B21FD8 /* ContentView.swift */,
 				22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */,
 				22C02CC12A0E71B9004FB233 /* SignInForm.swift */,
 				22E5D9502A1385BC0088B869 /* HomeView.swift */,
 				22E5D9522A1386010088B869 /* ProfileView.swift */,
-				22E5D9542A139AD00088B869 /* Navbar.swift */,
-				22E5D9562A139BC20088B869 /* LogOutButton.swift */,
-				22E5D95C2A13AAB10088B869 /* SideMenuButton.swift */,
 				22E5D95E2A13B41D0088B869 /* FavouritesView.swift */,
 				22E5D9602A14AE6A0088B869 /* EditForm.swift */,
-				22E5D9662A14CBB40088B869 /* PasswordTextField.swift */,
 				22E5D9682A14CF1C0088B869 /* SideMenu.swift */,
-				22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,12 +164,14 @@
 		22E26A6F2A0D170D00B21FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22E5D9802A165AF40088B869 /* TextFields */,
 				22C02CC32A0E737B004FB233 /* SignUpExtension.swift */,
 				22E5D94B2A12406E0088B869 /* SignInExtension.swift */,
 				22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */,
 				22E5D9622A14BEBE0088B869 /* EditFormExtension.swift */,
 				22E5D9642A14C2060088B869 /* ProfileViewExtension.swift */,
 				22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */,
+				22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +182,39 @@
 				22E5D94E2A1247560088B869 /* TextFieldExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		22E5D96E2A1622A40088B869 /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */,
+				22E5D9542A139AD00088B869 /* Navbar.swift */,
+				22E5D9562A139BC20088B869 /* LogOutButton.swift */,
+				22E5D95C2A13AAB10088B869 /* SideMenuButton.swift */,
+			);
+			path = Navbar;
+			sourceTree = "<group>";
+		};
+		22E5D97F2A165AD80088B869 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D97B2A1658200088B869 /* UsernameTextField.swift */,
+				22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */,
+				22E5D9772A164B8C0088B869 /* EmailTextField.swift */,
+				22E5D9662A14CBB40088B869 /* PasswordTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		22E5D9802A165AF40088B869 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D9792A164C800088B869 /* EmailTextFieldExtension.swift */,
+				22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */,
+				22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */,
+				22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,12 +296,16 @@
 			files = (
 				22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */,
 				22E5D9612A14AE6A0088B869 /* EditForm.swift in Sources */,
+				22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */,
 				22E5D9672A14CBB40088B869 /* PasswordTextField.swift in Sources */,
 				22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */,
 				22E5D95F2A13B41D0088B869 /* FavouritesView.swift in Sources */,
 				22E26A752A0D27CC00B21FD8 /* SignUpForm.swift in Sources */,
+				22E5D97A2A164C800088B869 /* EmailTextFieldExtension.swift in Sources */,
+				22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */,
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
+				22E5D9702A1622ED0088B869 /* GlobalFuncs.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
 				22E5D9632A14BEBE0088B869 /* EditFormExtension.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
@@ -262,13 +314,17 @@
 				22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
+				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
+				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
+				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,
 				22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */,
 				22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */,
 				22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */,
 				22E26A732A0D234800B21FD8 /* Car.swift in Sources */,
 				22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */,
+				22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */,
 				22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

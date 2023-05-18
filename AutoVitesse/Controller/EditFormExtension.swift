@@ -10,20 +10,41 @@ import RealmSwift
 
 extension EditForm{
     
+    func handleSaveButton(){
+        let confirmationData = [isEmailCompleted, isPasswordCompleted]
+        var isFormCompleted = true
+        
+        for data in confirmationData {
+            if(data == false){
+                errorMessage = "Please fill out the form!"
+                isFormCompleted = false
+                break
+            }
+        }
+        if(isFormCompleted){
+            errorMessage = ""
+            saveUserEdit()
+            showHomeView = true
+        }
+    }
+    
     func saveUserEdit(){
         do{
+            let hashPassword = GlobalFuncs()
             let realm = try Realm()
             guard let user = appSession.currentUser else {
                 print("User not found")
                 return
             }
             try realm.write {
-                user.email = userEdit.email
-                user.password = userEdit.password
-                user.country = userEdit.country
-                user.city = userEdit.city
+                user.thaw()?.email = userEdit.email
+                if(userEdit.password != ""){
+                    user.thaw()?.password = hashPassword.hashPassword(userEdit.password)
+                }
+                user.thaw()?.country = userEdit.country
+                user.thaw()?.city = userEdit.city
             }
-            showHomeView = true
+            appSession.currentUser = user
         }
         catch{
             print("Error updating user: \(error)")

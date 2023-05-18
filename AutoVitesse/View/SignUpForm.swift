@@ -21,7 +21,7 @@ struct SignUpFormView: View {
     @State var city = ""
     @State var isEmailConfirmed = false
     @State var errorMessage = ""
-    //@State var isUsernameCompleted = false
+    @State var isUsernameCompleted = false
     @State var isEmailCompleted = false
     @State var isPasswordCompleted = false
     @State var isConfirmPasswordCompleted = false
@@ -31,21 +31,10 @@ struct SignUpFormView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Username", text: $username)
-                    .disableAutocorrectAndAutocapitalize()
-                TextField("Email", text: $email)
-                    .disableAutocorrectAndAutocapitalize()
-                    .onChange(of: email) { newValue in
-                        handleEmailChange(email)
-                    }
-                SecureField("Password", text: $password)
-                    .onChange(of: password){ newValue in
-                        handlePasswordChange(password)
-                    }
-                SecureField("Confirm Password", text: $confirmPassword)
-                    .onChange(of: confirmPassword){ newValue in
-                        handleConfirmPasswordChange(password, confirmPassword)
-                    }
+                UsernameTextField(username: $username, usernameState: username, errorMessage: $errorMessage, isUsernameCompleted: $isUsernameCompleted)
+                EmailTextField(email: $email, emailState: email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
+                PasswordTextField(password: $password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
+                ConfirmPasswordTextField(password: $password, confirmPassword: $confirmPassword, errorMessage: $errorMessage, isConfirmPasswordCompleted: $isConfirmPasswordCompleted)
                 Picker("Country", selection: $country) {
                     ForEach(countries, id: \.self) { option in
                         Text("\(option)")

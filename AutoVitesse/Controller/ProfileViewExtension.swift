@@ -14,7 +14,7 @@ extension ProfileView{
         
         userEdit.username = user!.username
         userEdit.email = user!.email
-        userEdit.password = user!.password
+        userEdit.password = ""
         userEdit.country = user!.country
         userEdit.city = user!.city
         
