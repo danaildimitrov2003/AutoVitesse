@@ -10,10 +10,10 @@ import Foundation
 extension SignUpFormView {
     
     func signUp (){
-        let hashPassword = GlobalFuncs()
+        let utils = Utils()
         user.username = username
         user.email = email
-        user.password = hashPassword.hashPassword(password)
+        user.password = utils.hashString(password)
         user.country = country
         user.city = city
         try? realm.write {
@@ -24,20 +24,13 @@ extension SignUpFormView {
     
     
     func handleSubmitButton(){
+        let utils = Utils()
         let userData = [country]
-        let confirmationData = [isUsernameCompleted, isEmailCompleted, isPasswordCompleted, isConfirmPasswordCompleted, isEmailConfirmed]
+        let completionData = [isUsernameCompleted, isEmailCompleted, isPasswordCompleted, isConfirmPasswordCompleted, isEmailConfirmed]
         var isFormCompleted = true
-        
-        for data in confirmationData {
-            if(data == false){
-                errorMessage = "Please fill out the form!"
-                isFormCompleted = false
-                break
-            }
-        }
+        isFormCompleted = utils.checkBools(completionData)
         for data in userData {
             if(data == ""){
-                errorMessage = "Please fill out the form!"
                 isFormCompleted = false
                 break
             }
@@ -46,6 +39,8 @@ extension SignUpFormView {
             errorMessage = ""
             signUp()
             showHomeView = true
+        }else{
+            errorMessage = "Please fill out the form!"
         }
         
     }

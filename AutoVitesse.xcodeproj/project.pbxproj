@@ -35,7 +35,7 @@
 		22E5D9692A14CF1C0088B869 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9682A14CF1C0088B869 /* SideMenu.swift */; };
 		22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */; };
 		22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */; };
-		22E5D9702A1622ED0088B869 /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */; };
+		22E5D9702A1622ED0088B869 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D96F2A1622ED0088B869 /* Utils.swift */; };
 		22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */; };
 		22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */; };
 		22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */; };
@@ -43,6 +43,8 @@
 		22E5D97A2A164C800088B869 /* EmailTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9792A164C800088B869 /* EmailTextFieldExtension.swift */; };
 		22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D97B2A1658200088B869 /* UsernameTextField.swift */; };
 		22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */; };
+		22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9832A1795DC0088B869 /* CarsView.swift */; };
+		22E5D9862A17962D0088B869 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9852A17962D0088B869 /* PhotosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +75,7 @@
 		22E5D9682A14CF1C0088B869 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarContainerView.swift; sourceTree = "<group>"; };
 		22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarContainerViewExtension.swift; sourceTree = "<group>"; };
-		22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
+		22E5D96F2A1622ED0088B869 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordTextField.swift; sourceTree = "<group>"; };
 		22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordTextFieldExtension.swift; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		22E5D9792A164C800088B869 /* EmailTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D97B2A1658200088B869 /* UsernameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextField.swift; sourceTree = "<group>"; };
 		22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D9832A1795DC0088B869 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
+		22E5D9852A17962D0088B869 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				22E5D95E2A13B41D0088B869 /* FavouritesView.swift */,
 				22E5D9602A14AE6A0088B869 /* EditForm.swift */,
 				22E5D9682A14CF1C0088B869 /* SideMenu.swift */,
+				22E5D9832A1795DC0088B869 /* CarsView.swift */,
+				22E5D9852A17962D0088B869 /* PhotosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +177,7 @@
 				22E5D9622A14BEBE0088B869 /* EditFormExtension.swift */,
 				22E5D9642A14C2060088B869 /* ProfileViewExtension.swift */,
 				22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */,
-				22E5D96F2A1622ED0088B869 /* GlobalFuncs.swift */,
+				22E5D96F2A1622ED0088B869 /* Utils.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,8 +311,9 @@
 				22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */,
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
-				22E5D9702A1622ED0088B869 /* GlobalFuncs.swift in Sources */,
+				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
+				22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */,
 				22E5D9632A14BEBE0088B869 /* EditFormExtension.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
 				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,
@@ -326,6 +333,7 @@
 				22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */,
 				22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */,
 				22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */,
+				22E5D9862A17962D0088B869 /* PhotosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,44 +11,39 @@ struct MenuItem: Identifiable{
     var id =  UUID()
     let text: String
     let imageName: String
-    let handler: () -> Void = {
-        print("Tapped Item")
-    }
-    
 }
 
 struct MenuContent: View{
+    @State var selection: String? = nil
     let items : [MenuItem] = [
         MenuItem(text: "Home", imageName: "house.fill"),
         MenuItem(text: "Cars", imageName: "car.2.fill"),
-        MenuItem(text: "Photos", imageName: "camera.fill"),
-    ]
+        MenuItem(text: "Photos", imageName: "camera.fill")]
     
     let toggleMenu: () -> Void
     
     var body: some View{
         ZStack{
             Color(UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0 , alpha: 1))
-            
             VStack(alignment: .leading, spacing: 0){
+                NavigationLink(destination: NavbarContainerView{HomeView()}, tag:"Home", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView{CarsView()}, tag:"Cars", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView{PhotosView()}, tag:"Photos", selection: $selection) {}
                 ForEach(items) { item in
-                    HStack{
-                        Image(systemName: item.imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(width:32, height: 32, alignment: .center)
-                        Text(item.text)
-                            .foregroundColor(.white)
-                            .bold()
-                            .font(.system(size: 22))
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                    }
-                    .onTapGesture {
-                        item.handler()
-                        toggleMenu()
-                        
+                    Button(action: {selection = item.text}) {
+                        HStack{
+                            Image(systemName: item.imageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
+                                .frame(width:32, height: 32, alignment: .center)
+                            Text(item.text)
+                                .foregroundColor(.white)
+                                .bold()
+                                .font(.system(size: 22))
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
                     }
                     .padding()
                     Divider()
@@ -105,7 +100,7 @@ struct SideMenuView: View {
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color.mint)
                 })
-             }
+            }
             SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
         }
         .edgesIgnoringSafeArea(.all)

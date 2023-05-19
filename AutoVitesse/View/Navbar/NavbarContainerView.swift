@@ -15,19 +15,20 @@ struct NavbarContainerView<Content: View>: View {
         self.content = content()
     }
     var body: some View {
-        VStack(spacing: 0) {
-            Navbar(toggleMenu: toggleMenu)
-            ZStack {
-                VStack{
-                    content
-                        .frame(maxWidth : .infinity, maxHeight : .infinity)
+        NavigationView {
+            VStack(spacing: 0) {
+                Navbar(toggleMenu: toggleMenu)
+                ZStack {
+                    VStack{
+                        content
+                            .frame(maxWidth : .infinity, maxHeight : .infinity)
+                    }
+                    SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
                 }
-                SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
+                .edgesIgnoringSafeArea(.all)
             }
-            .edgesIgnoringSafeArea(.all)
         }
-        
-        
+        .navigationBarBackButtonHidden(true)
     }
 }
 
