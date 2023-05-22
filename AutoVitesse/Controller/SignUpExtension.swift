@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RealmSwift
 
 extension SignUpFormView {
     
     func signUp (){
+        let realm = try! Realm(configuration: config)
         let utils = Utils()
         user.username = username
         user.email = email

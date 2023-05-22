@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct CarsView: View {
-    @State var search = ""
     var body: some View {
         VStack(alignment: .center){
-            TextField("Search", text: $search)
-                .font(.title)
-            Text("There are no records")
-                .font(.title2)
+            SearchBarTextField()
+            ScrollView {
+                CarsList(cars: loadCars())
+            }
         }
         
     }

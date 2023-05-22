@@ -45,6 +45,13 @@
 		22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */; };
 		22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9832A1795DC0088B869 /* CarsView.swift */; };
 		22E5D9862A17962D0088B869 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9852A17962D0088B869 /* PhotosView.swift */; };
+		22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9872A1B68BC0088B869 /* SearchBarTextField.swift */; };
+		22E5D98A2A1B6E840088B869 /* SearchBarTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9892A1B6E840088B869 /* SearchBarTextFieldExtension.swift */; };
+		22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98B2A1B8DA40088B869 /* CarComponent.swift */; };
+		22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98D2A1B95B80088B869 /* CarsList.swift */; };
+		22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */; };
+		22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9912A1B98430088B869 /* ResultsExtension.swift */; };
+		22E5D9942A1BA0490088B869 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9932A1BA0490088B869 /* Enviroment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +92,13 @@
 		22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D9832A1795DC0088B869 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		22E5D9852A17962D0088B869 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		22E5D9872A1B68BC0088B869 /* SearchBarTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTextField.swift; sourceTree = "<group>"; };
+		22E5D9892A1B6E840088B869 /* SearchBarTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTextFieldExtension.swift; sourceTree = "<group>"; };
+		22E5D98B2A1B8DA40088B869 /* CarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarComponent.swift; sourceTree = "<group>"; };
+		22E5D98D2A1B95B80088B869 /* CarsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsList.swift; sourceTree = "<group>"; };
+		22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewExtension.swift; sourceTree = "<group>"; };
+		22E5D9912A1B98430088B869 /* ResultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsExtension.swift; sourceTree = "<group>"; };
+		22E5D9932A1BA0490088B869 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,7 @@
 				22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */,
 				22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */,
 				22E26A602A0D11E400B21FD8 /* Preview Content */,
+				22E5D9932A1BA0490088B869 /* Enviroment.swift */,
 			);
 			path = AutoVitesse;
 			sourceTree = "<group>";
@@ -163,6 +178,8 @@
 				22E5D9682A14CF1C0088B869 /* SideMenu.swift */,
 				22E5D9832A1795DC0088B869 /* CarsView.swift */,
 				22E5D9852A17962D0088B869 /* PhotosView.swift */,
+				22E5D98B2A1B8DA40088B869 /* CarComponent.swift */,
+				22E5D98D2A1B95B80088B869 /* CarsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +195,7 @@
 				22E5D9642A14C2060088B869 /* ProfileViewExtension.swift */,
 				22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */,
 				22E5D96F2A1622ED0088B869 /* Utils.swift */,
+				22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				22E5D94E2A1247560088B869 /* TextFieldExtension.swift */,
+				22E5D9912A1B98430088B869 /* ResultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +227,7 @@
 				22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */,
 				22E5D9772A164B8C0088B869 /* EmailTextField.swift */,
 				22E5D9662A14CBB40088B869 /* PasswordTextField.swift */,
+				22E5D9872A1B68BC0088B869 /* SearchBarTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -219,6 +239,7 @@
 				22E5D97D2A1658BC0088B869 /* UsernameTextFieldExtension.swift */,
 				22E5D9752A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift */,
 				22E5D9712A163CE10088B869 /* PasswordTextFieldExtension.swift */,
+				22E5D9892A1B6E840088B869 /* SearchBarTextFieldExtension.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -313,17 +334,24 @@
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
 				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
+				22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */,
 				22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */,
 				22E5D9632A14BEBE0088B869 /* EditFormExtension.swift in Sources */,
+				22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
 				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,
 				22E5D9692A14CF1C0088B869 /* SideMenu.swift in Sources */,
+				22E5D98A2A1B6E840088B869 /* SearchBarTextFieldExtension.swift in Sources */,
 				22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */,
+				22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
+				22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
 				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
+				22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */,
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
+				22E5D9942A1BA0490088B869 /* Enviroment.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
 				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,
 				22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */,

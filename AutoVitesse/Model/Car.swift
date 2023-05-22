@@ -8,10 +8,19 @@
 import Foundation
 import RealmSwift
 
-class Car: Object, ObjectKeyIdentifiable {
+class Car: Object, ObjectKeyIdentifiable, Codable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var make = ""
     @Persisted var model = ""
     @Persisted var year = 0
     @Persisted var type = ""
+    @Persisted var apiId = 0
+}
+
+struct apiCar: Hashable, Codable{
+    var id : Int
+    var make : String
+    var model : String
+    var year : Int
+    var type : String
 }

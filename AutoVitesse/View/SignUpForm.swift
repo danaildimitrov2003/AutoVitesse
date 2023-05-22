@@ -9,8 +9,6 @@ import SwiftUI
 import RealmSwift
 
 struct SignUpFormView: View {
-    @Environment(\.dismiss) var dismiss
-    @Environment(\.realm) var realm
     @ObservedRealmObject var user: User
     
     @State var username = ""
