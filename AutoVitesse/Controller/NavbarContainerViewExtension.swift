@@ -8,6 +8,7 @@
 import Foundation
 
 extension NavbarContainerView{
+    
     func toggleMenu(){
         menuOpened.toggle()
     }

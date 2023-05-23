@@ -7,6 +7,7 @@
 
 import Foundation
 import CryptoKit
+import RealmSwift
 
 class Utils{
     
@@ -24,5 +25,16 @@ class Utils{
             }
         }
         return true
+    }
+    
+    func isCarFavourited(carId : String) -> Bool{
+        var result = false
+        let realm = try! Realm()
+        if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", appSession.currentUser!.idString).first {
+            if favouriteCars.carIds.contains(carId) {
+                result =  true
+            }
+        }
+        return result
     }
 }

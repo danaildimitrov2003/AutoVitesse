@@ -11,7 +11,10 @@ struct CarComponent: View {
     let carMake : String
     let carModel : String
     let carYear : Int
-    @State var isClicked = false
+    let userId : String
+    let carId : String
+    @State var isClicked : Bool
+    
     var body: some View {
         HStack{
             Text(carMake)
@@ -23,7 +26,12 @@ struct CarComponent: View {
                 .foregroundColor(.gray)
                 .frame(width:20, height: 20, alignment: .center)
                 .onTapGesture {
-                    isClicked.toggle()
+                    if(isClicked == false){
+                        handleFavouriteClick(userId: userId, carId: carId)
+                    }else{
+                        handleUnFavouriteClick(userId: userId, carId: carId)
+                    }
+                    isClicked.toggle()   
                 }
         }
     }
@@ -31,6 +39,6 @@ struct CarComponent: View {
 
 struct CarComponent_Previews: PreviewProvider {
     static var previews: some View {
-        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003)
+        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false)
     }
 }

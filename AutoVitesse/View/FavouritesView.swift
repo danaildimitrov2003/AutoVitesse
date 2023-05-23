@@ -12,8 +12,7 @@ struct FavouritesView: View {
         VStack{
             Text("Favourites")
                 .font(.title)
-            Text("No favorite items")
-                .font(.title2)
+            FavouritesCarsList(cars: getFavouriteCars(), message: "No favorite items")
         }
     }
 }

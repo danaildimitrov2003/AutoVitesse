@@ -6,13 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
-struct CarsList: View {
+struct FavouritesCarsList: View {
     let utils = Utils()
-    @ObservedResults(
-        Car.self
-    ) var cars
+    @State var cars : [Car]
     @State var message : String
     var body: some View {
         if(cars.count >= 1){
@@ -26,8 +23,8 @@ struct CarsList: View {
     }
 }
 
-struct CarsList_Previews: PreviewProvider {
+struct FavouritesCarsList_Previews: PreviewProvider {
     static var previews: some View {
-        CarsList(message: "There are no records")
+        FavouritesCarsList(cars: [Car()], message: "There are no records")
     }
 }

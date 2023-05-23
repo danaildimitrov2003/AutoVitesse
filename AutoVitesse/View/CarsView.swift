@@ -13,10 +13,9 @@ struct CarsView: View {
         VStack(alignment: .center){
             SearchBarTextField()
             ScrollView {
-                CarsList(cars: loadCars())
+                CarsList(message: "There are no records")
             }
         }
-        
     }
 }
 
