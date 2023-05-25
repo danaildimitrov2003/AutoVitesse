@@ -14,6 +14,7 @@ struct CarComponent: View {
     let userId : String
     let carId : String
     @State var isClicked : Bool
+    @Binding var carsList : [Car]
     
     var body: some View {
         HStack{
@@ -30,6 +31,7 @@ struct CarComponent: View {
                         handleFavouriteClick(userId: userId, carId: carId)
                     }else{
                         handleUnFavouriteClick(userId: userId, carId: carId)
+                        carsList = carsList.filter { $0.idString != carId }
                     }
                     isClicked.toggle()   
                 }
@@ -37,8 +39,8 @@ struct CarComponent: View {
     }
 }
 
-struct CarComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false)
-    }
-}
+//struct CarComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false)
+//    }
+//}
