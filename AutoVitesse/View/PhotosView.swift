@@ -9,40 +9,32 @@ import SwiftUI
 import PhotosUI
 
 struct PhotosView: View {
-    @State var selectedItems: [PhotosPickerItem] = []
-    @State var data: Data?
+    @State private var image = UIImage()
+    @State private var showLibrary = false
+    @State private var showCamera = false
     var body: some View {
-        VStack{
-            Text("There are no photos")
-                .font(.title)
-            PhotosPicker(selection: $selectedItems, maxSelectionCount: 1, matching: .images){
-                Text("upload from device")
-                    .font(.title2)
-                    .foregroundColor(.blue)
-            }
-            .onChange(of: selectedItems){ newValue in
-                guard let item = selectedItems.last else {
-                    return
+        ScrollView {
+            VStack{
+                Button(action: {showLibrary.toggle()}) {
+                    Text("upload from device")
+                        .font(.title2)
+                        .foregroundColor(.blue)
                 }
-                item.loadTransferable(type: Data.self) { result in
-                    switch result{
-                    case.success(let data):
-                        if let data = data{
-                            self.data = data
-                        }else{
-                            print("Data is nil")
-                        }
-                    case.failure(let failure):
-                        fatalError("\(failure)")
-                    }
+                .sheet(isPresented: $showLibrary) {
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
                 }
-            }
-            Text("use camera")
-                .font(.title2)
-                .foregroundColor(.blue)
-            if let data = data, let uiImage = UIImage(data: data){
-                Image(uiImage: uiImage)
-                    .resizable()
+                Button(action: {showCamera.toggle()}) {
+                    Text("use camera")
+                        .font(.title2)
+                        .foregroundColor(.blue)
+                }
+                .sheet(isPresented: $showCamera) {
+                    ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                }
+                .onChange(of: image) { newValue in
+                    saveImageLocally(image: image, fileName: UUID().uuidString)
+                }
+                UserImagesList()
             }
         }
     }

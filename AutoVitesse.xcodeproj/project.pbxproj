@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2274161B2A20CB3200E0AA78 /* UserImagesListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */; };
 		22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC12A0E71B9004FB233 /* SignInForm.swift */; };
 		22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC32A0E737B004FB233 /* SignUpExtension.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
@@ -55,9 +56,15 @@
 		22E5D9962A1CB4510088B869 /* FavouriteCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9952A1CB4510088B869 /* FavouriteCars.swift */; };
 		22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */; };
 		22E5D99C2A1CD2240088B869 /* FavouritesViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */; };
+		22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA972A209A4000EBF5D2 /* ImagePicker.swift */; };
+		22FACA9A2A20B36E00EBF5D2 /* PhotosViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA992A20B36E00EBF5D2 /* PhotosViewExtension.swift */; };
+		22FACA9C2A20B7E300EBF5D2 /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA9B2A20B7E300EBF5D2 /* UserImage.swift */; };
+		22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA9D2A20BE4600EBF5D2 /* UserImageComponent.swift */; };
+		22FACAA02A20BF7500EBF5D2 /* UserImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA9F2A20BF7500EBF5D2 /* UserImagesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImagesListExtension.swift; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		22C02CC32A0E737B004FB233 /* SignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExtension.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +112,11 @@
 		22E5D9952A1CB4510088B869 /* FavouriteCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCars.swift; sourceTree = "<group>"; };
 		22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarComponentExtension.swift; sourceTree = "<group>"; };
 		22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewExtension.swift; sourceTree = "<group>"; };
+		22FACA972A209A4000EBF5D2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		22FACA992A20B36E00EBF5D2 /* PhotosViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewExtension.swift; sourceTree = "<group>"; };
+		22FACA9B2A20B7E300EBF5D2 /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
+		22FACA9D2A20BE4600EBF5D2 /* UserImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageComponent.swift; sourceTree = "<group>"; };
+		22FACA9F2A20BF7500EBF5D2 /* UserImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImagesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,7 @@
 				22E26A722A0D234800B21FD8 /* Car.swift */,
 				22E26A762A0D2E1200B21FD8 /* Countries.swift */,
 				22E5D9952A1CB4510088B869 /* FavouriteCars.swift */,
+				22FACA9B2A20B7E300EBF5D2 /* UserImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +200,9 @@
 				22E5D9852A17962D0088B869 /* PhotosView.swift */,
 				22E5D98B2A1B8DA40088B869 /* CarComponent.swift */,
 				22E5D98D2A1B95B80088B869 /* CarsList.swift */,
+				22FACA972A209A4000EBF5D2 /* ImagePicker.swift */,
+				22FACA9D2A20BE4600EBF5D2 /* UserImageComponent.swift */,
+				22FACA9F2A20BF7500EBF5D2 /* UserImagesList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +221,8 @@
 				22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */,
 				22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */,
 				22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */,
+				22FACA992A20B36E00EBF5D2 /* PhotosViewExtension.swift */,
+				2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,7 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FACA9C2A20B7E300EBF5D2 /* UserImage.swift in Sources */,
 				22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */,
+				22FACAA02A20BF7500EBF5D2 /* UserImagesList.swift in Sources */,
 				22E5D9612A14AE6A0088B869 /* EditForm.swift in Sources */,
 				22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */,
 				22E5D9672A14CBB40088B869 /* PasswordTextField.swift in Sources */,
@@ -342,6 +362,7 @@
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
 				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
+				22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
 				22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */,
 				22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */,
@@ -355,11 +376,13 @@
 				22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
 				22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */,
+				22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
 				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
 				22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */,
 				22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */,
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
+				2274161B2A20CB3200E0AA78 /* UserImagesListExtension.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
 				22E5D9942A1BA0490088B869 /* Enviroment.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
@@ -370,6 +393,7 @@
 				22E26A732A0D234800B21FD8 /* Car.swift in Sources */,
 				22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */,
 				22E5D9962A1CB4510088B869 /* FavouriteCars.swift in Sources */,
+				22FACA9A2A20B36E00EBF5D2 /* PhotosViewExtension.swift in Sources */,
 				22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */,
 				22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */,
 				22E5D9862A17962D0088B869 /* PhotosView.swift in Sources */,
@@ -505,6 +529,7 @@
 				DEVELOPMENT_TEAM = P9HCF88VHS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse need access to your camera to take photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -534,6 +559,7 @@
 				DEVELOPMENT_TEAM = P9HCF88VHS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse need access to your camera to take photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

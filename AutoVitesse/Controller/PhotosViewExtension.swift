@@ -1,0 +1,32 @@
+//
+//  PhotosViewExtension.swift
+//  AutoVitesse
+//
+//  Created by Danail Dimitrov on 26.05.23.
+//
+
+import Foundation
+import UIKit
+import RealmSwift
+
+extension PhotosView{
+    
+    func saveImageLocally(image: UIImage, fileName: String) {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let url = documentsDirectory.appendingPathComponent(fileName)
+        if let data = image.pngData() {
+            do {
+                try data.write(to: url)
+                let realm = try! Realm()
+                try? realm.write {
+                    let image = userImage()
+                    image.userId = appSession.currentUser!.idString
+                    image.imageId = fileName
+                    realm.add(image)
+                }
+            } catch {
+                print("Unable to Write \(fileName) Image Data to Disk")
+            }
+        }
+    }
+}

@@ -17,25 +17,31 @@ struct CarsList: View {
     @State var message : String
     var body: some View {
         
-        if(cars[0].year != 0){
-            if(cars.count >= 1){
-                ForEach(cars) { car in
-                    CarComponent(carMake: car.make, carModel: car.model, carYear: car.year, userId: appSession.currentUser!.idString, carId: car.idString, isClicked: utils.isCarFavourited(carId: car.idString), carsList: $cars)
+        if(cars != []){
+            if(cars[0].year != 0){
+                if(cars.count >= 1){
+                    ForEach(cars) { car in
+                        CarComponent(carMake: car.make, carModel: car.model, carYear: car.year, userId: appSession.currentUser!.idString, carId: car.idString, isClicked: utils.isCarFavourited(carId: car.idString), carsList: $cars)
+                    }
+                }else{
+                    Text(message)
+                        .font(.title2)
                 }
             }else{
-                Text(message)
-                    .font(.title2)
+                if(allCars.count >= 1){
+                    ForEach(allCars) { car in
+                        CarComponent(carMake: car.make, carModel: car.model, carYear: car.year, userId: appSession.currentUser!.idString, carId: car.idString, isClicked: utils.isCarFavourited(carId: car.idString), carsList: $cars)
+                    }
+                }else{
+                    Text(message)
+                        .font(.title2)
+                }
             }
         }else{
-            if(allCars.count >= 1){
-                ForEach(allCars) { car in
-                    CarComponent(carMake: car.make, carModel: car.model, carYear: car.year, userId: appSession.currentUser!.idString, carId: car.idString, isClicked: utils.isCarFavourited(carId: car.idString), carsList: $cars)
-                }
-            }else{
-                Text(message)
-                    .font(.title2)
-            }
+            Text(message)
+                .font(.title2)
         }
+        
         
         
         

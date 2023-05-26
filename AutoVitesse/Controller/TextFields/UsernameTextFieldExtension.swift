@@ -11,7 +11,7 @@ import RealmSwift
 extension UsernameTextField{
     
     func handleUsernameChange(_ username: String ){
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: config)
         if (realm.objects(User.self).filter("username = %@", username).first != nil ) {
             errorMessage = "This username has been taken!"
             isUsernameCompleted = false
