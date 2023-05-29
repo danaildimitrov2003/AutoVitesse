@@ -24,7 +24,7 @@ struct MenuContent: View{
     
     var body: some View{
         ZStack{
-            Color(UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0 , alpha: 1))
+            Color("PrimaryGreen")
             VStack(alignment: .leading, spacing: 0){
                 NavigationLink(destination: NavbarContainerView{HomeView()}, tag:"Home", selection: $selection) {}
                 NavigationLink(destination: NavbarContainerView{CarsView()}, tag:"Cars", selection: $selection) {}
@@ -35,10 +35,10 @@ struct MenuContent: View{
                             Image(systemName: item.imageName)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("WhiteTextColor"))
                                 .frame(width:32, height: 32, alignment: .center)
                             Text(item.text)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("WhiteTextColor"))
                                 .bold()
                                 .font(.system(size: 22))
                                 .multilineTextAlignment(.leading)

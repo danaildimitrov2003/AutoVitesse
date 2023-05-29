@@ -18,7 +18,7 @@ struct PhotosView: View {
                 Button(action: {showLibrary.toggle()}) {
                     Text("upload from device")
                         .font(.title2)
-                        .foregroundColor(.blue)
+                        //.foregroundColor(.blue)
                 }
                 .sheet(isPresented: $showLibrary) {
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
@@ -26,7 +26,7 @@ struct PhotosView: View {
                 Button(action: {showCamera.toggle()}) {
                     Text("use camera")
                         .font(.title2)
-                        .foregroundColor(.blue)
+
                 }
                 .sheet(isPresented: $showCamera) {
                     ImagePicker(sourceType: .camera, selectedImage: self.$image)
@@ -40,8 +40,8 @@ struct PhotosView: View {
     }
 }
 
-struct PhotosView_Previews: PreviewProvider {
-    static var previews: some View {
-        PhotosView()
-    }
-}
+//struct PhotosView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PhotosView()
+//    }
+//}

@@ -16,6 +16,7 @@ struct EmailTextField: View {
     var body: some View {
         TextField("Email", text: $emailState)
             .disableAutocorrectAndAutocapitalize()
+            .foregroundColor(Color("TextColor"))
             .onChange(of: emailState) { newValue in
                 email = emailState
                 handleEmailChange(email)

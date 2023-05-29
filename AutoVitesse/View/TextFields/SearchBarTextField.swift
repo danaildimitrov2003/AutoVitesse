@@ -22,7 +22,8 @@ struct SearchBarTextField: View {
             Image(systemName:"magnifyingglass")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.gray)
+                //.foregroundColor(.gray)
+                .foregroundColor(Color("TextColor"))
                 .frame(width:32, height: 32, alignment: .center)
         }
     }

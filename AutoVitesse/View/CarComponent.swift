@@ -19,12 +19,15 @@ struct CarComponent: View {
     var body: some View {
         HStack{
             Text(carMake)
+                .foregroundColor(Color("TextColor"))
             Text(carModel)
+                .foregroundColor(Color("TextColor"))
             Text(String(carYear))
+                .foregroundColor(Color("TextColor"))
             Image(systemName: isClicked ? "star.fill" : "star")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.gray)
+                .foregroundColor(Color("PrimaryGreen"))
                 .frame(width:20, height: 20, alignment: .center)
                 .onTapGesture {
                     if(isClicked == false){

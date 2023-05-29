@@ -15,7 +15,7 @@ struct SideMenuButton: View {
             Image(systemName: isClicked ? "xmark" : "line.horizontal.3")
                 .imageScale(.large)
                 .frame(width: 24, height: 24)
-                .foregroundColor(.white)
+                .foregroundColor(Color("WhiteTextColor"))
                 .padding(.leading, 10)
         }
         .buttonStyle(PlainButtonStyle())

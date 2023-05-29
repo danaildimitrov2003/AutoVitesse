@@ -22,6 +22,7 @@ struct UserImagesList: View {
         }else{
             Text("There are no photos")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
         }
         
     }

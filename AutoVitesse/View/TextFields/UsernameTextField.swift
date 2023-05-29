@@ -16,6 +16,7 @@ struct UsernameTextField: View {
     var body: some View {
         TextField("Username", text: $usernameState)
             .disableAutocorrectAndAutocapitalize()
+            .foregroundColor(Color("TextColor"))
             .onChange(of: usernameState) { newValue in
                 username = usernameState
                 handleUsernameChange(username)

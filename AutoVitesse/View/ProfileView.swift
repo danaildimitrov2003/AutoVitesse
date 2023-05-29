@@ -15,13 +15,17 @@ struct ProfileView: View {
         VStack{
             Label(appSession.currentUser?.username ?? "username", systemImage: "person.fill")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
             Label(appSession.currentUser?.email ?? "email", systemImage: "envelope.fill")
                 .font(.title)
-            Label(appSession.currentUser?.country ?? "country", systemImage: "globe")
+                .foregroundColor(Color("TextColor"))
+            Label(appSession.currentUser?.country ?? "country", systemImage: "globe.europe.africa.fill")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
             if(appSession.currentUser?.city != "" ){
                 Label(appSession.currentUser?.city ?? "city", systemImage: "mappin")
                     .font(.title)
+                    .foregroundColor(Color("TextColor"))
             }
             Button("Edit profile data") {
                 isEditFormActive = true

@@ -12,6 +12,7 @@ struct FavouritesView: View {
         VStack{
             Text("Favourites")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
             CarsList(cars: getFavouriteCars(), message: "No favorite items")
         }
     }

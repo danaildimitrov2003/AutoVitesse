@@ -38,11 +38,15 @@ struct SignUpFormView: View {
                         Text("\(option)")
                     }
                 }
+                .foregroundColor(Color("TextColor"))
                 TextField("City", text: $city)
                     .disableAutocorrectAndAutocapitalize()
+                    .foregroundColor(Color("TextColor"))
                 Toggle(isOn: $isEmailConfirmed) {
                     Text("I confirm that this is my email")
                 }
+                .foregroundColor(Color("TextColor"))
+                .tint(Color("AccentColor"))
                 if(errorMessage != ""){
                     Text(errorMessage)
                         .foregroundColor(.red)

@@ -18,39 +18,42 @@ struct EditForm: View {
     
     var body: some View {
         NavigationView {
-            List {
-                TextField("Username", text: $userEdit.username)
-                    .disableAutocorrectAndAutocapitalize()
-                    .disabled(true)
-                    .foregroundColor(.gray)
-                EmailTextField(email: $userEdit.email, emailState: userEdit.email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
-                PasswordTextField(password: $userEdit.password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
-                Picker("Country", selection: $userEdit.country) {
-                    ForEach(countries, id: \.self) { option in
-                        Text("\(option)")
+            ZStack {
+                Color("BackgroundColor")
+                List {
+                    TextField("Username", text: $userEdit.username)
+                        .disableAutocorrectAndAutocapitalize()
+                        .disabled(true)
+                        .foregroundColor(.gray)
+                    EmailTextField(email: $userEdit.email, emailState: userEdit.email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
+                    PasswordTextField(password: $userEdit.password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
+                    Picker("Country", selection: $userEdit.country) {
+                        ForEach(countries, id: \.self) { option in
+                            Text("\(option)")
+                        }
+                    }
+                    TextField("City", text: $userEdit.city)
+                        .disableAutocorrectAndAutocapitalize()
+                    if(errorMessage != ""){
+                        Text(errorMessage)
+                            .foregroundColor(.red)
                     }
                 }
-                TextField("City", text: $userEdit.city)
-                    .disableAutocorrectAndAutocapitalize()
-                if(errorMessage != ""){
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                }
-            }
-            .fullScreenCover(isPresented: $showHomeView) {
-                NavbarContainerView{
-                    HomeView()
-                }
-            }
-            .navigationTitle("Edit user data")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        handleSaveButton()
+                .fullScreenCover(isPresented: $showHomeView) {
+                    NavbarContainerView{
+                        HomeView()
                     }
-                    //.disabled(true)
                 }
+                .navigationTitle("Edit user data")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Save") {
+                            handleSaveButton()
+                        }
+                        //.disabled(true)
+                    }
+            }
             }
         }
     }

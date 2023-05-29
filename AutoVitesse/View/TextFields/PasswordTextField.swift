@@ -15,6 +15,7 @@ struct PasswordTextField: View {
     
     var body: some View {
         SecureField("Password", text: $passwordState)
+            .foregroundColor(Color("TextColor"))
             .onChange(of: passwordState){ newValue in
                 password = passwordState
                 handlePasswordChange(password)

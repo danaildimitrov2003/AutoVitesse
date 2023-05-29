@@ -14,7 +14,7 @@ struct LogOutButton: View {
             Image(systemName: "chevron.left")
                 .imageScale(.large)
                 .frame(width: 24, height: 24)
-                .foregroundColor(.white)
+                .foregroundColor(Color("WhiteTextColor"))
                 .padding(.leading, 10)
         }
         .buttonStyle(PlainButtonStyle())

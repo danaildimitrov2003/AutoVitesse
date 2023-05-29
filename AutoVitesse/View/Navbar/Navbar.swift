@@ -16,12 +16,12 @@ struct Navbar: View {
             Spacer()
             Text("AutoVitesse")
                 .font(.title)
-                .foregroundColor(.white)
+                .foregroundColor(Color("WhiteTextColor"))
             Spacer()
             SideMenuButton(toggleMenu: toggleMenu)
                 .padding(.trailing)
         }
-        .background(Color.mint)
+        .background(Color("SecondaryGreen"))
         
     }
 }

@@ -26,6 +26,7 @@ struct CarsList: View {
                 }else{
                     Text(message)
                         .font(.title2)
+                        .foregroundColor(Color("TextColor"))
                 }
             }else{
                 if(allCars.count >= 1){
@@ -35,11 +36,13 @@ struct CarsList: View {
                 }else{
                     Text(message)
                         .font(.title2)
+                        .foregroundColor(Color("TextColor"))
                 }
             }
         }else{
             Text(message)
                 .font(.title2)
+                .foregroundColor(Color("TextColor"))
         }
         
         

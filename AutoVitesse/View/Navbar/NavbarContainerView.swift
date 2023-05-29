@@ -19,6 +19,7 @@ struct NavbarContainerView<Content: View>: View {
             VStack(spacing: 0) {
                 Navbar(toggleMenu: toggleMenu)
                 ZStack {
+                    Color("BackgroundColor")
                     VStack{
                         content
                             .frame(maxWidth : .infinity, maxHeight : .infinity)

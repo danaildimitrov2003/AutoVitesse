@@ -13,7 +13,8 @@ extension SearchBarTextField{
     func handleSearch(_ search : String){
         let env = Environment()
         if(search.count >= 2){
-            var request = URLRequest(url: URL(string: "https://car-data.p.rapidapi.com/cars?limit=50&page=0&model=\(search)")!,timeoutInterval: Double.infinity)
+            let modifiedSearch = search.replacingOccurrences(of: " ", with: "%20")
+            var request = URLRequest(url: URL(string: "https://car-data.p.rapidapi.com/cars?limit=50&page=0&model=\(modifiedSearch)")!,timeoutInterval: Double.infinity)
             request.addValue(env.apiKey, forHTTPHeaderField: "X-RapidAPI-Key")
             request.addValue("car-data.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
             
