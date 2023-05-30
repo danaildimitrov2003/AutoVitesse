@@ -9,22 +9,24 @@ import SwiftUI
 
 struct NavbarContainerView<Content: View>: View {
     let content : Content
+    let currentViewName : String
     @State var menuOpened = false
     
-    init(@ViewBuilder content : () -> Content){
+    init(currentViewName: String, @ViewBuilder content : () -> Content){
         self.content = content()
+        self.currentViewName = currentViewName
     }
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                Navbar(toggleMenu: toggleMenu)
+                Navbar(toggleMenu: toggleMenu, menuOpened: $menuOpened)
                 ZStack {
                     Color("BackgroundColor")
                     VStack{
                         content
                             .frame(maxWidth : .infinity, maxHeight : .infinity)
                     }
-                    SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
+                    SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu, currentViewName: currentViewName)
                 }
                 .edgesIgnoringSafeArea(.all)
             }
@@ -35,7 +37,7 @@ struct NavbarContainerView<Content: View>: View {
 
 struct NavbarContainerView_Previews : PreviewProvider {
     static var previews: some View {
-        NavbarContainerView{
+        NavbarContainerView(currentViewName: "ViewName"){
             
         }
     }

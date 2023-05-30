@@ -16,7 +16,7 @@ extension EditForm{
         if(utils.checkBools(completionData)){
             errorMessage = ""
             saveUserEdit()
-            showHomeView = true
+            presentationMode.wrappedValue.dismiss()
         }else{
             errorMessage = "Please fill out the form!"
         }

@@ -17,8 +17,8 @@ extension PhotosView{
         if let data = image.pngData() {
             do {
                 try data.write(to: url)
-                let realm = try! Realm()
-                try? realm.write {
+                let realm = try Realm(configuration: config)
+                realm.safeWrite {
                     let image = userImage()
                     image.userId = appSession.currentUser!.idString
                     image.imageId = fileName

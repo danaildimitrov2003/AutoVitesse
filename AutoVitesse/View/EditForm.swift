@@ -10,11 +10,10 @@ import RealmSwift
 
 struct EditForm: View {
     @State var userEdit = User()
-    @State var showHomeView = false
     @State var errorMessage = ""
     @State var isPasswordCompleted = true
     @State var isEmailCompleted = true
-    
+    @SwiftUI.Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -37,11 +36,6 @@ struct EditForm: View {
                     if(errorMessage != ""){
                         Text(errorMessage)
                             .foregroundColor(.red)
-                    }
-                }
-                .fullScreenCover(isPresented: $showHomeView) {
-                    NavbarContainerView{
-                        HomeView()
                     }
                 }
                 .navigationTitle("Edit user data")

@@ -10,8 +10,6 @@ import RealmSwift
 
 extension CarsView{
     
-    func loadCars() -> [Car]{
-        let realm = try! Realm()
-        return realm.objects(Car.self).toArray()
-    }
+    
+    
 }

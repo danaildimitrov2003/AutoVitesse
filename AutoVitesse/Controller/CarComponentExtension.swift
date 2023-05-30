@@ -14,27 +14,36 @@ extension CarComponent{
         let favouriteCars = FavouriteCars()
         favouriteCars.userId = userId
         favouriteCars.carIds.append(carId)
-        
-        let realm = try! Realm()
-        if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
-            try? realm.write {
-                userFavouriteCars.thaw()!.carIds.append(carId)
+        do{
+            let realm = try Realm(configuration: config)
+            if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
+                realm.safeWrite {
+                    userFavouriteCars.thaw()!.carIds.append(carId)
+                }
+            }else{
+                realm.safeWrite {
+                    realm.add(favouriteCars)
+                }
             }
-        }else{
-            try? realm.write {
-                realm.add(favouriteCars)
-            }
+        }catch let error{
+            print("Error initializing Realm: \(error.localizedDescription)")
         }
+        
     }
     
     func handleUnFavouriteClick(userId : String, carId : String){
-        let realm = try! Realm()
-        if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
-            let index = userFavouriteCars.carIds.index(of: carId)
-            try! realm.write {
-                userFavouriteCars.carIds.remove(at: index!)
+        do{
+            let realm = try Realm(configuration: config)
+            if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
+                let index = userFavouriteCars.carIds.index(of: carId)
+                realm.safeWrite {
+                    userFavouriteCars.carIds.remove(at: index!)
+                }
             }
+        }catch let error{
+            print("Error initializing Realm: \(error.localizedDescription)")
         }
+        
         
     }
     

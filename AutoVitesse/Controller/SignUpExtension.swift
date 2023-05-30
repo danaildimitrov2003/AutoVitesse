@@ -11,15 +11,19 @@ import RealmSwift
 extension SignUpFormView {
     
     func signUp (){
-        let realm = try! Realm(configuration: config)
         let utils = Utils()
         user.username = username
         user.email = email
         user.password = utils.hashString(password)
         user.country = country
         user.city = city
-        try? realm.write {
-            realm.add(user)
+        do{
+            let realm = try Realm(configuration: config)
+            realm.safeWrite {
+                realm.add(user)
+            }
+        }catch let error{
+            print("Error initializing Realm: \(error.localizedDescription)")
         }
         appSession.currentUser = user
     }

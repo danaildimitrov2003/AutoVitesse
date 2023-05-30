@@ -19,18 +19,18 @@ struct MenuContent: View{
         MenuItem(text: "Home", imageName: "house.fill"),
         MenuItem(text: "Cars", imageName: "car.2.fill"),
         MenuItem(text: "Photos", imageName: "camera.fill")]
-    
     let toggleMenu: () -> Void
+    let currentViewName : String
     
     var body: some View{
         ZStack{
             Color("PrimaryGreen")
             VStack(alignment: .leading, spacing: 0){
-                NavigationLink(destination: NavbarContainerView{HomeView()}, tag:"Home", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView{CarsView()}, tag:"Cars", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView{PhotosView()}, tag:"Photos", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Home"){HomeView()}, tag:"Home", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Cars"){CarsView()}, tag:"Cars", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Photos"){PhotosView()}, tag:"Photos", selection: $selection) {}
                 ForEach(items) { item in
-                    Button(action: {selection = item.text}) {
+                    Button(action: {handleButtonTab(itemText: item.text)}) {
                         HStack{
                             Image(systemName: item.imageName)
                                 .resizable()
@@ -59,6 +59,7 @@ struct SideMenu: View{
     let width: CGFloat
     let menuOpened: Bool
     let toggleMenu: () -> Void
+    let currentViewName: String
     
     
     var body: some View{
@@ -74,7 +75,7 @@ struct SideMenu: View{
             }
             
             HStack{
-                MenuContent(toggleMenu: toggleMenu)
+                MenuContent(toggleMenu: toggleMenu, currentViewName: currentViewName)
                     .frame(width: width)
                     .offset(x: menuOpened ? UIScreen.main.bounds.width - width : UIScreen.main.bounds.width + width)
                     .animation(.default, value: menuOpened)
@@ -101,7 +102,7 @@ struct SideMenuView: View {
                         .background(Color.mint)
                 })
             }
-            SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
+            SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu, currentViewName: "Home")
         }
         .edgesIgnoringSafeArea(.all)
     }

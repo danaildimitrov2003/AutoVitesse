@@ -12,11 +12,11 @@ extension ProfileView{
     func setEditUser() -> User{
         let userEdit = User()
         
-        userEdit.username = user!.username
-        userEdit.email = user!.email
+        userEdit.username = user[0].username
+        userEdit.email = user[0].email
         userEdit.password = ""
-        userEdit.country = user!.country
-        userEdit.city = user!.city
+        userEdit.country = user[0].country
+        userEdit.city = user[0].city
         
         return userEdit
     }

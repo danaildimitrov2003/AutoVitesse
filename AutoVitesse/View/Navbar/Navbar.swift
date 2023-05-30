@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Navbar: View {
     let toggleMenu: () -> Void
+    @Binding var menuOpened : Bool
     var body: some View {
         HStack{
             LogOutButton()
@@ -18,7 +19,7 @@ struct Navbar: View {
                 .font(.title)
                 .foregroundColor(Color("WhiteTextColor"))
             Spacer()
-            SideMenuButton(toggleMenu: toggleMenu)
+            SideMenuButton(toggleMenu: toggleMenu, menuOpened: $menuOpened)
                 .padding(.trailing)
         }
         .background(Color("SecondaryGreen"))

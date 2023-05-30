@@ -29,11 +29,18 @@ class Utils{
     
     func isCarFavourited(carId : String) -> Bool{
         var result = false
-        let realm = try! Realm()
-        if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", appSession.currentUser!.idString).first {
-            if favouriteCars.carIds.contains(carId) {
-                result =  true
+        guard let userId = appSession.currentUser?.idString else {
+           fatalError("User Id is nil!")
+        }
+        do{
+            let realm = try Realm(configuration: config)
+            if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", userId).first {
+                if favouriteCars.carIds.contains(carId) {
+                    result =  true
+                }
             }
+        }catch let error{
+            print("Error initializing Realm: \(error.localizedDescription)")
         }
         return result
     }
