@@ -20,7 +20,10 @@ extension PhotosView{
                 let realm = try Realm(configuration: config)
                 realm.safeWrite {
                     let image = userImage()
-                    image.userId = appSession.currentUser!.idString
+                    guard let userId = appSession.currentUser?.idString else {
+                        return
+                    }
+                    image.userId = userId
                     image.imageId = fileName
                     realm.add(image)
                 }

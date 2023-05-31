@@ -16,14 +16,14 @@ extension CarComponent{
         favouriteCars.carIds.append(carId)
         do{
             let realm = try Realm(configuration: config)
-            if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
-                realm.safeWrite {
-                    userFavouriteCars.thaw()!.carIds.append(carId)
-                }
-            }else{
+            guard let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first else {
                 realm.safeWrite {
                     realm.add(favouriteCars)
                 }
+                return
+            }
+            realm.safeWrite {
+                userFavouriteCars.thaw()?.carIds.append(carId)
             }
         }catch let error{
             print("Error initializing Realm: \(error.localizedDescription)")
@@ -35,9 +35,10 @@ extension CarComponent{
         do{
             let realm = try Realm(configuration: config)
             if let userFavouriteCars = realm.objects(FavouriteCars.self).filter("userId = %@", userId).first{
-                let index = userFavouriteCars.carIds.index(of: carId)
-                realm.safeWrite {
-                    userFavouriteCars.carIds.remove(at: index!)
+                if let index = userFavouriteCars.carIds.index(of: carId){
+                    realm.safeWrite {
+                        userFavouriteCars.carIds.remove(at: index)
+                    }
                 }
             }
         }catch let error{

@@ -8,6 +8,7 @@
 import Foundation
 import CryptoKit
 import RealmSwift
+import UIKit
 
 class Utils{
     
