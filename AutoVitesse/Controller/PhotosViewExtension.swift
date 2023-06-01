@@ -12,6 +12,7 @@ import RealmSwift
 extension PhotosView{
     
     func saveImageLocally(image: UIImage, fileName: String) {
+        let utils = Utils()
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let url = documentsDirectory.appendingPathComponent(fileName)
         if let data = image.pngData() {
@@ -20,10 +21,7 @@ extension PhotosView{
                 let realm = try Realm(configuration: config)
                 realm.safeWrite {
                     let image = userImage()
-                    guard let userId = appSession.currentUser?.idString else {
-                        return
-                    }
-                    image.userId = userId
+                    image.userId = utils.getCurrentUser().idString
                     image.imageId = fileName
                     realm.add(image)
                 }

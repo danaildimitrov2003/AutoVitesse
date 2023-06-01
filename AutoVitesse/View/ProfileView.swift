@@ -9,14 +9,11 @@ import SwiftUI
 import RealmSwift
 
 struct ProfileView: View {
+    let utils = Utils()
     @State private var isEditFormActive = false
     @ObservedObject var user: User
     init() {
-        guard let currentUser = appSession.currentUser else {
-            user = User()
-            return
-        }
-        user = currentUser
+        user = utils.getCurrentUser()
     }
     var body: some View {
         VStack{

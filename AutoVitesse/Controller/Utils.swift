@@ -30,9 +30,7 @@ class Utils{
     
     func isCarFavourited(carId : String) -> Bool{
         var result = false
-        guard let userId = appSession.currentUser?.idString else {
-           fatalError("User Id is nil!")
-        }
+        let userId = getCurrentUser().idString
         do{
             let realm = try Realm(configuration: config)
             if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", userId).first {
@@ -44,5 +42,12 @@ class Utils{
             print("Error initializing Realm: \(error.localizedDescription)")
         }
         return result
+    }
+    
+    func getCurrentUser() -> User{
+        guard let user = appSession.currentUser else {
+           return User()
+        }
+        return user
     }
 }

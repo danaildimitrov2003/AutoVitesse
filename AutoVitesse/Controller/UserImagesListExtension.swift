@@ -17,10 +17,13 @@ extension UserImagesList{
         var image = UIImage()
         
         if let imageData = try? Data(contentsOf: url) {
-            image = UIImage(data: imageData)!
-            
+            if let imageFromData = UIImage(data: imageData) {
+                image = imageFromData
+            } else {
+                print("Couldn't get image data for \(fileName)")
+            }
         } else {
-            print("Couldn't get image for \(fileName)")
+            print("Couldn't get image data for \(fileName)")
         }
         return image
     }

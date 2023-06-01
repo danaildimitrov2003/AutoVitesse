@@ -11,7 +11,7 @@ import RealmSwift
 struct UserImagesList: View {
     @ObservedResults(
     userImage.self,
-      where: { $0.userId == appSession.currentUser!.idString }
+      where: { $0.userId == appSession.currentUser?.idString ?? ""}
     ) var userImages
     
     var body: some View {
@@ -24,7 +24,6 @@ struct UserImagesList: View {
                 .font(.title)
                 .foregroundColor(Color("TextColor"))
         }
-        
     }
 }
 

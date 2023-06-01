@@ -26,10 +26,7 @@ extension EditForm{
         do{
             let utils = Utils()
             let realm = try Realm()
-            guard let user = appSession.currentUser else {
-                print("User not found")
-                return
-            }
+            let user = utils.getCurrentUser()
             try realm.write {
                 user.thaw()?.email = userEdit.email
                 if(userEdit.password != ""){
