@@ -23,6 +23,9 @@ struct NavbarContainerView<Content: View>: View {
                 ZStack {
                     Color("BackgroundColor")
                     VStack{
+                        Text("Email is not confirmed!")
+                            .foregroundColor(Color("TextColor"))
+                        Divider()
                         content
                             .frame(maxWidth : .infinity, maxHeight : .infinity)
                     }
