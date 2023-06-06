@@ -11,6 +11,8 @@
 		2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161C2A25D03400E0AA78 /* RealmExtension.swift */; };
 		2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */; };
 		227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416202A273F8200E0AA78 /* UiImageExtension.swift */; };
+		2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274162D2A2E14CA00E0AA78 /* Enviroment.swift */; };
+		227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 227416302A2F283C00E0AA78 /* FacebookLogin */; };
 		22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC12A0E71B9004FB233 /* SignInForm.swift */; };
 		22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC32A0E737B004FB233 /* SignUpExtension.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
@@ -55,7 +57,6 @@
 		22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98D2A1B95B80088B869 /* CarsList.swift */; };
 		22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */; };
 		22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9912A1B98430088B869 /* ResultsExtension.swift */; };
-		22E5D9942A1BA0490088B869 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9932A1BA0490088B869 /* Enviroment.swift */; };
 		22E5D9962A1CB4510088B869 /* FavouriteCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9952A1CB4510088B869 /* FavouriteCars.swift */; };
 		22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */; };
 		22E5D99C2A1CD2240088B869 /* FavouritesViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */; };
@@ -71,6 +72,8 @@
 		2274161C2A25D03400E0AA78 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentExtension.swift; sourceTree = "<group>"; };
 		227416202A273F8200E0AA78 /* UiImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtension.swift; sourceTree = "<group>"; };
+		2274162D2A2E14CA00E0AA78 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		227416322A2F312200E0AA78 /* AutoVitesse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoVitesse.entitlements; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		22C02CC32A0E737B004FB233 /* SignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExtension.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +117,6 @@
 		22E5D98D2A1B95B80088B869 /* CarsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsList.swift; sourceTree = "<group>"; };
 		22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewExtension.swift; sourceTree = "<group>"; };
 		22E5D9912A1B98430088B869 /* ResultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsExtension.swift; sourceTree = "<group>"; };
-		22E5D9932A1BA0490088B869 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		22E5D9952A1CB4510088B869 /* FavouriteCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCars.swift; sourceTree = "<group>"; };
 		22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarComponentExtension.swift; sourceTree = "<group>"; };
 		22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewExtension.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			files = (
 				22E26A6C2A0D147D00B21FD8 /* RealmSwift in Frameworks */,
 				22E26A6A2A0D147D00B21FD8 /* Realm in Frameworks */,
+				227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +160,8 @@
 		22E26A592A0D11E300B21FD8 /* AutoVitesse */ = {
 			isa = PBXGroup;
 			children = (
+				227416322A2F312200E0AA78 /* AutoVitesse.entitlements */,
+				2274162D2A2E14CA00E0AA78 /* Enviroment.swift */,
 				22E5D94D2A12473F0088B869 /* Extensions */,
 				22E26A6F2A0D170D00B21FD8 /* Controller */,
 				22E26A6E2A0D170200B21FD8 /* View */,
@@ -164,7 +169,6 @@
 				22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */,
 				22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */,
 				22E26A602A0D11E400B21FD8 /* Preview Content */,
-				22E5D9932A1BA0490088B869 /* Enviroment.swift */,
 			);
 			path = AutoVitesse;
 			sourceTree = "<group>";
@@ -299,6 +303,7 @@
 			packageProductDependencies = (
 				22E26A692A0D147D00B21FD8 /* Realm */,
 				22E26A6B2A0D147D00B21FD8 /* RealmSwift */,
+				227416302A2F283C00E0AA78 /* FacebookLogin */,
 			);
 			productName = AutoVitesse;
 			productReference = 22E26A572A0D11E300B21FD8 /* AutoVitesse.app */;
@@ -330,6 +335,7 @@
 			mainGroup = 22E26A4E2A0D11E300B21FD8;
 			packageReferences = (
 				22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 22E26A582A0D11E300B21FD8 /* Products */;
 			projectDirPath = "";
@@ -370,6 +376,7 @@
 				22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */,
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
+				2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */,
 				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
 				22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
@@ -396,7 +403,6 @@
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
 				2274161B2A20CB3200E0AA78 /* UserImagesListExtension.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
-				22E5D9942A1BA0490088B869 /* Enviroment.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
 				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,
 				22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */,
@@ -535,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoVitesse/AutoVitesse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AutoVitesse/Preview Content\"";
@@ -565,6 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoVitesse/AutoVitesse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AutoVitesse/Preview Content\"";
@@ -614,6 +622,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
 		22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -625,6 +641,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		227416302A2F283C00E0AA78 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		22E26A692A0D147D00B21FD8 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */;

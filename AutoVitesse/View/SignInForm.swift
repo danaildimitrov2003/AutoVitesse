@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import FBSDKLoginKit
 
 struct SignInFormView: View {
     @State private var username = ""
@@ -14,6 +15,7 @@ struct SignInFormView: View {
     @EnvironmentObject var appSession: AppSession
     @State var errorMessage = ""
     @State var showHomeView = false
+    @State var manager = LoginManager()
     
     var body: some View {
         NavigationView{
@@ -24,6 +26,9 @@ struct SignInFormView: View {
                 if(errorMessage != ""){
                     Text(errorMessage)
                         .foregroundColor(.red)
+                }
+                Button("Sign in with facebook") {
+                    facebookSignIn()
                 }
             }
             .navigationTitle("Sign in")
