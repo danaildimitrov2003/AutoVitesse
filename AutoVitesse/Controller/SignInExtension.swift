@@ -27,20 +27,4 @@ extension SignInFormView {
         }
     }
     
-    func facebookSignIn(){
-        
-        manager.logIn(permissions: ["public_profile","email"], from: nil){
-            (result, error) in
-            if error != nil{
-                print(error?.localizedDescription)
-                return
-            }
-            let request = GraphRequest(graphPath: "me", parameters: ["fields": "email"])
-            request.start{ (_, res, _) in
-                guard let profileData = res as? [String: Any]else{return}
-
-                print(profileData["email"] as! String )
-            }
-        }
-    }
 }

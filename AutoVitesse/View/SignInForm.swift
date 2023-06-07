@@ -15,11 +15,12 @@ struct SignInFormView: View {
     @EnvironmentObject var appSession: AppSession
     @State var errorMessage = ""
     @State var showHomeView = false
+    @State var showFacebookSignUp = false
     @State var manager = LoginManager()
     
     var body: some View {
         NavigationView{
-            Form {
+            List {
                 TextField("Username", text: $username)
                     .disableAutocorrectAndAutocapitalize()
                 SecureField("Password", text: $password)
@@ -27,9 +28,7 @@ struct SignInFormView: View {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 }
-                Button("Sign in with facebook") {
-                    facebookSignIn()
-                }
+                FacebookButton(buttonText: "Sign in with Facebook", showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
             }
             .navigationTitle("Sign in")
             .navigationBarTitleDisplayMode(.inline)
@@ -45,6 +44,9 @@ struct SignInFormView: View {
                 NavbarContainerView(currentViewName: "Home"){
                     HomeView()
                 }
+            }
+            .sheet(isPresented: $showFacebookSignUp) {
+                FacebookSignUpView()
             }
         }
     }

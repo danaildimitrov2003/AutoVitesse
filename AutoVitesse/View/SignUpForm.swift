@@ -24,7 +24,7 @@ struct SignUpFormView: View {
     @State var isPasswordCompleted = false
     @State var isConfirmPasswordCompleted = false
     @State var showHomeView = false
-    //@State var isCountryCompleted = false
+    @State var showFacebookSignUp = false
     
     var body: some View {
         NavigationView {
@@ -51,6 +51,7 @@ struct SignUpFormView: View {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 }
+                FacebookButton(buttonText: "Sign up with Facebook", showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
             }
             .navigationTitle("Sign Up")
             .navigationBarTitleDisplayMode(.inline)
@@ -66,6 +67,9 @@ struct SignUpFormView: View {
                 NavbarContainerView(currentViewName: "Home"){
                     HomeView()
                 }
+            }
+            .sheet(isPresented: $showFacebookSignUp) {
+                FacebookSignUpView()
             }
         }
     }

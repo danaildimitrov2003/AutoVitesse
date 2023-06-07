@@ -38,6 +38,7 @@ struct CarComponent: View {
                     }
                     isClicked.toggle()   
                 }
+                .animation(.default, value: isClicked)
         }
     }
 }

@@ -18,6 +18,7 @@ struct UserImageComponent: View {
             .background(Color.black.opacity(0.2))
             .aspectRatio(contentMode: .fill)
             .clipShape(Rectangle())
+            //.transition(.slide)
     }
 }
 

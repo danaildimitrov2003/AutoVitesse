@@ -15,7 +15,7 @@ struct UserImagesList: View {
     ) var userImages
     
     var body: some View {
-        if(userImages.count > 1){
+        if(userImages.count >= 1){
             ForEach(userImages) { image in
                 UserImageComponent(image: getImageFromName(fileName: image.imageId))
             }
