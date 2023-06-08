@@ -69,7 +69,7 @@ struct ContentView: View {
                     SignInFormView()
                 }
                 .sheet(isPresented: $isSignUpFormViewActive) {
-                    SignUpFormView(user: User())
+                    SignUpFormView()
                 }
                 
             }

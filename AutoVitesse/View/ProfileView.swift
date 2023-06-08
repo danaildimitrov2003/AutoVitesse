@@ -11,23 +11,24 @@ import RealmSwift
 struct ProfileView: View {
     let utils = Utils()
     @State private var isEditFormActive = false
-    @ObservedObject var user: User
-    init() {
-        user = utils.getCurrentUser()
-    }
+    @ObservedResults(
+    User.self,
+      where: { $0.id == appSession.currentUser?.id ?? ObjectId("")}
+    ) var user
+    
     var body: some View {
         VStack{
-            Label(user.username , systemImage: "person.fill")
+            Label(user[0].username , systemImage: "person.fill")
                 .font(.title)
                 .foregroundColor(Color("TextColor"))
-            Label(user.email , systemImage: "envelope.fill")
+            Label(user[0].email , systemImage: "envelope.fill")
                 .font(.title)
                 .foregroundColor(Color("TextColor"))
-            Label(user.country , systemImage: "globe.europe.africa.fill")
+            Label(user[0].country , systemImage: "globe.europe.africa.fill")
                 .font(.title)
                 .foregroundColor(Color("TextColor"))
-            if(user.city != "" ){
-                Label(user.city , systemImage: "mappin")
+            if(user[0].city != "" ){
+                Label(user[0].city , systemImage: "mappin")
                     .font(.title)
                     .foregroundColor(Color("TextColor"))
             }

@@ -9,8 +9,6 @@ import SwiftUI
 import RealmSwift
 
 struct SignUpFormView: View {
-    @ObservedRealmObject var user: User
-    
     @State var username = ""
     @State var email = ""
     @State var password = ""
@@ -77,6 +75,6 @@ struct SignUpFormView: View {
 
 struct SignUpFormView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpFormView(user: User())
+        SignUpFormView()
     }
 }
