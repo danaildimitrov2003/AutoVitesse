@@ -50,4 +50,8 @@ class Utils{
         }
         return user
     }
+    
+    func generateArray(min : Int, max : Int) -> Array<Int>{
+        return Array(min...max)
+    }
 }

@@ -13,7 +13,7 @@ struct SignUpFormView: View {
     @State var email = ""
     @State var password = ""
     @State var confirmPassword = ""
-    @State var country = ""
+    @State var country = "Bulgaria"
     @State var city = ""
     @State var isEmailConfirmed = false
     @State var errorMessage = ""

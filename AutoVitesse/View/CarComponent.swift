@@ -27,7 +27,7 @@ struct CarComponent: View {
             Image(systemName: isClicked ? "star.fill" : "star")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color("PrimaryGreen"))
+                .foregroundColor(Color("AccentColor"))
                 .frame(width:20, height: 20, alignment: .center)
                 .onTapGesture {
                     if(isClicked == false){
@@ -40,6 +40,10 @@ struct CarComponent: View {
                 }
                 .animation(.default, value: isClicked)
         }
+        .padding()
+        .background(Color("PrimaryGreen"))
+        .cornerRadius(15)
+        
     }
 }
 
