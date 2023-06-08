@@ -22,8 +22,8 @@ struct FacebookButton: View {
     }
 }
 
-//struct FacebookButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FacebookButton(buttonText: "sign in with Facebook")
-//    }
-//}
+struct FacebookButton_Previews: PreviewProvider {
+    static var previews: some View {
+        FacebookButton(buttonText: "Sign in with Facebook", showHomeView: .constant(false), showFacebookSignUp: .constant(false))
+    }
+}

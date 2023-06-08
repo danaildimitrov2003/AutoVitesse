@@ -23,8 +23,8 @@ struct PasswordTextField: View {
     }
 }
 
-//struct PasswordTextField_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasswordTextField(password: "password")
-//    }
-//}
+struct PasswordTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        PasswordTextField(password: .constant("password"), errorMessage: .constant("error message"), isPasswordCompleted: .constant(true))
+    }
+}

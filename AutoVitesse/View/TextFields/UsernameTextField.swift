@@ -24,8 +24,8 @@ struct UsernameTextField: View {
     }
 }
 
-//struct UsernameTextField_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UsernameTextField()
-//    }
-//}
+struct UsernameTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        UsernameTextField(username: .constant("username"), usernameState: "username", errorMessage: .constant("error message"), isUsernameCompleted: .constant(true))
+    }
+}

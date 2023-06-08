@@ -27,8 +27,8 @@ struct Navbar: View {
     }
 }
 
-//struct Navbar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Navbar()
-//    }
-//}
+struct Navbar_Previews: PreviewProvider {
+    static var previews: some View {
+        Navbar(toggleMenu: {}, menuOpened: .constant(false))
+    }
+}

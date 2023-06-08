@@ -24,8 +24,8 @@ struct ConfirmPasswordTextField: View {
     }
 }
 
-//struct ConfirmPasswordTextField_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConfirmPasswordTextField()
-//    }
-//}
+struct ConfirmPasswordTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        ConfirmPasswordTextField(password: .constant("password"), confirmPassword: .constant("password"), errorMessage: .constant("error message"), isConfirmPasswordCompleted: .constant(true))
+    }
+}

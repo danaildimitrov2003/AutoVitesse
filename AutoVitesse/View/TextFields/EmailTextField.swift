@@ -24,8 +24,8 @@ struct EmailTextField: View {
     }
 }
 
-//struct EmailTextField_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmailTextField()
-//    }
-//}
+struct EmailTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        EmailTextField(email: .constant("email"), emailState: "email", errorMessage: .constant("error message"), isEmailCompleted: .constant(true))
+    }
+}

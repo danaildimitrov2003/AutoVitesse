@@ -43,8 +43,8 @@ struct CarComponent: View {
     }
 }
 
-//struct CarComponent_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false)
-//    }
-//}
+struct CarComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false, carsList: .constant([Car()]))
+    }
+}
