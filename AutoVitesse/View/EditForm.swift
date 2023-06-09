@@ -50,6 +50,7 @@ struct EditForm: View {
             }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

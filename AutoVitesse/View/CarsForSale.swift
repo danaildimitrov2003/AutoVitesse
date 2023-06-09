@@ -8,36 +8,29 @@
 import SwiftUI
 
 struct CarsForSale: View {
-    @State var isFilterOpenned = false
+    @State var isFilterOpened = false
+    @State var isSortOpened = false
     var body: some View {
         VStack{
-            SearchBarTextField()
+            SearchBarCarsForSale()
             HStack{
-                Button(action: {isFilterOpenned.toggle()}) {
-                    Text("Filter")
-                        .padding()
-                        .background(Color("AccentColor"))
-                        .foregroundColor(Color("WhiteTextColor"))
-                        .cornerRadius(10)
+                Button(action: {isFilterOpened.toggle()}) {
+                    AccentColorButtonText(buttonText: "Filter")
                 }
-                Button(action: {}) {
-                    Text("Sort")
-                        .padding()
-                        .background(Color("AccentColor"))
-                        .foregroundColor(Color("WhiteTextColor"))
-                        .cornerRadius(10)
+                Button(action: {isSortOpened.toggle()}) {
+                    AccentColorButtonText(buttonText: "Sort")
                 }
             }
             Button(action: {}) {
-                Text("Sell a car")
-                    .padding()
-                    .background(Color("AccentColor"))
-                    .foregroundColor(Color("WhiteTextColor"))
-                    .cornerRadius(10)
+                AccentColorButtonText(buttonText: "Sell a car")
             }
-            .sheet(isPresented: $isFilterOpenned) {
+            .sheet(isPresented: $isFilterOpened) {
                 FilterView()
             }
+            .sheet(isPresented: $isSortOpened) {
+                SortView()
+            }
+           
         }
         
     }

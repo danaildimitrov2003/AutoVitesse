@@ -10,6 +10,6 @@ import Foundation
 extension LogOutButton {
     
     func logOut(){
-        showLandingView = true
+        showLogOutView = true
     }
 }

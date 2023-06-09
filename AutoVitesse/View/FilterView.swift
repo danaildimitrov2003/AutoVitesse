@@ -13,6 +13,7 @@ struct FilterView: View {
         List{
             VStack{
                 Text("Filter")
+                    .font(.title)
                 TextField("Make", text: $make)
                 RangePicker(title: "Year", min: 1984, max: 2024)
                 RangeFields(title: "Price", min: "1000", max: "100000")

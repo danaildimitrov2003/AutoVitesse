@@ -30,6 +30,7 @@ struct SignInFormView: View {
                 }
                 FacebookButton(buttonText: "Sign in with Facebook", showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
             }
+            .navigationBarBackButtonHidden(true)
             .navigationTitle("Sign in")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -12,8 +12,15 @@ struct RangePicker: View {
     var utils = Utils()
     @State var min : Int
     @State var max : Int
-    @State var minSelection = 1
-    @State var maxSelection = 1
+    @State var minSelection: Int
+    @State var maxSelection: Int
+    init(title: String, min: Int, max: Int) {
+        self.title = title
+        self.min = min
+        self.max = max
+        self._minSelection = State(initialValue: min)
+        self._maxSelection = State(initialValue: max)
+    }
     var body: some View {
         VStack{
             Text(title)

@@ -23,6 +23,11 @@
 		22CE49CE2A31F5730017E033 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49CD2A31F5730017E033 /* FilterView.swift */; };
 		22CE49D02A31F73E0017E033 /* RangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49CF2A31F73D0017E033 /* RangePicker.swift */; };
 		22CE49D22A31FE290017E033 /* RangeFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49D12A31FE290017E033 /* RangeFields.swift */; };
+		22CE49D42A3315400017E033 /* LogOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49D32A3315400017E033 /* LogOutView.swift */; };
+		22CE49D62A3315F00017E033 /* AccentColorButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49D52A3315F00017E033 /* AccentColorButtonText.swift */; };
+		22CE49D82A3330DE0017E033 /* SearchBarCarsForSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49D72A3330DE0017E033 /* SearchBarCarsForSale.swift */; };
+		22CE49DA2A33335D0017E033 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49D92A33335D0017E033 /* SortView.swift */; };
+		22CE49DC2A3338CD0017E033 /* SortOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
 		22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5C2A0D11E300B21FD8 /* ContentView.swift */; };
 		22E26A5F2A0D11E400B21FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */; };
@@ -93,6 +98,11 @@
 		22CE49CD2A31F5730017E033 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		22CE49CF2A31F73D0017E033 /* RangePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangePicker.swift; sourceTree = "<group>"; };
 		22CE49D12A31FE290017E033 /* RangeFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeFields.swift; sourceTree = "<group>"; };
+		22CE49D32A3315400017E033 /* LogOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutView.swift; sourceTree = "<group>"; };
+		22CE49D52A3315F00017E033 /* AccentColorButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColorButtonText.swift; sourceTree = "<group>"; };
+		22CE49D72A3330DE0017E033 /* SearchBarCarsForSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCarsForSale.swift; sourceTree = "<group>"; };
+		22CE49D92A33335D0017E033 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
+		22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrderButton.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVitesseApp.swift; sourceTree = "<group>"; };
 		22E26A5C2A0D11E300B21FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -237,6 +247,9 @@
 				22CE49CD2A31F5730017E033 /* FilterView.swift */,
 				22CE49CF2A31F73D0017E033 /* RangePicker.swift */,
 				22CE49D12A31FE290017E033 /* RangeFields.swift */,
+				22CE49D52A3315F00017E033 /* AccentColorButtonText.swift */,
+				22CE49D92A33335D0017E033 /* SortView.swift */,
+				22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 		22E5D96E2A1622A40088B869 /* Navbar */ = {
 			isa = PBXGroup;
 			children = (
+				22CE49D32A3315400017E033 /* LogOutView.swift */,
 				22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */,
 				22E5D9542A139AD00088B869 /* Navbar.swift */,
 				22E5D9562A139BC20088B869 /* LogOutButton.swift */,
@@ -289,6 +303,7 @@
 		22E5D97F2A165AD80088B869 /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
+				22CE49D72A3330DE0017E033 /* SearchBarCarsForSale.swift */,
 				22E5D97B2A1658200088B869 /* UsernameTextField.swift */,
 				22E5D9732A1646870088B869 /* ConfirmPasswordTextField.swift */,
 				22E5D9772A164B8C0088B869 /* EmailTextField.swift */,
@@ -408,8 +423,10 @@
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
 				22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */,
 				22CE49CE2A31F5730017E033 /* FilterView.swift in Sources */,
+				22CE49DC2A3338CD0017E033 /* SortOrderButton.swift in Sources */,
 				22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */,
 				22E5D9632A14BEBE0088B869 /* EditFormExtension.swift in Sources */,
+				22CE49D82A3330DE0017E033 /* SearchBarCarsForSale.swift in Sources */,
 				22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */,
 				22CE49CC2A31E8DA0017E033 /* CarsForSale.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
@@ -421,6 +438,8 @@
 				2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */,
 				224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
+				22CE49D42A3315400017E033 /* LogOutView.swift in Sources */,
+				22CE49D62A3315F00017E033 /* AccentColorButtonText.swift in Sources */,
 				22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */,
 				2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */,
 				227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */,
@@ -435,6 +454,7 @@
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
 				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,
+				22CE49DA2A33335D0017E033 /* SortView.swift in Sources */,
 				22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */,
 				22CE49D22A31FE290017E033 /* RangeFields.swift in Sources */,
 				22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */,

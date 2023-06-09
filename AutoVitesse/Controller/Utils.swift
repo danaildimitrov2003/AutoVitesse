@@ -54,4 +54,10 @@ class Utils{
     func generateArray(min : Int, max : Int) -> Array<Int>{
         return Array(min...max)
     }
+    
+    enum SortOrder {
+        case ascending
+        case descending
+        case none
+    }
 }

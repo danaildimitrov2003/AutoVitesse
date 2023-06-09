@@ -33,21 +33,11 @@ struct ContentView: View {
                     .offset(x: logoAnimation ? 0 : -UIScreen.main.bounds.width/1.3)
                 VStack {
                     Button(action: {isSignInFormViewActive = true}) {
-                        Text("Sign In")
-                            .padding()
-                            .background(Color("AccentColor"))
-                            .foregroundColor(Color("WhiteTextColor"))
-                            .cornerRadius(10)
+                        AccentColorButtonText(buttonText: "Sign In")
                     }
 
-                    Button(action: {
-                        isSignUpFormViewActive = true
-                    }) {
-                        Text("Sign Up")
-                            .padding()
-                            .background(Color("AccentColor"))
-                            .foregroundColor(Color("WhiteTextColor"))
-                            .cornerRadius(10)
+                    Button(action: {isSignUpFormViewActive = true}) {
+                        AccentColorButtonText(buttonText: "Sign Up")
                     }
                 }
                 .overlay(

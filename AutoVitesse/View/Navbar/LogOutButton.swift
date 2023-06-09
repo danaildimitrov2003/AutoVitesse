@@ -8,18 +8,30 @@
 import SwiftUI
 
 struct LogOutButton: View {
-    @State var showLandingView = false
+    @State var showLogOutView = false
+    @State var selection: String? = ""
+    @State var selectionBinding = ""
     var body: some View {
-        Button(action: logOut) {
-            Image(systemName: "chevron.left")
-                .imageScale(.large)
-                .frame(width: 24, height: 24)
-                .foregroundColor(Color("WhiteTextColor"))
-                .padding(.leading, 10)
+        ZStack{
+            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), tag:"LogOut", selection: $selection) {}
+                .onChange(of: selectionBinding) { newValue in
+                    selection = selectionBinding
+                }
+            Button(action: logOut) {
+                Image(systemName: "chevron.left")
+                    .imageScale(.large)
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(Color("WhiteTextColor"))
+                    .padding(.leading, 10)
+            }
+            .buttonStyle(PlainButtonStyle())
+            
         }
-        .buttonStyle(PlainButtonStyle())
-        .fullScreenCover(isPresented: $showLandingView) {
-            ContentView()
+        
+        
+        
+        .sheet(isPresented: $showLogOutView) {
+            LogOutView(selection: $selectionBinding)
         }
     }
 }
