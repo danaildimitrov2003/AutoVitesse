@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct UserImagesList: View {
+    var utils = Utils()
     @ObservedResults(
     userImage.self,
       where: { $0.userId == appSession.currentUser?.idString ?? ""}
@@ -17,7 +18,7 @@ struct UserImagesList: View {
     var body: some View {
         if(userImages.count >= 1){
             ForEach(userImages) { image in
-                UserImageComponent(image: getImageFromName(fileName: image.imageId))
+                UserImageComponent(image: utils.getImageFromName(fileName: image.imageId))
             }
         }else{
             Text("There are no photos")

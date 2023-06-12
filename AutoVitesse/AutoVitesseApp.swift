@@ -12,11 +12,16 @@ import FBSDKCoreKit
 let appSession = AppSession()
 
 let config = Realm.Configuration(
-    schemaVersion: 2,
+    schemaVersion: 3,
     migrationBlock: { migration, oldSchemaVersion in
         if oldSchemaVersion < 2 {
             migration.enumerateObjects(ofType: Car.className()) { oldObject, newObject in
                 newObject?["apiId"] = ""
+            }
+        }
+        if oldSchemaVersion < 3 {
+            migration.enumerateObjects(ofType: CarForSale.className()) { oldObject, newObject in
+                newObject?["price"] = 0
             }
         }
     }
