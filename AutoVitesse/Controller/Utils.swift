@@ -77,4 +77,25 @@ class Utils{
         }
         return image
     }
+    
+    func saveImageLocally(image: UIImage, fileName: String) {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let url = documentsDirectory.appendingPathComponent(fileName)
+        if let data = image.pngData() {
+            do {
+                try data.write(to: url)
+            } catch {
+                print("Unable to Write \(fileName) Image Data to Disk")
+            }
+        }
+    }
+    
+    func checkBlanks(_ strings: [String]) -> Bool{
+        for string in strings {
+            if(string == ""){
+                return false
+            }
+        }
+        return true
+    }
 }

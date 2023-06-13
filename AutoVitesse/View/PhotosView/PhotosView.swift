@@ -32,7 +32,7 @@ struct PhotosView: View {
                     ImagePicker(sourceType: .camera, selectedImage: self.$image)
                 }
                 .onChange(of: image) { newValue in
-                    saveImageLocally(image: image, fileName: UUID().uuidString)
+                    saveImage(image: image)
                 }
                 UserImagesList()
             }

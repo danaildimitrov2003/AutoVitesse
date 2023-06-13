@@ -32,6 +32,8 @@
 		22CE49E02A37292A0017E033 /* CarForSaleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */; };
 		22CE49E22A3734F10017E033 /* CarsForSaleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49E12A3734F10017E033 /* CarsForSaleList.swift */; };
 		22CE49E82A3741CF0017E033 /* SellACarForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49E72A3741CF0017E033 /* SellACarForm.swift */; };
+		22CE49EC2A3868600017E033 /* NumericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49EB2A3868600017E033 /* NumericTextField.swift */; };
+		22CE49F02A3885FC0017E033 /* SellACarFormExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
 		22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5C2A0D11E300B21FD8 /* ContentView.swift */; };
 		22E26A5F2A0D11E400B21FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */; };
@@ -41,7 +43,7 @@
 		22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A702A0D1D4D00B21FD8 /* User.swift */; };
 		22E26A732A0D234800B21FD8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A722A0D234800B21FD8 /* Car.swift */; };
 		22E26A752A0D27CC00B21FD8 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */; };
-		22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A762A0D2E1200B21FD8 /* Countries.swift */; };
+		22E26A772A0D2E1200B21FD8 /* UtilData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A762A0D2E1200B21FD8 /* UtilData.swift */; };
 		22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94B2A12406E0088B869 /* SignInExtension.swift */; };
 		22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94E2A1247560088B869 /* TextFieldExtension.swift */; };
 		22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9502A1385BC0088B869 /* HomeView.swift */; };
@@ -111,6 +113,8 @@
 		22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarForSaleComponent.swift; sourceTree = "<group>"; };
 		22CE49E12A3734F10017E033 /* CarsForSaleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsForSaleList.swift; sourceTree = "<group>"; };
 		22CE49E72A3741CF0017E033 /* SellACarForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellACarForm.swift; sourceTree = "<group>"; };
+		22CE49EB2A3868600017E033 /* NumericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextField.swift; sourceTree = "<group>"; };
+		22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellACarFormExtension.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVitesseApp.swift; sourceTree = "<group>"; };
 		22E26A5C2A0D11E300B21FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +123,7 @@
 		22E26A702A0D1D4D00B21FD8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22E26A722A0D234800B21FD8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
-		22E26A762A0D2E1200B21FD8 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		22E26A762A0D2E1200B21FD8 /* UtilData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilData.swift; sourceTree = "<group>"; };
 		22E5D94B2A12406E0088B869 /* SignInExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtension.swift; sourceTree = "<group>"; };
 		22E5D94E2A1247560088B869 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D9502A1385BC0088B869 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -210,8 +214,8 @@
 		22CE49E62A3735700017E033 /* CarsForSaleView */ = {
 			isa = PBXGroup;
 			children = (
-				22CE49CB2A31E8DA0017E033 /* CarsForSale.swift */,
 				22CE49CD2A31F5730017E033 /* FilterView.swift */,
+				22CE49CB2A31E8DA0017E033 /* CarsForSale.swift */,
 				22CE49D92A33335D0017E033 /* SortView.swift */,
 				22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */,
 				22CE49E12A3734F10017E033 /* CarsForSaleList.swift */,
@@ -266,7 +270,7 @@
 			children = (
 				22E26A702A0D1D4D00B21FD8 /* User.swift */,
 				22E26A722A0D234800B21FD8 /* Car.swift */,
-				22E26A762A0D2E1200B21FD8 /* Countries.swift */,
+				22E26A762A0D2E1200B21FD8 /* UtilData.swift */,
 				22E5D9952A1CB4510088B869 /* FavouriteCars.swift */,
 				22FACA9B2A20B7E300EBF5D2 /* UserImage.swift */,
 				22CE49DD2A37269A0017E033 /* CarForSale.swift */,
@@ -317,6 +321,7 @@
 				2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */,
 				227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */,
 				224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */,
+				22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				22E5D9772A164B8C0088B869 /* EmailTextField.swift */,
 				22E5D9662A14CBB40088B869 /* PasswordTextField.swift */,
 				22E5D9872A1B68BC0088B869 /* SearchBarTextField.swift */,
+				22CE49EB2A3868600017E033 /* NumericTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */,
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
+				22CE49EC2A3868600017E033 /* NumericTextField.swift in Sources */,
 				2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */,
 				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
 				22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */,
@@ -485,6 +492,7 @@
 				2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */,
 				224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
+				22CE49F02A3885FC0017E033 /* SellACarFormExtension.swift in Sources */,
 				22CE49D42A3315400017E033 /* LogOutView.swift in Sources */,
 				22CE49D62A3315F00017E033 /* AccentColorButtonText.swift in Sources */,
 				22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */,
@@ -508,7 +516,7 @@
 				22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */,
 				22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */,
 				22E26A732A0D234800B21FD8 /* Car.swift in Sources */,
-				22E26A772A0D2E1200B21FD8 /* Countries.swift in Sources */,
+				22E26A772A0D2E1200B21FD8 /* UtilData.swift in Sources */,
 				22E5D9962A1CB4510088B869 /* FavouriteCars.swift in Sources */,
 				22FACA9A2A20B36E00EBF5D2 /* PhotosViewExtension.swift in Sources */,
 				22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */,

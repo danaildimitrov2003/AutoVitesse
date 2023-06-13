@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 
 struct RangeFields: View {
     @State var title : String
@@ -16,23 +15,9 @@ struct RangeFields: View {
         VStack{
             Text(title)
             HStack{
-                TextField("Min", text: $min)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(min)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.min = filtered
-                        }
-                    }
+                NumericTextField(title: "Min", value: $min)
                 Text("to")
-                TextField("Max", text: $max)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(max)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.max = filtered
-                        }
-                    }
+                NumericTextField(title: "Max", value: $max)
             }
             .background(Color("SecondaryGreen"))
         }

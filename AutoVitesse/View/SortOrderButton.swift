@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct SortOrderButton: View {
-
     @Binding var sortOrder : Utils.SortOrder
+    @Binding var otherSortOrder : Utils.SortOrder
+    @Binding var otherSortOrder2 : Utils.SortOrder
     @State var buttonText : String
+    
     var body: some View {
-        HStack{
+        HStack {
             Spacer()
             Text(buttonText)
             Button(action: {
                 switch sortOrder {
                 case .ascending:
                     sortOrder = .descending
+                    otherSortOrder = .none
+                    otherSortOrder2 = .none
                 case .descending:
                     sortOrder = .none
                 case .none:
                     sortOrder = .ascending
+                    otherSortOrder = .none
+                    otherSortOrder2 = .none
                 }
             }) {
                 switch sortOrder {
@@ -42,6 +48,6 @@ struct SortOrderButton: View {
 
 struct SortOrderButton_Previews: PreviewProvider {
     static var previews: some View {
-        SortOrderButton(sortOrder: .constant(Utils.SortOrder.none), buttonText: "Button")
+        SortOrderButton(sortOrder: .constant(Utils.SortOrder.none), otherSortOrder:.constant(Utils.SortOrder.none) , otherSortOrder2: .constant(Utils.SortOrder.none), buttonText: "Button")
     }
 }

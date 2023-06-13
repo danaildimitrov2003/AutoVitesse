@@ -16,7 +16,7 @@ struct CarsForSaleList: View {
     
     var body: some View {
         if(carsForSale.count >= 1){
-            ForEach(carsForSale) { car in
+            ForEach(carsForSale.reversed()) { car in
                 CarForSaleComponent(image: utils.getImageFromName(fileName: car.photoId), make: car.make, model: car.model, year: car.year, price: car.price)
             }
         }else{

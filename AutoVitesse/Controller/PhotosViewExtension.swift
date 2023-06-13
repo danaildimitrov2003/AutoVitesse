@@ -11,13 +11,11 @@ import RealmSwift
 
 extension PhotosView{
     
-    func saveImageLocally(image: UIImage, fileName: String) {
+    func saveImage(image: UIImage) {
         let utils = Utils()
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let url = documentsDirectory.appendingPathComponent(fileName)
-        if let data = image.pngData() {
+        let fileName = UUID().uuidString
+        utils.saveImageLocally(image: image, fileName: fileName)
             do {
-                try data.write(to: url)
                 let realm = try Realm(configuration: config)
                 realm.safeWrite {
                     let image = userImage()
@@ -26,8 +24,8 @@ extension PhotosView{
                     realm.add(image)
                 }
             } catch {
-                print("Unable to Write \(fileName) Image Data to Disk")
+                print("Unable to save image to Realm")
             }
         }
     }
-}
+

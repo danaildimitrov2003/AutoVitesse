@@ -16,9 +16,9 @@ struct SortView: View {
             VStack(alignment: .center){
                 Text("Sort")
                     .font(.title)
-                SortOrderButton(sortOrder: $alphabeticalSortOrder, buttonText: "Alphabetically")
-                SortOrderButton(sortOrder: $priceSortOrder, buttonText: "Price")
-                SortOrderButton(sortOrder: $yearSortOrder, buttonText: "Year")
+                SortOrderButton(sortOrder: $alphabeticalSortOrder, otherSortOrder: $priceSortOrder, otherSortOrder2: $yearSortOrder, buttonText: "Alphabetically")
+                SortOrderButton(sortOrder: $priceSortOrder, otherSortOrder: $alphabeticalSortOrder, otherSortOrder2: $yearSortOrder, buttonText: "Price")
+                SortOrderButton(sortOrder: $yearSortOrder, otherSortOrder: $alphabeticalSortOrder, otherSortOrder2: $priceSortOrder, buttonText: "Year")
             }
         }
     }

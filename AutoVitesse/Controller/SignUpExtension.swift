@@ -37,12 +37,7 @@ extension SignUpFormView {
         let completionData = [isUsernameCompleted, isEmailCompleted, isPasswordCompleted, isConfirmPasswordCompleted, isEmailConfirmed]
         var isFormCompleted = true
         isFormCompleted = utils.checkBools(completionData)
-        for data in userData {
-            if(data == ""){
-                isFormCompleted = false
-                break
-            }
-        }
+        isFormCompleted = utils.checkBlanks(userData)
         if(isFormCompleted){
             errorMessage = ""
             signUp()
