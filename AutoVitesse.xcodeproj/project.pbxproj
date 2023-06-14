@@ -30,10 +30,11 @@
 		22CE49DC2A3338CD0017E033 /* SortOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */; };
 		22CE49DE2A37269A0017E033 /* CarForSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49DD2A37269A0017E033 /* CarForSale.swift */; };
 		22CE49E02A37292A0017E033 /* CarForSaleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */; };
-		22CE49E22A3734F10017E033 /* CarsForSaleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49E12A3734F10017E033 /* CarsForSaleList.swift */; };
 		22CE49E82A3741CF0017E033 /* SellACarForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49E72A3741CF0017E033 /* SellACarForm.swift */; };
 		22CE49EC2A3868600017E033 /* NumericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49EB2A3868600017E033 /* NumericTextField.swift */; };
 		22CE49F02A3885FC0017E033 /* SellACarFormExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */; };
+		22CE49F22A39A6180017E033 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49F12A39A6180017E033 /* CarDetailView.swift */; };
+		22CE49F42A39B5890017E033 /* CarDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49F32A39B5890017E033 /* CarDetailItem.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
 		22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5C2A0D11E300B21FD8 /* ContentView.swift */; };
 		22E26A5F2A0D11E400B21FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */; };
@@ -111,10 +112,11 @@
 		22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrderButton.swift; sourceTree = "<group>"; };
 		22CE49DD2A37269A0017E033 /* CarForSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarForSale.swift; sourceTree = "<group>"; };
 		22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarForSaleComponent.swift; sourceTree = "<group>"; };
-		22CE49E12A3734F10017E033 /* CarsForSaleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsForSaleList.swift; sourceTree = "<group>"; };
 		22CE49E72A3741CF0017E033 /* SellACarForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellACarForm.swift; sourceTree = "<group>"; };
 		22CE49EB2A3868600017E033 /* NumericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextField.swift; sourceTree = "<group>"; };
 		22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellACarFormExtension.swift; sourceTree = "<group>"; };
+		22CE49F12A39A6180017E033 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		22CE49F32A39B5890017E033 /* CarDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailItem.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVitesseApp.swift; sourceTree = "<group>"; };
 		22E26A5C2A0D11E300B21FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,8 +220,9 @@
 				22CE49CB2A31E8DA0017E033 /* CarsForSale.swift */,
 				22CE49D92A33335D0017E033 /* SortView.swift */,
 				22CE49DF2A37292A0017E033 /* CarForSaleComponent.swift */,
-				22CE49E12A3734F10017E033 /* CarsForSaleList.swift */,
 				22CE49E72A3741CF0017E033 /* SellACarForm.swift */,
+				22CE49F12A39A6180017E033 /* CarDetailView.swift */,
+				22CE49F32A39B5890017E033 /* CarDetailItem.swift */,
 			);
 			path = CarsForSaleView;
 			sourceTree = "<group>";
@@ -488,7 +491,6 @@
 				22E5D98A2A1B6E840088B869 /* SearchBarTextFieldExtension.swift in Sources */,
 				22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */,
 				22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */,
-				22CE49E22A3734F10017E033 /* CarsForSaleList.swift in Sources */,
 				2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */,
 				224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */,
 				22E26A712A0D1D4D00B21FD8 /* User.swift in Sources */,
@@ -496,6 +498,8 @@
 				22CE49D42A3315400017E033 /* LogOutView.swift in Sources */,
 				22CE49D62A3315F00017E033 /* AccentColorButtonText.swift in Sources */,
 				22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */,
+				22CE49F42A39B5890017E033 /* CarDetailItem.swift in Sources */,
+				22CE49F22A39A6180017E033 /* CarDetailView.swift in Sources */,
 				2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */,
 				227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */,
 				22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */,

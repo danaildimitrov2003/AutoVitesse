@@ -18,7 +18,7 @@ class CarForSale: Object, ObjectKeyIdentifiable, Codable {
     @Persisted var horsePower = 0
     @Persisted var fuel = ""
     @Persisted var transmission = ""
-    @Persisted var mileage = ""
+    @Persisted var mileage = 0
     @Persisted var price = 0
     @Persisted var sellerId = ""
     @Persisted var photoId = ""

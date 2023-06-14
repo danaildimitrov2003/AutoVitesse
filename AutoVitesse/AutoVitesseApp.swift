@@ -12,7 +12,7 @@ import FBSDKCoreKit
 let appSession = AppSession()
 
 let config = Realm.Configuration(
-    schemaVersion: 3,
+    schemaVersion: 4,
     migrationBlock: { migration, oldSchemaVersion in
         if oldSchemaVersion < 2 {
             migration.enumerateObjects(ofType: Car.className()) { oldObject, newObject in
@@ -22,6 +22,15 @@ let config = Realm.Configuration(
         if oldSchemaVersion < 3 {
             migration.enumerateObjects(ofType: CarForSale.className()) { oldObject, newObject in
                 newObject?["price"] = 0
+            }
+        }
+        if oldSchemaVersion < 4 {
+            migration.enumerateObjects(ofType: CarForSale.className()) { oldObject, newObject in
+                if let mileage = oldObject?["mileage"] as? String {
+                    if let intValue = Int(mileage) {
+                        newObject?["mileage"] = intValue
+                    }
+                }
             }
         }
     }
@@ -41,25 +50,24 @@ struct AutoVitesseApp: SwiftUI.App {
     }
     
     class AppDelegate: NSObject, UIApplicationDelegate {
-            func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-                
-                ApplicationDelegate.shared.application(
-                    application,
-                    didFinishLaunchingWithOptions: launchOptions
-                )
-                return true
-            }
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
-            
-            func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-                
-                ApplicationDelegate.shared.application(
-                    app,
-                    open: url,
-                    sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                    annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-                )
-            }
+            ApplicationDelegate.shared.application(
+                application,
+                didFinishLaunchingWithOptions: launchOptions
+            )
+            return true
         }
+        
+        func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+            
+            ApplicationDelegate.shared.application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
+        }
+    }
 }
 

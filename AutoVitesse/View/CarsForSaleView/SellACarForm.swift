@@ -40,7 +40,7 @@ struct SellACarForm: View {
                         Text("\(option)")
                     }
                 }
-                TextField("Description", text: $description)
+                //TextField("Description", text: $description)
                 NumericTextField(title: "HorsePower", value: $horsePower)
                 Picker("Fuel", selection: $fuel) {
                     ForEach(fuelTypes, id: \.self) { option in
@@ -55,6 +55,8 @@ struct SellACarForm: View {
                 NumericTextField(title: "Mileage", value: $mileage)
                 Group{
                     NumericTextField(title: "Price", value: $price)
+                    Text("Description")
+                    TextEditor(text: $description)
                     Text("Photo")
                     HStack {
                         Spacer()
@@ -83,7 +85,6 @@ struct SellACarForm: View {
                             Spacer()
                         }
                     }
-                    
                     if errorMessage != "" {
                         Text(errorMessage)
                             .foregroundColor(.red)
