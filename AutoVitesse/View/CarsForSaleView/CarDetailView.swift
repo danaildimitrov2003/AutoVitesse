@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CarDetailView: View {
     let carForSale: CarForSale
     @State private var carImage: UIImage?

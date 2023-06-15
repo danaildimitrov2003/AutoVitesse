@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SortView: View {
-    @State var alphabeticalSortOrder = Utils.SortOrder.none
-    @State var priceSortOrder = Utils.SortOrder.none
-    @State var yearSortOrder = Utils.SortOrder.none
+    @Binding var alphabeticalSortOrder : Utils.SortOrder
+    @Binding var priceSortOrder : Utils.SortOrder
+    @Binding var yearSortOrder : Utils.SortOrder
+    let sortCars: () -> Void
     var body: some View {
         List{
             VStack(alignment: .center){
@@ -19,6 +20,15 @@ struct SortView: View {
                 SortOrderButton(sortOrder: $alphabeticalSortOrder, otherSortOrder: $priceSortOrder, otherSortOrder2: $yearSortOrder, buttonText: "Alphabetically")
                 SortOrderButton(sortOrder: $priceSortOrder, otherSortOrder: $alphabeticalSortOrder, otherSortOrder2: $yearSortOrder, buttonText: "Price")
                 SortOrderButton(sortOrder: $yearSortOrder, otherSortOrder: $alphabeticalSortOrder, otherSortOrder2: $priceSortOrder, buttonText: "Year")
+                    .onChange(of: alphabeticalSortOrder) { newValue in
+                        sortCars()
+                    }
+                    .onChange(of: priceSortOrder) { newValue in
+                        sortCars()
+                    }
+                    .onChange(of: yearSortOrder) { newValue in
+                        sortCars()
+                    }
             }
         }
     }
@@ -26,6 +36,6 @@ struct SortView: View {
 
 struct SortView_Previews: PreviewProvider {
     static var previews: some View {
-        SortView()
+        SortView(alphabeticalSortOrder: .constant(Utils.SortOrder.none), priceSortOrder: .constant(Utils.SortOrder.none), yearSortOrder: .constant(Utils.SortOrder.none), sortCars: {print("Sorted!")})
     }
 }

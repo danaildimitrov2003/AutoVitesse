@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RangeFields: View {
     @State var title : String
-    @State var min : String
-    @State var max : String
+    @Binding var min : String
+    @Binding var max : String
     var body: some View {
         VStack{
             Text(title)
@@ -26,6 +26,6 @@ struct RangeFields: View {
 
 struct RangeFields_Previews: PreviewProvider {
     static var previews: some View {
-        RangeFields(title: "Price", min: "1000", max: "100000")
+        RangeFields(title: "Price", min: .constant("1000"), max: .constant("100000"))
     }
 }

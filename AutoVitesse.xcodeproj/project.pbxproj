@@ -35,6 +35,8 @@
 		22CE49F02A3885FC0017E033 /* SellACarFormExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */; };
 		22CE49F22A39A6180017E033 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49F12A39A6180017E033 /* CarDetailView.swift */; };
 		22CE49F42A39B5890017E033 /* CarDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49F32A39B5890017E033 /* CarDetailItem.swift */; };
+		22CE49F62A3AE9D80017E033 /* CarsForSaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */; };
+		22CE49FC2A3B3D710017E033 /* FilterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */; };
 		22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */; };
 		22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A5C2A0D11E300B21FD8 /* ContentView.swift */; };
 		22E26A5F2A0D11E400B21FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E26A5E2A0D11E400B21FD8 /* Assets.xcassets */; };
@@ -117,6 +119,8 @@
 		22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellACarFormExtension.swift; sourceTree = "<group>"; };
 		22CE49F12A39A6180017E033 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		22CE49F32A39B5890017E033 /* CarDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailItem.swift; sourceTree = "<group>"; };
+		22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsForSaleExtension.swift; sourceTree = "<group>"; };
+		22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewExtension.swift; sourceTree = "<group>"; };
 		22E26A572A0D11E300B21FD8 /* AutoVitesse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVitesse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E26A5A2A0D11E300B21FD8 /* AutoVitesseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVitesseApp.swift; sourceTree = "<group>"; };
 		22E26A5C2A0D11E300B21FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 				227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */,
 				224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */,
 				22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */,
+				22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */,
+				22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				22CE49DE2A37269A0017E033 /* CarForSale.swift in Sources */,
 				22CE49D22A31FE290017E033 /* RangeFields.swift in Sources */,
 				22E5D9572A139BC20088B869 /* LogOutButton.swift in Sources */,
+				22CE49FC2A3B3D710017E033 /* FilterViewExtension.swift in Sources */,
 				22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */,
 				22E26A732A0D234800B21FD8 /* Car.swift in Sources */,
 				22E26A772A0D2E1200B21FD8 /* UtilData.swift in Sources */,
@@ -530,6 +537,7 @@
 				227416352A305E6A00E0AA78 /* FacebookSignUpView.swift in Sources */,
 				22CE49D02A31F73E0017E033 /* RangePicker.swift in Sources */,
 				22E5D99C2A1CD2240088B869 /* FavouritesViewExtension.swift in Sources */,
+				22CE49F62A3AE9D80017E033 /* CarsForSaleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
