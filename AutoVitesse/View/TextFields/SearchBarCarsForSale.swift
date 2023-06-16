@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SearchBarCarsForSale: View {
-    @State var search = ""
+    @Binding var search : String
+    let searchCars: () -> Void
     var body: some View {
         HStack {
             TextField("Search", text: $search)
@@ -16,7 +17,7 @@ struct SearchBarCarsForSale: View {
                 .font(.title)
                 .frame(width: 220)
                 .onChange(of: search) { newValue in
-                    
+                    searchCars()
                 }
             Image(systemName:"magnifyingglass")
                 .resizable()
@@ -30,6 +31,6 @@ struct SearchBarCarsForSale: View {
 
 struct SearchBarCarsForSale_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBarCarsForSale()
+        SearchBarCarsForSale(search: .constant(""), searchCars: {print("Searched!")})
     }
 }

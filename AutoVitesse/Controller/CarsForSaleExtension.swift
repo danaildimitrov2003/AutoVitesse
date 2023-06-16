@@ -11,7 +11,7 @@ extension CarsForSale{
     
     func sortCarsForSale() {
         if priceSortOrder == .none && yearSortOrder == .none && alphabeticalSortOrder == .none {
-            carsForSaleArray = filteredCarsForSaleArray
+            carsForSaleArray = searchCarsForSaleArray
             return
         }
         
@@ -75,8 +75,43 @@ extension CarsForSale{
             
             return passFilters
         }
-        carsForSaleArray = filteredCarsForSaleArray
+        searchCarsForSale() 
+    }
+    
+    func clearFilterCarsForSale(){
+        filteredCarsForSaleArray = carsForSale.reversed()
+        searchCarsForSale()
+        make = ""
+        model = ""
+        model2 = ""
+        model3 = ""
+        minYear = 1984
+        maxYear = 2024
+        minPrice = "1000"
+        maxPrice = "1000000"
+    }
+    
+    func searchCarsForSale() {
+        searchCarsForSaleArray = filteredCarsForSaleArray.filter { car in
+            var passFilters = true
+            
+            if !search.isEmpty {
+                let lowercasedSearch = search.lowercased()
+                
+                if car.make.lowercased().hasPrefix(lowercasedSearch) ||
+                    car.model.lowercased().hasPrefix(lowercasedSearch) {
+                    passFilters = true
+                } else {
+                    let yearContainsSearch = String(car.year).contains(lowercasedSearch)
+                    passFilters = yearContainsSearch
+                }
+            }
+            
+            return passFilters
+        }
+        carsForSaleArray = searchCarsForSaleArray
         sortCarsForSale()
     }
+    
     
 }

@@ -17,14 +17,18 @@ struct CarsForSale: View {
     @State var yearSortOrder = Utils.SortOrder.none
     @State var carsForSaleArray: [CarForSale] = []
     @State var filteredCarsForSaleArray: [CarForSale] = []
+    @State var searchCarsForSaleArray: [CarForSale] = []
     @State var make = ""
     @State var model = ""
     @State var model2 = ""
     @State var model3 = ""
     @State var minYear = 1984
     @State var maxYear = 2024
+    @State var minYearInitial = 1984
+    @State var maxYearInitial = 2024
     @State var minPrice = "1000"
     @State var maxPrice = "1000000"
+    @State var search = ""
     @ObservedResults(CarForSale.self) var carsForSale
     var utils = Utils()
     var body: some View {
@@ -33,7 +37,7 @@ struct CarsForSale: View {
                 Color("BackgroundColor").ignoresSafeArea(.all)
                 ScrollView {
                     VStack{
-                        SearchBarCarsForSale()
+                        SearchBarCarsForSale(search: $search, searchCars: searchCarsForSale)
                         HStack{
                             Button(action: {isFilterOpened.toggle()}) {
                                 AccentColorButtonText(buttonText: "Filter")
@@ -46,7 +50,7 @@ struct CarsForSale: View {
                             AccentColorButtonText(buttonText: "Sell a car")
                         }
                         .sheet(isPresented: $isFilterOpened) {
-                            FilterView(makeBinding: $make, modelBinding: $model, model2Binding: $model2, model3Binding: $model3, minYearBinding: $minYear, maxYearBinding: $maxYear, minPriceBinding: $minPrice, maxPriceBinding: $maxPrice, filterCars: filterCarsForSale)
+                            FilterView(makeBinding: $make, modelBinding: $model, model2Binding: $model2, model3Binding: $model3, minYearBinding: $minYear, maxYearBinding: $minYear, minYearInitial: minYearInitial, maxYearInitial: maxYearInitial, minPriceBinding: $minPrice, maxPriceBinding: $maxPrice, filterCars: filterCarsForSale, clearFilterCars: clearFilterCarsForSale)
                         }
                         .sheet(isPresented: $isSortOpened) {
                             SortView(alphabeticalSortOrder: $alphabeticalSortOrder, priceSortOrder: $priceSortOrder, yearSortOrder: $yearSortOrder, sortCars: sortCarsForSale)

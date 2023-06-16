@@ -22,9 +22,13 @@ struct FilterView: View {
     @State var model3 : String
     @State var minYear : Int
     @State var maxYear : Int
+    @State var minYearInitial : Int
+    @State var maxYearInitial : Int
     @State var minPrice : String
     @State var maxPrice : String
+    @State var errorMessage = ""
     let filterCars: () -> Void
+    let clearFilterCars: () -> Void
     
     init(makeBinding: Binding<String>,
          modelBinding: Binding<String>,
@@ -32,9 +36,12 @@ struct FilterView: View {
          model3Binding: Binding<String>,
          minYearBinding: Binding<Int>,
          maxYearBinding: Binding<Int>,
+         minYearInitial: Int,
+         maxYearInitial: Int,
          minPriceBinding: Binding<String>,
          maxPriceBinding: Binding<String>,
-         filterCars: @escaping () -> Void) {
+         filterCars: @escaping () -> Void,
+         clearFilterCars: @escaping () -> Void) {
         
         _makeBinding = makeBinding
         _modelBinding = modelBinding
@@ -54,7 +61,10 @@ struct FilterView: View {
         _minPrice = State(initialValue: minPriceBinding.wrappedValue)
         _maxPrice = State(initialValue: maxPriceBinding.wrappedValue)
         
+        self.minYearInitial = minYearInitial
+        self.maxYearInitial = maxYearInitial
         self.filterCars = filterCars
+        self.clearFilterCars = clearFilterCars
     } 
     
     var body: some View {
@@ -74,7 +84,7 @@ struct FilterView: View {
                 }else{
                     Text("Please select a make to select models")
                 }
-                RangePicker(title: "Year", min: minYear, max: maxYear)
+                RangePicker(title: "Year", min: minYearInitial, max: maxYearInitial, minBinding: $minYear, maxBinding: $maxYear)
                 RangeFields(title: "Price", min: $minPrice, max: $maxPrice)
             }
             HStack{
@@ -91,7 +101,10 @@ struct FilterView: View {
                 }
                 Spacer()
             }
-            
+            if errorMessage != "" {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            }
         }
         
         
@@ -100,6 +113,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView(makeBinding: .constant(""), modelBinding: .constant(""), model2Binding: .constant(""), model3Binding: .constant(""), minYearBinding: .constant(1984), maxYearBinding: .constant(2024), minPriceBinding: .constant("1000"), maxPriceBinding: .constant("10000"), filterCars: {print("Filtered!")})
+        FilterView(makeBinding: .constant(""), modelBinding: .constant(""), model2Binding: .constant(""), model3Binding: .constant(""), minYearBinding: .constant(1984), maxYearBinding: .constant(2024), minYearInitial: 1984, maxYearInitial: 2024, minPriceBinding: .constant("1000"), maxPriceBinding: .constant("1000000"), filterCars: {print("Filtered!")}, clearFilterCars: {print("Cleared Filter!")})
     }
 }
