@@ -10,7 +10,6 @@ import Foundation
 extension FilterView{
     func saveFilter(){
         if minYear > maxYear {
-            print("jjj")
             errorMessage = "Please enter a valid years range!"
         } else {
             if let intMinPrice = Int(minPrice), let intMaxPrice = Int(maxPrice) {

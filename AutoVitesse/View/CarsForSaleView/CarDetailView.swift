@@ -46,7 +46,7 @@ struct CarDetailView: View {
                             CarDetailItem(title: "Price", value: "\(carForSale.price) $")
                         }
                         VStack(alignment: .leading){
-                            Text("Description:")
+                            Text("Description")
                                 .font(.headline)
                                 .foregroundColor(.secondary)
                             Text(carForSale.carDescription)
@@ -54,7 +54,9 @@ struct CarDetailView: View {
                                 .font(.title2)
                                 .foregroundColor(Color("TextColor"))
                         }
-                        
+                    }
+                    Button(action: {}) {
+                        AccentColorButtonText(buttonText: "Message Seller")
                     }
                 }
                 .padding()

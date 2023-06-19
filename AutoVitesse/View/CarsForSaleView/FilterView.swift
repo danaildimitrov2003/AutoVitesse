@@ -84,7 +84,7 @@ struct FilterView: View {
                 }else{
                     Text("Please select a make to select models")
                 }
-                RangePicker(title: "Year", min: minYearInitial, max: maxYearInitial, minBinding: $minYear, maxBinding: $maxYear)
+                RangePicker(title: "Year", minBinding: $minYear, maxBinding: $maxYear, min: minYearInitial, max: maxYearInitial)
                 RangeFields(title: "Price", min: $minPrice, max: $maxPrice)
             }
             HStack{

@@ -19,7 +19,6 @@ struct RangeFields: View {
                 Text("to")
                 NumericTextField(title: "Max", value: $max)
             }
-            .background(Color("SecondaryGreen"))
         }
     }
 }

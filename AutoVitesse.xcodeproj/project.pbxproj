@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		224AD06E2A3067690035FF47 /* FacebookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06D2A3067690035FF47 /* FacebookButton.swift */; };
 		224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */; };
-		2274161B2A20CB3200E0AA78 /* UserImagesListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */; };
 		2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161C2A25D03400E0AA78 /* RealmExtension.swift */; };
 		2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */; };
 		227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416202A273F8200E0AA78 /* UiImageExtension.swift */; };
@@ -92,7 +91,6 @@
 /* Begin PBXFileReference section */
 		224AD06D2A3067690035FF47 /* FacebookButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButton.swift; sourceTree = "<group>"; };
 		224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButtonExtension.swift; sourceTree = "<group>"; };
-		2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImagesListExtension.swift; sourceTree = "<group>"; };
 		2274161C2A25D03400E0AA78 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentExtension.swift; sourceTree = "<group>"; };
 		227416202A273F8200E0AA78 /* UiImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtension.swift; sourceTree = "<group>"; };
@@ -288,6 +286,8 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22E414EE2A406E1C002C31A1 /* Components */,
+				22E414ED2A40664B002C31A1 /* Authentecation */,
 				22CE49E62A3735700017E033 /* CarsForSaleView */,
 				22CE49E52A3735510017E033 /* CarsView */,
 				22CE49E42A3735360017E033 /* PhotosView */,
@@ -295,16 +295,6 @@
 				22E5D97F2A165AD80088B869 /* TextFields */,
 				22E5D96E2A1622A40088B869 /* Navbar */,
 				22E26A5C2A0D11E300B21FD8 /* ContentView.swift */,
-				22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */,
-				22C02CC12A0E71B9004FB233 /* SignInForm.swift */,
-				22E5D9682A14CF1C0088B869 /* SideMenu.swift */,
-				22FACA972A209A4000EBF5D2 /* ImagePicker.swift */,
-				227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */,
-				224AD06D2A3067690035FF47 /* FacebookButton.swift */,
-				22CE49CF2A31F73D0017E033 /* RangePicker.swift */,
-				22CE49D12A31FE290017E033 /* RangeFields.swift */,
-				22CE49D52A3315F00017E033 /* AccentColorButtonText.swift */,
-				22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,27 +302,97 @@
 		22E26A6F2A0D170D00B21FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22E414F52A406F93002C31A1 /* CarsForSale */,
+				22E414F42A406F87002C31A1 /* Photos */,
+				22E414F32A406F52002C31A1 /* Cars */,
+				22E414F22A406F39002C31A1 /* Home */,
+				22E414F12A406EF8002C31A1 /* Navbar */,
+				22E414EF2A406E56002C31A1 /* Authentecation */,
 				22E5D9802A165AF40088B869 /* TextFields */,
-				22C02CC32A0E737B004FB233 /* SignUpExtension.swift */,
-				22E5D94B2A12406E0088B869 /* SignInExtension.swift */,
-				22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */,
-				22E5D9622A14BEBE0088B869 /* EditFormExtension.swift */,
-				22E5D9642A14C2060088B869 /* ProfileViewExtension.swift */,
-				22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */,
 				22E5D96F2A1622ED0088B869 /* Utils.swift */,
-				22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */,
-				22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */,
-				22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */,
-				22FACA992A20B36E00EBF5D2 /* PhotosViewExtension.swift */,
-				2274161A2A20CB3200E0AA78 /* UserImagesListExtension.swift */,
-				2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */,
-				227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */,
-				224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */,
-				22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */,
-				22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */,
-				22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		22E414ED2A40664B002C31A1 /* Authentecation */ = {
+			isa = PBXGroup;
+			children = (
+				22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */,
+				22C02CC12A0E71B9004FB233 /* SignInForm.swift */,
+				227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */,
+				224AD06D2A3067690035FF47 /* FacebookButton.swift */,
+			);
+			path = Authentecation;
+			sourceTree = "<group>";
+		};
+		22E414EE2A406E1C002C31A1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22CE49DB2A3338CD0017E033 /* SortOrderButton.swift */,
+				22CE49D52A3315F00017E033 /* AccentColorButtonText.swift */,
+				22CE49D12A31FE290017E033 /* RangeFields.swift */,
+				22CE49CF2A31F73D0017E033 /* RangePicker.swift */,
+				22FACA972A209A4000EBF5D2 /* ImagePicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22E414EF2A406E56002C31A1 /* Authentecation */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D94B2A12406E0088B869 /* SignInExtension.swift */,
+				227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */,
+				224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */,
+				22C02CC32A0E737B004FB233 /* SignUpExtension.swift */,
+			);
+			path = Authentecation;
+			sourceTree = "<group>";
+		};
+		22E414F12A406EF8002C31A1 /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */,
+				22E5D9582A139EF50088B869 /* LogOutButtonExtension.swift */,
+				22E5D96C2A14E6590088B869 /* NavbarContainerViewExtension.swift */,
+			);
+			path = Navbar;
+			sourceTree = "<group>";
+		};
+		22E414F22A406F39002C31A1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D9622A14BEBE0088B869 /* EditFormExtension.swift */,
+				22E5D99B2A1CD2240088B869 /* FavouritesViewExtension.swift */,
+				22E5D9642A14C2060088B869 /* ProfileViewExtension.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22E414F32A406F52002C31A1 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */,
+				22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		22E414F42A406F87002C31A1 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				22FACA992A20B36E00EBF5D2 /* PhotosViewExtension.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		22E414F52A406F93002C31A1 /* CarsForSale */ = {
+			isa = PBXGroup;
+			children = (
+				22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */,
+				22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */,
+				22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */,
+			);
+			path = CarsForSale;
 			sourceTree = "<group>";
 		};
 		22E5D94D2A12473F0088B869 /* Extensions */ = {
@@ -349,6 +409,7 @@
 		22E5D96E2A1622A40088B869 /* Navbar */ = {
 			isa = PBXGroup;
 			children = (
+				22E5D9682A14CF1C0088B869 /* SideMenu.swift */,
 				22CE49D32A3315400017E033 /* LogOutView.swift */,
 				22E5D96A2A14E2F80088B869 /* NavbarContainerView.swift */,
 				22E5D9542A139AD00088B869 /* Navbar.swift */,
@@ -515,7 +576,6 @@
 				22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */,
 				22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */,
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
-				2274161B2A20CB3200E0AA78 /* UserImagesListExtension.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
 				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,

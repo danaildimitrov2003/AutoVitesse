@@ -14,18 +14,6 @@ struct RangePicker: View {
     @Binding var maxBinding: Int
     @State var min: Int
     @State var max: Int
-    @State var minSelection: Int
-    @State var maxSelection: Int
-    
-    init(title: String, min: Int, max: Int, minBinding: Binding<Int>, maxBinding: Binding<Int>) {
-        self.title = title
-        self.min = min
-        self.max = max
-        self._minBinding = minBinding
-        self._maxBinding = maxBinding
-        self._minSelection = State(initialValue: min)
-        self._maxSelection = State(initialValue: max)
-    }
     
     var body: some View {
         VStack{
@@ -38,18 +26,17 @@ struct RangePicker: View {
                 }
                 Text("to")
                 Picker(selection: $maxBinding, label: Text("")) {
-                    ForEach(utils.generateArray(min: minBinding, max: maxBinding), id: \.self) { option in
+                    ForEach(utils.generateArray(min: min, max: max), id: \.self) { option in
                         Text(String(option))
                     }
                 }
             }
-            .background(Color("SecondaryGreen"))
         }
     }
 }
 
 struct RangePicker_Previews: PreviewProvider {
     static var previews: some View {
-        RangePicker(title: "Picker", min: 1984, max: 2024, minBinding: .constant(1984), maxBinding: .constant(2024))
+        RangePicker(title: "Picker", minBinding: .constant(1084), maxBinding: .constant(2024), min: 1984, max: 2024)
     }
 }
