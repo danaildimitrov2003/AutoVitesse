@@ -19,7 +19,8 @@ struct MenuContent: View{
         MenuItem(text: "Home", imageName: "house.fill"),
         MenuItem(text: "Cars", imageName: "car.2.fill"),
         MenuItem(text: "Photos", imageName: "camera.fill"),
-        MenuItem(text: "Cars For Sale", imageName: "car.rear.waves.up.fill"),  ]
+        MenuItem(text: "Cars For Sale", imageName: "car.rear.waves.up.fill"),
+        MenuItem(text: "Messages", imageName: "ellipsis.message.fill") ]
     let toggleMenu: () -> Void
     let currentViewName : String
     
@@ -31,6 +32,7 @@ struct MenuContent: View{
                 NavigationLink(destination: NavbarContainerView(currentViewName: "Cars"){CarsView()}, tag:"Cars", selection: $selection) {}
                 NavigationLink(destination: NavbarContainerView(currentViewName: "Photos"){PhotosView()}, tag:"Photos", selection: $selection) {}
                 NavigationLink(destination: NavbarContainerView(currentViewName: "Cars For Sale"){CarsForSale()}, tag:"Cars For Sale", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Messages"){MessagesView()}, tag:"Messages", selection: $selection) {}
                 ForEach(items) { item in
                     Button(action: {handleButtonTab(itemText: item.text)}) {
                         HStack{

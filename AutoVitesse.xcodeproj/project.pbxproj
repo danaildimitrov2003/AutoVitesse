@@ -46,6 +46,10 @@
 		22E26A732A0D234800B21FD8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A722A0D234800B21FD8 /* Car.swift */; };
 		22E26A752A0D27CC00B21FD8 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */; };
 		22E26A772A0D2E1200B21FD8 /* UtilData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E26A762A0D2E1200B21FD8 /* UtilData.swift */; };
+		22E414F72A417EAB002C31A1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E414F62A417EAB002C31A1 /* Messages.swift */; };
+		22E414FD2A4197F4002C31A1 /* CarMessageComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E414FC2A4197F4002C31A1 /* CarMessageComposeView.swift */; };
+		22E414FF2A41A465002C31A1 /* CarMessageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E414FE2A41A465002C31A1 /* CarMessageExtension.swift */; };
+		22E415022A41ADD2002C31A1 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415012A41ADD2002C31A1 /* MessagesView.swift */; };
 		22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94B2A12406E0088B869 /* SignInExtension.swift */; };
 		22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94E2A1247560088B869 /* TextFieldExtension.swift */; };
 		22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9502A1385BC0088B869 /* HomeView.swift */; };
@@ -128,6 +132,10 @@
 		22E26A722A0D234800B21FD8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		22E26A742A0D27CC00B21FD8 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
 		22E26A762A0D2E1200B21FD8 /* UtilData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilData.swift; sourceTree = "<group>"; };
+		22E414F62A417EAB002C31A1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		22E414FC2A4197F4002C31A1 /* CarMessageComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMessageComposeView.swift; sourceTree = "<group>"; };
+		22E414FE2A41A465002C31A1 /* CarMessageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMessageExtension.swift; sourceTree = "<group>"; };
+		22E415012A41ADD2002C31A1 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		22E5D94B2A12406E0088B869 /* SignInExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtension.swift; sourceTree = "<group>"; };
 		22E5D94E2A1247560088B869 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D9502A1385BC0088B869 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -225,6 +233,7 @@
 				22CE49E72A3741CF0017E033 /* SellACarForm.swift */,
 				22CE49F12A39A6180017E033 /* CarDetailView.swift */,
 				22CE49F32A39B5890017E033 /* CarDetailItem.swift */,
+				22E414FC2A4197F4002C31A1 /* CarMessageComposeView.swift */,
 			);
 			path = CarsForSaleView;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				22E5D9952A1CB4510088B869 /* FavouriteCars.swift */,
 				22FACA9B2A20B7E300EBF5D2 /* UserImage.swift */,
 				22CE49DD2A37269A0017E033 /* CarForSale.swift */,
+				22E414F62A417EAB002C31A1 /* Messages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +296,7 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22E415002A41ADB4002C31A1 /* Messages */,
 				22E414EE2A406E1C002C31A1 /* Components */,
 				22E414ED2A40664B002C31A1 /* Authentecation */,
 				22CE49E62A3735700017E033 /* CarsForSaleView */,
@@ -391,8 +402,17 @@
 				22CE49EF2A3885FC0017E033 /* SellACarFormExtension.swift */,
 				22CE49FB2A3B3D710017E033 /* FilterViewExtension.swift */,
 				22CE49F52A3AE9D80017E033 /* CarsForSaleExtension.swift */,
+				22E414FE2A41A465002C31A1 /* CarMessageExtension.swift */,
 			);
 			path = CarsForSale;
+			sourceTree = "<group>";
+		};
+		22E415002A41ADB4002C31A1 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				22E415012A41ADD2002C31A1 /* MessagesView.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		22E5D94D2A12473F0088B869 /* Extensions */ = {
@@ -526,11 +546,13 @@
 			files = (
 				22FACA9C2A20B7E300EBF5D2 /* UserImage.swift in Sources */,
 				22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */,
+				22E414FD2A4197F4002C31A1 /* CarMessageComposeView.swift in Sources */,
 				22FACAA02A20BF7500EBF5D2 /* UserImagesList.swift in Sources */,
 				22E5D9612A14AE6A0088B869 /* EditForm.swift in Sources */,
 				22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */,
 				22E5D9672A14CBB40088B869 /* PasswordTextField.swift in Sources */,
 				22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */,
+				22E414F72A417EAB002C31A1 /* Messages.swift in Sources */,
 				22E5D95F2A13B41D0088B869 /* FavouritesView.swift in Sources */,
 				22E26A752A0D27CC00B21FD8 /* SignUpForm.swift in Sources */,
 				22E5D97A2A164C800088B869 /* EmailTextFieldExtension.swift in Sources */,
@@ -548,6 +570,7 @@
 				22E5D9842A1795DC0088B869 /* CarsView.swift in Sources */,
 				22CE49E02A37292A0017E033 /* CarForSaleComponent.swift in Sources */,
 				22CE49E82A3741CF0017E033 /* SellACarForm.swift in Sources */,
+				22E414FF2A41A465002C31A1 /* CarMessageExtension.swift in Sources */,
 				22E5D9632A14BEBE0088B869 /* EditFormExtension.swift in Sources */,
 				22CE49D82A3330DE0017E033 /* SearchBarCarsForSale.swift in Sources */,
 				22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */,
@@ -571,6 +594,7 @@
 				227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */,
 				22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
+				22E415022A41ADD2002C31A1 /* MessagesView.swift in Sources */,
 				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
 				227416372A3060EC00E0AA78 /* FacebookSignUpExtension.swift in Sources */,
 				22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */,

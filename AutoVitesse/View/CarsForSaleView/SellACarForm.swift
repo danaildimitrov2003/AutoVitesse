@@ -40,7 +40,6 @@ struct SellACarForm: View {
                         Text("\(option)")
                     }
                 }
-                //TextField("Description", text: $description)
                 NumericTextField(title: "HorsePower", value: $horsePower)
                 Picker("Fuel", selection: $fuel) {
                     ForEach(fuelTypes, id: \.self) { option in

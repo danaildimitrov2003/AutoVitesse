@@ -98,4 +98,15 @@ class Utils{
         }
         return true
     }
+    
+    func getUserByID(userID: String) -> User? {
+        do {
+            let realm = try Realm()
+            let user = realm.object(ofType: User.self, forPrimaryKey: try ObjectId(string: userID))
+            return user
+        } catch {
+            print("Error: \(error)")
+            return nil
+        }
+    }
 }

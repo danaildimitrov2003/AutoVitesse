@@ -10,6 +10,7 @@ import SwiftUI
 struct CarDetailView: View {
     let carForSale: CarForSale
     @State private var carImage: UIImage?
+    @State var showCarMassage = false
     var utils = Utils()
     
     var body: some View {
@@ -55,7 +56,7 @@ struct CarDetailView: View {
                                 .foregroundColor(Color("TextColor"))
                         }
                     }
-                    Button(action: {}) {
+                    Button(action: {showCarMassage.toggle()}) {
                         AccentColorButtonText(buttonText: "Message Seller")
                     }
                 }
@@ -64,6 +65,9 @@ struct CarDetailView: View {
                     carImage = utils.getImageFromName(fileName: carForSale.photoId)
                 }
             .navigationBarTitle("Car Details")
+            }
+            .sheet(isPresented: $showCarMassage) {
+                CarMessageComposeView(carForSale: carForSale)
             }
         }
     }
@@ -84,7 +88,7 @@ struct CarDetailView_Previews: PreviewProvider {
         carForSale.transmission = "Automatic"
         carForSale.mileage = 10000
         carForSale.price = 85000
-        carForSale.sellerId = "12345"
+        carForSale.sellerId = "6465e8bf881c671df018abdd"
         carForSale.photoId = "D94B19B6-E660-40B7-AF6C-73B4B31719CA"
         return CarDetailView(carForSale: carForSale)
     }
