@@ -23,7 +23,6 @@ struct FacebookSignUpView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                //Color.purple.ignoresSafeArea()
                 Form {
                     TextField("Email", text: $email)
                         .disableAutocorrectAndAutocapitalize()

@@ -21,7 +21,7 @@ class Dialogue: Object, ObjectKeyIdentifiable {
     
 }
 
-class Message: Object{
+class Message: Object, Identifiable{
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var senderId = ""
     @Persisted var message = ""

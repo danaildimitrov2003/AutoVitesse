@@ -72,7 +72,7 @@ struct CarsForSale: View {
                     }
                 }
                 .navigationDestination(for: CarForSale.self){ car in
-                    CarDetailView(carForSale: car)
+                    CarDetailView(carForSale: car, showMessageButton: true)
                 }
                 .onChange(of: carsForSale) { newValue in
                     filterCarsForSale()

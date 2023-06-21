@@ -109,4 +109,15 @@ class Utils{
             return nil
         }
     }
+    
+    func getCarForSaleByID(carForSaleID: String) -> CarForSale? {
+        do {
+            let realm = try Realm()
+            let carForSale = realm.object(ofType: CarForSale.self, forPrimaryKey: try ObjectId(string: carForSaleID))
+            return carForSale
+        } catch {
+            print("Error: \(error)")
+            return nil
+        }
+    }
 }

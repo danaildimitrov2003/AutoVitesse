@@ -26,10 +26,12 @@ extension CarMessageComposeView{
                 realm.add(dialogue)
                 dialogue.messages.append(message)
             }
+            errorMessage = ""
             presentationMode.wrappedValue.dismiss()
         } catch {
             print("Unable to save message to Realm: \(error)")
         }
+        
     }
-
+    
 }

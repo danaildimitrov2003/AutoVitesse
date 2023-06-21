@@ -34,6 +34,7 @@ struct NavbarContainerView<Content: View>: View {
                 .edgesIgnoringSafeArea(.all)
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarBackButtonHidden(true)
     }
 }

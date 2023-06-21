@@ -50,6 +50,12 @@
 		22E414FD2A4197F4002C31A1 /* CarMessageComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E414FC2A4197F4002C31A1 /* CarMessageComposeView.swift */; };
 		22E414FF2A41A465002C31A1 /* CarMessageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E414FE2A41A465002C31A1 /* CarMessageExtension.swift */; };
 		22E415022A41ADD2002C31A1 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415012A41ADD2002C31A1 /* MessagesView.swift */; };
+		22E415042A42CAA4002C31A1 /* DualogueComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415032A42CAA4002C31A1 /* DualogueComponent.swift */; };
+		22E415062A42E405002C31A1 /* DialogueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415052A42E405002C31A1 /* DialogueDetailView.swift */; };
+		22E415082A42EB9E002C31A1 /* MessageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415072A42EB9E002C31A1 /* MessageComponent.swift */; };
+		22E4150A2A42F52F002C31A1 /* NewMessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E415092A42F52F002C31A1 /* NewMessageTextField.swift */; };
+		22E4150D2A42FB09002C31A1 /* DialogueDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4150C2A42FB09002C31A1 /* DialogueDetailExtension.swift */; };
+		22E4150F2A431238002C31A1 /* NewMessageTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4150E2A431238002C31A1 /* NewMessageTextFieldExtension.swift */; };
 		22E5D94C2A12406E0088B869 /* SignInExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94B2A12406E0088B869 /* SignInExtension.swift */; };
 		22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D94E2A1247560088B869 /* TextFieldExtension.swift */; };
 		22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9502A1385BC0088B869 /* HomeView.swift */; };
@@ -80,7 +86,6 @@
 		22E5D98A2A1B6E840088B869 /* SearchBarTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9892A1B6E840088B869 /* SearchBarTextFieldExtension.swift */; };
 		22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98B2A1B8DA40088B869 /* CarComponent.swift */; };
 		22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98D2A1B95B80088B869 /* CarsList.swift */; };
-		22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */; };
 		22E5D9922A1B98430088B869 /* ResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9912A1B98430088B869 /* ResultsExtension.swift */; };
 		22E5D9962A1CB4510088B869 /* FavouriteCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9952A1CB4510088B869 /* FavouriteCars.swift */; };
 		22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */; };
@@ -136,6 +141,12 @@
 		22E414FC2A4197F4002C31A1 /* CarMessageComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMessageComposeView.swift; sourceTree = "<group>"; };
 		22E414FE2A41A465002C31A1 /* CarMessageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMessageExtension.swift; sourceTree = "<group>"; };
 		22E415012A41ADD2002C31A1 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		22E415032A42CAA4002C31A1 /* DualogueComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualogueComponent.swift; sourceTree = "<group>"; };
+		22E415052A42E405002C31A1 /* DialogueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueDetailView.swift; sourceTree = "<group>"; };
+		22E415072A42EB9E002C31A1 /* MessageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComponent.swift; sourceTree = "<group>"; };
+		22E415092A42F52F002C31A1 /* NewMessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageTextField.swift; sourceTree = "<group>"; };
+		22E4150C2A42FB09002C31A1 /* DialogueDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueDetailExtension.swift; sourceTree = "<group>"; };
+		22E4150E2A431238002C31A1 /* NewMessageTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageTextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D94B2A12406E0088B869 /* SignInExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExtension.swift; sourceTree = "<group>"; };
 		22E5D94E2A1247560088B869 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D9502A1385BC0088B869 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -166,7 +177,6 @@
 		22E5D9892A1B6E840088B869 /* SearchBarTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTextFieldExtension.swift; sourceTree = "<group>"; };
 		22E5D98B2A1B8DA40088B869 /* CarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarComponent.swift; sourceTree = "<group>"; };
 		22E5D98D2A1B95B80088B869 /* CarsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsList.swift; sourceTree = "<group>"; };
-		22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewExtension.swift; sourceTree = "<group>"; };
 		22E5D9912A1B98430088B869 /* ResultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsExtension.swift; sourceTree = "<group>"; };
 		22E5D9952A1CB4510088B869 /* FavouriteCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCars.swift; sourceTree = "<group>"; };
 		22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarComponentExtension.swift; sourceTree = "<group>"; };
@@ -313,6 +323,7 @@
 		22E26A6F2A0D170D00B21FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22E4150B2A42FAF7002C31A1 /* Messages */,
 				22E414F52A406F93002C31A1 /* CarsForSale */,
 				22E414F42A406F87002C31A1 /* Photos */,
 				22E414F32A406F52002C31A1 /* Cars */,
@@ -383,7 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				22E5D9972A1CBBE40088B869 /* CarComponentExtension.swift */,
-				22E5D98F2A1B976F0088B869 /* CarsViewExtension.swift */,
 			);
 			path = Cars;
 			sourceTree = "<group>";
@@ -411,6 +421,19 @@
 			isa = PBXGroup;
 			children = (
 				22E415012A41ADD2002C31A1 /* MessagesView.swift */,
+				22E415032A42CAA4002C31A1 /* DualogueComponent.swift */,
+				22E415052A42E405002C31A1 /* DialogueDetailView.swift */,
+				22E415072A42EB9E002C31A1 /* MessageComponent.swift */,
+				22E415092A42F52F002C31A1 /* NewMessageTextField.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		22E4150B2A42FAF7002C31A1 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				22E4150C2A42FB09002C31A1 /* DialogueDetailExtension.swift */,
+				22E4150E2A431238002C31A1 /* NewMessageTextFieldExtension.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -547,6 +570,7 @@
 				22FACA9C2A20B7E300EBF5D2 /* UserImage.swift in Sources */,
 				22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */,
 				22E414FD2A4197F4002C31A1 /* CarMessageComposeView.swift in Sources */,
+				22E415082A42EB9E002C31A1 /* MessageComponent.swift in Sources */,
 				22FACAA02A20BF7500EBF5D2 /* UserImagesList.swift in Sources */,
 				22E5D9612A14AE6A0088B869 /* EditForm.swift in Sources */,
 				22E5D97E2A1658BC0088B869 /* UsernameTextFieldExtension.swift in Sources */,
@@ -577,8 +601,10 @@
 				22CE49CC2A31E8DA0017E033 /* CarsForSale.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
 				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,
+				22E4150F2A431238002C31A1 /* NewMessageTextFieldExtension.swift in Sources */,
 				22E5D9692A14CF1C0088B869 /* SideMenu.swift in Sources */,
 				22E5D98A2A1B6E840088B869 /* SearchBarTextFieldExtension.swift in Sources */,
+				22E4150D2A42FB09002C31A1 /* DialogueDetailExtension.swift in Sources */,
 				22E5D9592A139EF50088B869 /* LogOutButtonExtension.swift in Sources */,
 				22E5D98E2A1B95B80088B869 /* CarsList.swift in Sources */,
 				2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */,
@@ -591,17 +617,19 @@
 				22CE49F42A39B5890017E033 /* CarDetailItem.swift in Sources */,
 				22CE49F22A39A6180017E033 /* CarDetailView.swift in Sources */,
 				2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */,
+				22E4150A2A42F52F002C31A1 /* NewMessageTextField.swift in Sources */,
 				227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */,
 				22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
 				22E415022A41ADD2002C31A1 /* MessagesView.swift in Sources */,
 				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
 				227416372A3060EC00E0AA78 /* FacebookSignUpExtension.swift in Sources */,
-				22E5D9902A1B976F0088B869 /* CarsViewExtension.swift in Sources */,
+				22E415042A42CAA4002C31A1 /* DualogueComponent.swift in Sources */,
 				22E5D9982A1CBBE40088B869 /* CarComponentExtension.swift in Sources */,
 				22E5D9512A1385BC0088B869 /* HomeView.swift in Sources */,
 				22E5D94F2A1247560088B869 /* TextFieldExtension.swift in Sources */,
 				22E5D97C2A1658200088B869 /* UsernameTextField.swift in Sources */,
+				22E415062A42E405002C31A1 /* DialogueDetailView.swift in Sources */,
 				22E5D9742A1646870088B869 /* ConfirmPasswordTextField.swift in Sources */,
 				22CE49DA2A33335D0017E033 /* SortView.swift in Sources */,
 				22E5D96D2A14E6590088B869 /* NavbarContainerViewExtension.swift in Sources */,

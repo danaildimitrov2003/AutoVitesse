@@ -29,17 +29,17 @@ struct CarForSaleComponent: View {
                     .clipShape(Rectangle())
                 HStack{
                     Text(make)
-                        .foregroundColor(Color("TextColor"))
+                        .foregroundColor(Color("BlackTextColor"))
                         .font(.title)
                     Text(model)
-                        .foregroundColor(Color("TextColor"))
+                        .foregroundColor(Color("BlackTextColor"))
                         .font(.title)
                     Text(String(year))
-                        .foregroundColor(Color("TextColor"))
+                        .foregroundColor(Color("BlackTextColor"))
                         .font(.title)
                 }
                 Text(String(price)+" $")
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(Color("BlackTextColor"))
                     .font(.title)
                 
             }

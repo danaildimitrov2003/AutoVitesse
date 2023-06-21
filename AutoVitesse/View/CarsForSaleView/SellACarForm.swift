@@ -80,7 +80,7 @@ struct SellACarForm: View {
                     if image != UIImage() {
                         HStack {
                             Spacer()
-                            CarForSaleComponent(image: image, make: make, model: model, year: 1977, price: 9999)
+                            CarForSaleComponent(image: image, make: make, model: model, year: (year as NSString).integerValue, price: (price as NSString).integerValue)
                             Spacer()
                         }
                     }

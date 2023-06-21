@@ -12,6 +12,7 @@ struct CarMessageComposeView: View {
     let carForSale: CarForSale
     let utils = Utils()
     @State var messageCar = "Hi, is the car still available?"
+    @State var errorMessage = ""
     var body: some View {
         Form {
             HStack{
@@ -28,7 +29,10 @@ struct CarMessageComposeView: View {
                 }
                 Spacer()
             }
-           
+            if(errorMessage != ""){
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            }
         }
         
     }
