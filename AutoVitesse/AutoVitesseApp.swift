@@ -8,6 +8,7 @@
 import SwiftUI
 import RealmSwift
 import FBSDKCoreKit
+import PDFNet
 
 let appSession = AppSession()
 
@@ -67,6 +68,11 @@ struct AutoVitesseApp: SwiftUI.App {
                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                 annotation: options[UIApplication.OpenURLOptionsKey.annotation]
             )
+        }
+        
+        func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            PTPDFNet.initialize("Insert Commercial License Key Here After Purchase")
+            return true
         }
     }
 }

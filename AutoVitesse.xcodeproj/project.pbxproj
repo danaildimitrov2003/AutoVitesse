@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22174A6B2A45B6450005CCD7 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22174A6A2A45B6450005CCD7 /* Documents.swift */; };
+		22174A6D2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */; };
+		22174A6F2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */; };
 		224AD06E2A3067690035FF47 /* FacebookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06D2A3067690035FF47 /* FacebookButton.swift */; };
 		224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */; };
 		2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161C2A25D03400E0AA78 /* RealmExtension.swift */; };
@@ -16,6 +19,9 @@
 		227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 227416302A2F283C00E0AA78 /* FacebookLogin */; };
 		227416352A305E6A00E0AA78 /* FacebookSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */; };
 		227416372A3060EC00E0AA78 /* FacebookSignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */; };
+		22A45B812A456BA5007410C0 /* PDFTron in Frameworks */ = {isa = PBXBuildFile; productRef = 22A45B802A456BA5007410C0 /* PDFTron */; };
+		22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A45B832A45907B007410C0 /* DocumentDetailView.swift */; };
+		22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */; };
 		22C02CC22A0E71B9004FB233 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC12A0E71B9004FB233 /* SignInForm.swift */; };
 		22C02CC42A0E737B004FB233 /* SignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C02CC32A0E737B004FB233 /* SignUpExtension.swift */; };
 		22CE49CC2A31E8DA0017E033 /* CarsForSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE49CB2A31E8DA0017E033 /* CarsForSale.swift */; };
@@ -98,6 +104,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22174A6A2A45B6450005CCD7 /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
+		22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Porsche-959-Driver-Manual.pdf"; sourceTree = "<group>"; };
+		22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2005_M5_Owners_Manual.pdf; sourceTree = "<group>"; };
 		224AD06D2A3067690035FF47 /* FacebookButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButton.swift; sourceTree = "<group>"; };
 		224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButtonExtension.swift; sourceTree = "<group>"; };
 		2274161C2A25D03400E0AA78 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
@@ -108,6 +117,8 @@
 		227416332A2F52B900E0AA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpView.swift; sourceTree = "<group>"; };
 		227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpExtension.swift; sourceTree = "<group>"; };
+		22A45B832A45907B007410C0 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
+		22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "e46-m3-owners-manual.pdf"; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		22C02CC32A0E737B004FB233 /* SignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExtension.swift; sourceTree = "<group>"; };
 		22CE49CB2A31E8DA0017E033 /* CarsForSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsForSale.swift; sourceTree = "<group>"; };
@@ -193,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A45B812A456BA5007410C0 /* PDFTron in Frameworks */,
 				22E26A6C2A0D147D00B21FD8 /* RealmSwift in Frameworks */,
 				22E26A6A2A0D147D00B21FD8 /* Realm in Frameworks */,
 				227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */,
@@ -202,6 +214,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A45B822A459061007410C0 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				22A45B832A45907B007410C0 /* DocumentDetailView.swift */,
+				22174A6A2A45B6450005CCD7 /* Documents.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		22A45B852A459F3C007410C0 /* pdfs */ = {
+			isa = PBXGroup;
+			children = (
+				22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */,
+				22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */,
+				22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */,
+			);
+			path = pdfs;
+			sourceTree = "<group>";
+		};
 		22CE49E32A3734FA0017E033 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +298,7 @@
 		22E26A592A0D11E300B21FD8 /* AutoVitesse */ = {
 			isa = PBXGroup;
 			children = (
+				22A45B852A459F3C007410C0 /* pdfs */,
 				227416332A2F52B900E0AA78 /* Info.plist */,
 				227416322A2F312200E0AA78 /* AutoVitesse.entitlements */,
 				2274162D2A2E14CA00E0AA78 /* Enviroment.swift */,
@@ -306,6 +338,7 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22A45B822A459061007410C0 /* Documents */,
 				22E415002A41ADB4002C31A1 /* Messages */,
 				22E414EE2A406E1C002C31A1 /* Components */,
 				22E414ED2A40664B002C31A1 /* Authentecation */,
@@ -508,6 +541,7 @@
 				22E26A692A0D147D00B21FD8 /* Realm */,
 				22E26A6B2A0D147D00B21FD8 /* RealmSwift */,
 				227416302A2F283C00E0AA78 /* FacebookLogin */,
+				22A45B802A456BA5007410C0 /* PDFTron */,
 			);
 			productName = AutoVitesse;
 			productReference = 22E26A572A0D11E300B21FD8 /* AutoVitesse.app */;
@@ -540,6 +574,7 @@
 			packageReferences = (
 				22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				22A45B7F2A456BA5007410C0 /* XCRemoteSwiftPackageReference "pdftron-apple-package" */,
 			);
 			productRefGroup = 22E26A582A0D11E300B21FD8 /* Products */;
 			projectDirPath = "";
@@ -555,7 +590,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */,
+				22174A6F2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf in Resources */,
 				22E26A622A0D11E400B21FD8 /* Preview Assets.xcassets in Resources */,
+				22174A6D2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf in Resources */,
 				22E26A5F2A0D11E400B21FD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +637,8 @@
 				22CE49D82A3330DE0017E033 /* SearchBarCarsForSale.swift in Sources */,
 				22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */,
 				22CE49CC2A31E8DA0017E033 /* CarsForSale.swift in Sources */,
+				22174A6B2A45B6450005CCD7 /* Documents.swift in Sources */,
+				22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
 				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,
 				22E4150F2A431238002C31A1 /* NewMessageTextFieldExtension.swift in Sources */,
@@ -783,7 +823,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AutoVitesse/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse need access to your camera to take photos.";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "AutoVitesse requires access to your Bluetooth to detect if an Apple Pencil is paired. This enables palm rejection and the ability to scroll with one finger while annotating.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "AutoVitesse requires access to your Bluetooth to detect if an Apple Pencil is paired. This enables palm rejection and the ability to scroll with one finger while annotating.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse requires access to your camera to capture and use images.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "AutoVitesse requires permission to add images to your photo library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "AutoVitesse requires access to your photo library to create signatures and annotations from images.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -815,7 +859,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AutoVitesse/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse need access to your camera to take photos.";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "AutoVitesse requires access to your Bluetooth to detect if an Apple Pencil is paired. This enables palm rejection and the ability to scroll with one finger while annotating.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "AutoVitesse requires access to your Bluetooth to detect if an Apple Pencil is paired. This enables palm rejection and the ability to scroll with one finger while annotating.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AutoVitesse requires access to your camera to capture and use images.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "AutoVitesse requires permission to add images to your photo library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "AutoVitesse requires access to your photo library to create signatures and annotations from images.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -866,6 +914,14 @@
 				minimumVersion = 14.0.0;
 			};
 		};
+		22A45B7F2A456BA5007410C0 /* XCRemoteSwiftPackageReference "pdftron-apple-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PDFTron/pdftron-apple-package";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -881,6 +937,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		22A45B802A456BA5007410C0 /* PDFTron */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22A45B7F2A456BA5007410C0 /* XCRemoteSwiftPackageReference "pdftron-apple-package" */;
+			productName = PDFTron;
 		};
 		22E26A692A0D147D00B21FD8 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
