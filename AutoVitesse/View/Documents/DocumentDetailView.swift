@@ -2,7 +2,7 @@ import SwiftUI
 import PDFNet
 import Tools
 
-struct DocumentDetailView: UIViewControllerRepresentable {
+struct DocumentView: UIViewControllerRepresentable {
     let fileName: String
     
     func makeUIViewController(context: Context) -> UIViewController {
@@ -22,9 +22,21 @@ struct DocumentDetailView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        // Update the view controller if needed
+        
     }
 }
+
+struct DocumentDetailView: View {
+    let fileName: String
+    
+    var body: some View {
+            ZStack{
+                Color("BackgroundColor").ignoresSafeArea(.all)
+                DocumentView(fileName: fileName)
+            }
+        }
+}
+
 
 struct DocumentDetailView_Previews: PreviewProvider {
     static var previews: some View {

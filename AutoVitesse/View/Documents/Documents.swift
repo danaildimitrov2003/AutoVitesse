@@ -16,15 +16,20 @@ struct Documents: View {
     let documentItems : [DocumentItem] = [
         DocumentItem(text: "e46-m3-owners-manual"),
         DocumentItem(text: "Porsche-959-Driver-Manual"),
-        DocumentItem(text: "2005_M5_Owners_Manual")]
+        DocumentItem(text: "2005_M5_Owners_Manual"),
+        DocumentItem(text: "Porsche-Carrera-GT-Owners-Manual")
+        ]
     var body: some View {
         NavigationStack{
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
-                VStack{
+                ScrollView{
+                    Text("Owner's Manuals")
+                        .font(.title)
+                        .foregroundColor(Color("TextColor"))
                     ForEach(documentItems) { item in
                         NavigationLink(value: item){
-                            Text(item.text)
+                            AccentColorButtonText(buttonText: item.text)
                         }
                     }
                 }

@@ -10,6 +10,7 @@
 		22174A6B2A45B6450005CCD7 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22174A6A2A45B6450005CCD7 /* Documents.swift */; };
 		22174A6D2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */; };
 		22174A6F2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */; };
+		22174A712A4981140005CCD7 /* Porsche-Carrera-GT-Owners-Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22174A702A4981140005CCD7 /* Porsche-Carrera-GT-Owners-Manual.pdf */; };
 		224AD06E2A3067690035FF47 /* FacebookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06D2A3067690035FF47 /* FacebookButton.swift */; };
 		224AD0702A306B960035FF47 /* FacebookButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */; };
 		2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161C2A25D03400E0AA78 /* RealmExtension.swift */; };
@@ -107,6 +108,7 @@
 		22174A6A2A45B6450005CCD7 /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Porsche-959-Driver-Manual.pdf"; sourceTree = "<group>"; };
 		22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2005_M5_Owners_Manual.pdf; sourceTree = "<group>"; };
+		22174A702A4981140005CCD7 /* Porsche-Carrera-GT-Owners-Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Porsche-Carrera-GT-Owners-Manual.pdf"; sourceTree = "<group>"; };
 		224AD06D2A3067690035FF47 /* FacebookButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButton.swift; sourceTree = "<group>"; };
 		224AD06F2A306B960035FF47 /* FacebookButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButtonExtension.swift; sourceTree = "<group>"; };
 		2274161C2A25D03400E0AA78 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */,
 				22174A6E2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf */,
 				22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */,
+				22174A702A4981140005CCD7 /* Porsche-Carrera-GT-Owners-Manual.pdf */,
 			);
 			path = pdfs;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22174A712A4981140005CCD7 /* Porsche-Carrera-GT-Owners-Manual.pdf in Resources */,
 				22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */,
 				22174A6F2A45C3460005CCD7 /* 2005_M5_Owners_Manual.pdf in Resources */,
 				22E26A622A0D11E400B21FD8 /* Preview Assets.xcassets in Resources */,
