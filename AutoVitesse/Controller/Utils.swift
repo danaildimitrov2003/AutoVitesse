@@ -9,6 +9,7 @@ import Foundation
 import CryptoKit
 import RealmSwift
 import UIKit
+import PDFNet
 
 class Utils{
     
@@ -46,7 +47,7 @@ class Utils{
     
     func getCurrentUser() -> User{
         guard let user = appSession.currentUser else {
-           return User()
+            return User()
         }
         return user
     }
@@ -120,4 +121,58 @@ class Utils{
             return nil
         }
     }
+    
+    func exportAnnotationsToXFDF(fileName: String) {
+        do {
+            try PTPDFNet.catchException {
+                let docPath = Bundle.main.path(forResource: fileName, ofType: "pdf")
+                let doc = PTPDFDoc(filepath: docPath!)
+                doc?.initSecurityHandler()
+                
+                let xfdfDoc = doc?.fdfExtract(e_ptannots_only)
+                let xfdfPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                    .appending("/\(fileName)-\(self.getCurrentUser().idString).xfdf")
+                xfdfDoc?.save(asXFDF: xfdfPath)
+                
+                let fdoc_new: PTFDFDoc = (doc?.fdfExtract(e_ptboth))!
+                let XFDF_str: String = fdoc_new.saveAsXFDFToString()
+                print("Extracted XFDF: ")
+                print("\(XFDF_str)")
+                print("Annotations exported to XFDF successfully.")
+                print(xfdfPath)
+            }
+        } catch let e as NSError {
+            print("\(e)")
+        }
+    }
+    
+    func mergeXFDFIntoPDF(fileName: String) {
+        
+        do {
+            try PTPDFNet.catchException {
+                let xfdfPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                    .appending("/\(fileName)-\(self.getCurrentUser().idString).xfdf")
+                let fdf_doc: PTFDFDoc = PTFDFDoc.create(fromXFDF: xfdfPath)
+                //let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                // .appending("/\(fileName).pdf")
+                let docPath = Bundle.main.path(forResource: fileName, ofType: "pdf")
+                let doc = PTPDFDoc(filepath: docPath)
+                doc?.initSecurityHandler()
+                //                doc?.fdfMerge(fdf_doc)
+                //                doc?.fdfUpdate(fdf_doc)
+                doc?.mergeXFDF(with: xfdfPath, opts: nil)
+                //doc?.save(toFile: fileName, flags: e_ptlinearized.rawValue)
+                //                let modifiedDocPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                //                    .appending("/\(fileName)-\(self.getCurrentUser().idString).pdf")
+                //                doc?.save(toFile: modifiedDocPath, flags: e_ptlinearized.rawValue)
+                doc?.save(toFile: URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]).appendingPathComponent("form1_filled_with_annots.pdf").path, flags: e_ptlinearized.rawValue)
+                print("XFDF data merged into PDF successfully.")
+            }
+        } catch let e as NSError {
+            print("\(e)")
+        }
+        print("dfddfgdfgdfg")
+    }
+    
+    
 }
