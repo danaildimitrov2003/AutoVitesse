@@ -18,12 +18,16 @@ struct Documents: View {
         DocumentItem(text: "Porsche-959-Driver-Manual"),
         DocumentItem(text: "2005_M5_Owners_Manual"),
         DocumentItem(text: "Porsche-Carrera-GT-Owners-Manual")
-        ]
+    ]
+    @State var isCopyDocumentOpen = false
     var body: some View {
         NavigationStack{
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
                 ScrollView{
+                    Button(action: { isCopyDocumentOpen.toggle() }) {
+                        AccentColorButtonText(buttonText: "Copy Document")
+                    }
                     Text("Owner's Manuals")
                         .font(.title)
                         .foregroundColor(Color("TextColor"))
@@ -35,7 +39,10 @@ struct Documents: View {
                 }
                 .navigationDestination(for: DocumentItem.self){ item in
                     DocumentDetailView(fileName: item.text)
+                }
             }
+            .sheet(isPresented: $isCopyDocumentOpen) {
+                CopyDocumentView(documentItems: documentItems)
             }
         }
         

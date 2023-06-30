@@ -40,7 +40,7 @@ struct DocumentDetailView: View {
             Color("BackgroundColor").ignoresSafeArea(.all)
             DocumentView(fileName: fileName)
                 .onDisappear(){
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         utils.exportAnnotationsToXFDF(fileName: fileName)
                     }
                 }
