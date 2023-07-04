@@ -10,7 +10,11 @@ import SwiftUI
 struct CopyDocumentView: View {
     var documentItems : [DocumentItem]
     @State var documentSelection = "e46-m3-owners-manual"
-    @State var numberSelection = ""
+    @State var selectedNumbers: [Int] = []
+    @State var isSelectAllChecked = false
+    
+    @State var pageCount = 170
+    
     var body: some View {
         Form{
             Picker("Documents", selection: $documentSelection) {
@@ -18,20 +22,43 @@ struct CopyDocumentView: View {
                     Text("\(option.text)")
                 }
             }
-            VStack(alignment: .leading) {
-                NumericTextField(title: "Number of pages", value: $numberSelection)
-                Text("Leave blank if you want all")
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-            }
-            
-            HStack{
-                Spacer()
-                Button(action: {createCopy(fileName: documentSelection, numOfPages: numberSelection)}) {
-                    AccentColorButtonText(buttonText: "Save Copy In Documents")
+            Text("Select which pages you want to copy.")
+            Button(action: {selectAllPages() }) {
+                HStack{
+                    Text("Select All")
+                    Image(systemName: isSelectAllChecked ? "checkmark.square.fill" : "square")
+                        .resizable()
+                        .foregroundColor(Color("AccentColor"))
+                        .frame(width: 24, height: 24)
                 }
-                Spacer()
+                
             }
+            .buttonStyle(PlainButtonStyle())
+            LazyVGrid(columns: [
+                GridItem(.flexible(minimum: 0, maximum: .infinity)),
+                GridItem(.flexible(minimum: 0, maximum: .infinity)),
+                GridItem(.flexible(minimum: 0, maximum: .infinity)),
+                GridItem(.flexible(minimum: 0, maximum: .infinity)),
+            ]) {
+                ForEach(1...pageCount, id: \.self) { number in
+                    CustomCheckBox(isChecked: selectedNumbers.contains(number), selectedNumbers: $selectedNumbers, number: number)
+                }
+            }
+            if(selectedNumbers != [] ){
+                HStack{
+                    Spacer()
+                    Button(action: {createCopy(fileName: documentSelection)}) {
+                        AccentColorButtonText(buttonText: "Save Copy In Documents")
+                    }
+                    Spacer()
+                }
+            }else{
+                Text("Please select at least one page!")
+            }
+        }
+        .onChange(of: documentSelection) { newValue in
+            pageCount = getPDFPagesNum(fileName: documentSelection)
+            selectedNumbers = []
         }
     }
 }
@@ -43,6 +70,6 @@ struct CopyDocumentView_Previews: PreviewProvider {
             DocumentItem(text: "Porsche-959-Driver-Manual"),
             DocumentItem(text: "2005_M5_Owners_Manual"),
             DocumentItem(text: "Porsche-Carrera-GT-Owners-Manual")
-            ])
+        ])
     }
 }

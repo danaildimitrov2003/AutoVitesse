@@ -32,7 +32,7 @@ struct DocumentDetailView: View {
     
     init(fileName: String) {
         self.fileName = fileName
-        utils.mergeXFDFIntoPDF(fileName: fileName)
+        mergeXFDFIntoPDF(fileName: fileName)
     }
     
     var body: some View {
@@ -41,7 +41,7 @@ struct DocumentDetailView: View {
             DocumentView(fileName: fileName)
                 .onDisappear(){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        utils.exportAnnotationsToXFDF(fileName: fileName)
+                        exportAnnotationsToXFDF(fileName: fileName)
                     }
                 }
         }
