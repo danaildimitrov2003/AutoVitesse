@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 import FBSDKCoreKit
 import PDFNet
+import SwiftyDropbox
 
 let appSession = AppSession()
 
@@ -40,6 +41,10 @@ let config = Realm.Configuration(
 @main
 struct AutoVitesseApp: SwiftUI.App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    let env = Environment()
+    init() {
+        DropboxClientsManager.setupWithAppKey(env.dropBoxAppKey)
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -57,6 +62,10 @@ struct AutoVitesseApp: SwiftUI.App {
                 application,
                 didFinishLaunchingWithOptions: launchOptions
             )
+            //logout dropbox
+            if(DropboxClientsManager.authorizedClient != nil) {
+                DropboxClientsManager.unlinkClients()
+            }
             return true
         }
         

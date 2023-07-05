@@ -25,6 +25,9 @@
 		227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 227416302A2F283C00E0AA78 /* FacebookLogin */; };
 		227416352A305E6A00E0AA78 /* FacebookSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */; };
 		227416372A3060EC00E0AA78 /* FacebookSignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */; };
+		2276E0602A5556CB0040C0E5 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = 2276E05F2A5556CB0040C0E5 /* SwiftyDropbox */; };
+		2276E0632A555DA50040C0E5 /* MyStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0622A555DA50040C0E5 /* MyStorageView.swift */; };
+		2276E0672A557D630040C0E5 /* MyStorageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0662A557D630040C0E5 /* MyStorageExtension.swift */; };
 		22A45B812A456BA5007410C0 /* PDFTron in Frameworks */ = {isa = PBXBuildFile; productRef = 22A45B802A456BA5007410C0 /* PDFTron */; };
 		22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A45B832A45907B007410C0 /* DocumentDetailView.swift */; };
 		22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */; };
@@ -129,6 +132,8 @@
 		227416332A2F52B900E0AA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpView.swift; sourceTree = "<group>"; };
 		227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpExtension.swift; sourceTree = "<group>"; };
+		2276E0622A555DA50040C0E5 /* MyStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageView.swift; sourceTree = "<group>"; };
+		2276E0662A557D630040C0E5 /* MyStorageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageExtension.swift; sourceTree = "<group>"; };
 		22A45B832A45907B007410C0 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
 		22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "e46-m3-owners-manual.pdf"; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
@@ -220,6 +225,7 @@
 				22E26A6C2A0D147D00B21FD8 /* RealmSwift in Frameworks */,
 				22E26A6A2A0D147D00B21FD8 /* Realm in Frameworks */,
 				227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */,
+				2276E0602A5556CB0040C0E5 /* SwiftyDropbox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +239,22 @@
 				2257D3B12A4EE00500F48CE7 /* CopyDocument.swift */,
 			);
 			path = Documents;
+			sourceTree = "<group>";
+		};
+		2276E0612A555D840040C0E5 /* MyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2276E0622A555DA50040C0E5 /* MyStorageView.swift */,
+			);
+			path = MyStorage;
+			sourceTree = "<group>";
+		};
+		2276E0652A557D4C0040C0E5 /* MyStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2276E0662A557D630040C0E5 /* MyStorageExtension.swift */,
+			);
+			path = MyStorage;
 			sourceTree = "<group>";
 		};
 		22A45B822A459061007410C0 /* Documents */ = {
@@ -363,6 +385,7 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2276E0612A555D840040C0E5 /* MyStorage */,
 				22A45B822A459061007410C0 /* Documents */,
 				22E415002A41ADB4002C31A1 /* Messages */,
 				22E414EE2A406E1C002C31A1 /* Components */,
@@ -381,6 +404,7 @@
 		22E26A6F2A0D170D00B21FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2276E0652A557D4C0040C0E5 /* MyStorage */,
 				2257D3AC2A4C5EA700F48CE7 /* Documents */,
 				22E4150B2A42FAF7002C31A1 /* Messages */,
 				22E414F52A406F93002C31A1 /* CarsForSale */,
@@ -568,6 +592,7 @@
 				22E26A6B2A0D147D00B21FD8 /* RealmSwift */,
 				227416302A2F283C00E0AA78 /* FacebookLogin */,
 				22A45B802A456BA5007410C0 /* PDFTron */,
+				2276E05F2A5556CB0040C0E5 /* SwiftyDropbox */,
 			);
 			productName = AutoVitesse;
 			productReference = 22E26A572A0D11E300B21FD8 /* AutoVitesse.app */;
@@ -601,6 +626,7 @@
 				22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				22A45B7F2A456BA5007410C0 /* XCRemoteSwiftPackageReference "pdftron-apple-package" */,
+				2276E05E2A5556CB0040C0E5 /* XCRemoteSwiftPackageReference "SwiftyDropbox" */,
 			);
 			productRefGroup = 22E26A582A0D11E300B21FD8 /* Products */;
 			projectDirPath = "";
@@ -647,6 +673,7 @@
 				22E5D97A2A164C800088B869 /* EmailTextFieldExtension.swift in Sources */,
 				22E5D9782A164B8C0088B869 /* EmailTextField.swift in Sources */,
 				22E5D96B2A14E2F80088B869 /* NavbarContainerView.swift in Sources */,
+				2276E0672A557D630040C0E5 /* MyStorageExtension.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
 				22CE49EC2A3868600017E033 /* NumericTextField.swift in Sources */,
 				2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */,
@@ -716,6 +743,7 @@
 				22E5D9722A163CE10088B869 /* PasswordTextFieldExtension.swift in Sources */,
 				22E26A5B2A0D11E300B21FD8 /* AutoVitesseApp.swift in Sources */,
 				22E5D9862A17962D0088B869 /* PhotosView.swift in Sources */,
+				2276E0632A555DA50040C0E5 /* MyStorageView.swift in Sources */,
 				224AD06E2A3067690035FF47 /* FacebookButton.swift in Sources */,
 				227416352A305E6A00E0AA78 /* FacebookSignUpView.swift in Sources */,
 				22CE49D02A31F73E0017E033 /* RangePicker.swift in Sources */,
@@ -946,6 +974,14 @@
 				minimumVersion = 14.0.0;
 			};
 		};
+		2276E05E2A5556CB0040C0E5 /* XCRemoteSwiftPackageReference "SwiftyDropbox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dropbox/SwiftyDropbox.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		22A45B7F2A456BA5007410C0 /* XCRemoteSwiftPackageReference "pdftron-apple-package" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/PDFTron/pdftron-apple-package";
@@ -969,6 +1005,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2274162F2A2F283C00E0AA78 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		2276E05F2A5556CB0040C0E5 /* SwiftyDropbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2276E05E2A5556CB0040C0E5 /* XCRemoteSwiftPackageReference "SwiftyDropbox" */;
+			productName = SwiftyDropbox;
 		};
 		22A45B802A456BA5007410C0 /* PDFTron */ = {
 			isa = XCSwiftPackageProductDependency;
