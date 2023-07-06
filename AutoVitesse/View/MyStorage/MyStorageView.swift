@@ -12,47 +12,51 @@ import SwiftyDropbox
 struct MyStorageView: View {
     
     @State var isShown = false
-    @State var showUploadButton = false
+    @State var isLogedIn = false
     @State var showFileImporter = false
     @State var fileName = ""
     @State var importedFile : Data?
     
     var body: some View {
         VStack {
-            
-            Button(action: {
-                self.isShown.toggle()
-            }) {
-                Text("Login to Dropbox")
+            if(DropboxClientsManager.authorizedClient != nil || isLogedIn){
+                Button(action: {isLogedIn = false; DropboxClientsManager.unlinkClients()}) {
+                    AccentColorButtonText(buttonText: "Logout from Dropbox")
+                }
+            }else{
+                Button(action: {isShown.toggle()}) {
+                    AccentColorButtonText(buttonText: "Login to Dropbox")
+                }
             }
-            Button("Import File") {
-                showFileImporter.toggle()
-            }
-            .fileImporter(
-                isPresented: $showFileImporter,
-                allowedContentTypes: [.pdf]
-            ) { result in
-                switch result {
-                case .success(let file):
-                    print(file.absoluteString)
-                    do{
-                        importedFile = try Data(contentsOf: file)
-                        fileName = try result.get().lastPathComponent
-                    }catch{
-                        print("Error: \(error.localizedDescription)")
+            if(DropboxClientsManager.authorizedClient != nil || isLogedIn){
+                Button(action: {showFileImporter.toggle()}) {
+                    AccentColorButtonText(buttonText: "Import File")
+                }
+                .fileImporter(
+                    isPresented: $showFileImporter,
+                    allowedContentTypes: [.pdf]
+                ) { result in
+                    switch result {
+                    case .success(let file):
+                        print(file.absoluteString)
+                        do{
+                            importedFile = try Data(contentsOf: file)
+                            fileName = try result.get().lastPathComponent
+                        }catch{
+                            print("Error: \(error.localizedDescription)")
+                        }
+                        
+                    case .failure(let error):
+                        print(error.localizedDescription)
                     }
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
                 }
             }
             Text(fileName)
                 .font(.title3)
-            if (DropboxClientsManager.authorizedClient != nil || showUploadButton) {
-                Button {
-                    uploadFileToDropBox()
-                } label: {
-                    Text("Upload file")
+                .foregroundColor(Color("TextColor"))
+            if (fileName != "") {
+                Button(action: {uploadFileToDropBox()}) {
+                    AccentColorButtonText(buttonText: "Upload file")
                 }
             }
             DropboxView(isShown: $isShown)
@@ -62,7 +66,10 @@ struct MyStorageView: View {
                 if let authResult = $0 {
                     switch authResult {
                     case .success:
-                        print("Success! User is logged into DropboxClientsManager.")
+                        isLogedIn.toggle()
+                        isShown.toggle()
+                        //print("Success! User is logged into DropboxClientsManager.")
+                        //fileName = "men"
                     case .cancel:
                         print("Authorization flow was manually canceled by user!")
                     case .error(_, let description):

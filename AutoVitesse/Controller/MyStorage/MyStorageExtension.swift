@@ -12,7 +12,11 @@ extension MyStorageView{
     
     func uploadFileToDropBox(){
         if let client = DropboxClientsManager.authorizedClient {
-            let request = client.files.upload(path: "/AutoVitesse/\(fileName)", input: importedFile!)
+            guard let importedFile = importedFile else {
+                print("Error: importedFile is nil")
+                return
+            }
+            let request = client.files.upload(path: "/AutoVitesse/\(fileName)", input: importedFile)
                 .response { response, error in
                     if let response = response {
                         print(response)
@@ -25,7 +29,7 @@ extension MyStorageView{
                 }
             
         } else {
-            print("Error")
+            print("Error: Dropbox client is nil")
         }
     }
 }
