@@ -20,7 +20,7 @@ struct MyStorageView: View {
     var body: some View {
         VStack {
             if(DropboxClientsManager.authorizedClient != nil || isLogedIn){
-                Button(action: {isLogedIn = false; DropboxClientsManager.unlinkClients()}) {
+                Button(action: {logOutOfDropBox()}) {
                     AccentColorButtonText(buttonText: "Logout from Dropbox")
                 }
             }else{

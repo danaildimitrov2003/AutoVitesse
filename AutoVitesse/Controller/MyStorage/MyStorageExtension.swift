@@ -32,4 +32,11 @@ extension MyStorageView{
             print("Error: Dropbox client is nil")
         }
     }
+    
+    func logOutOfDropBox(){
+        isLogedIn = false
+        DropboxClientsManager.unlinkClients()
+        fileName = ""
+        importedFile = nil
+    }
 }
