@@ -14,7 +14,6 @@ struct EditForm: View {
     @State var isPasswordCompleted = true
     @State var isEmailCompleted = true
     @SwiftUI.Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -24,8 +23,10 @@ struct EditForm: View {
                         .disableAutocorrectAndAutocapitalize()
                         .disabled(true)
                         .foregroundColor(.gray)
-                    EmailTextField(email: $userEdit.email, emailState: userEdit.email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
-                    PasswordTextField(password: $userEdit.password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
+                    EmailTextField(email: $userEdit.email, emailState: userEdit.email,
+                                   errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
+                    PasswordTextField(password: $userEdit.password,
+                                      errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
                     Picker("Country", selection: $userEdit.country) {
                         ForEach(countries, id: \.self) { option in
                             Text("\(option)")
@@ -33,7 +34,7 @@ struct EditForm: View {
                     }
                     TextField("City", text: $userEdit.city)
                         .disableAutocorrectAndAutocapitalize()
-                    if(errorMessage != ""){
+                    if errorMessage != "" {
                         Text(errorMessage)
                             .foregroundColor(.red)
                     }
@@ -45,7 +46,6 @@ struct EditForm: View {
                         Button("Save") {
                             handleSaveButton()
                         }
-                        //.disabled(true)
                     }
             }
             }

@@ -7,9 +7,8 @@
 
 import Foundation
 
-extension NavbarContainerView{
-    
-    func toggleMenu(){
+extension NavbarContainerView {
+    func toggleMenu() {
         menuOpened.toggle()
     }
 }

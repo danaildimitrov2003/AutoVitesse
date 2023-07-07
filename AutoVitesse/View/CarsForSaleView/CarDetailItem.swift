@@ -10,7 +10,6 @@ import SwiftUI
 struct CarDetailItem: View {
     let title: String
     let value: String
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
@@ -22,7 +21,6 @@ struct CarDetailItem: View {
         }
     }
 }
-
 
 struct CarDetailItem_Previews: PreviewProvider {
     static var previews: some View {

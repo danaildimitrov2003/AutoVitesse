@@ -9,12 +9,10 @@ import SwiftUI
 import RealmSwift
 
 struct ContentView: View {
-    
     @State private var isSignUpFormViewActive = false
     @State private var isSignInFormViewActive = false
     @State private var signInAnimationAmount = 1.0
     @State private var logoAnimation = false
-    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -32,38 +30,35 @@ struct ContentView: View {
                     .frame(width: 140.0, height: 140.0)
                     .offset(x: logoAnimation ? 0 : -UIScreen.main.bounds.width/1.3)
                 VStack {
-                    Button(action: {isSignInFormViewActive = true}) {
+                    Button(action: { isSignInFormViewActive = true }, label: {
                         AccentColorButtonText(buttonText: "Sign In")
-                    }
+                    })
 
-                    Button(action: {isSignUpFormViewActive = true}) {
+                    Button(action: { isSignUpFormViewActive = true }, label: {
                         AccentColorButtonText(buttonText: "Sign Up")
-                    }
+                    })
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color("SecondaryGreen"))
                         .scaleEffect(signInAnimationAmount)
                         .opacity(2 - signInAnimationAmount)
-                        .animation(.easeInOut(duration: 1).repeatForever(autoreverses: false), value: signInAnimationAmount)
+                        .animation(.easeInOut(duration: 1)
+                            .repeatForever(autoreverses: false), value: signInAnimationAmount)
                 )
-                .onAppear{
+                .onAppear {
                     signInAnimationAmount = 2
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)){
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
                         logoAnimation.toggle()
                     }
-                    
                 }
-                
                 .sheet(isPresented: $isSignInFormViewActive) {
                     SignInFormView()
                 }
                 .sheet(isPresented: $isSignUpFormViewActive) {
                     SignUpFormView()
                 }
-                
             }
-            
         }
     }
 }

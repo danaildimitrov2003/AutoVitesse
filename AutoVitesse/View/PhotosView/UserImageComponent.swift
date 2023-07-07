@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct UserImageComponent: View {
-    var image : UIImage
-    
+    var image: UIImage
     var body: some View {
         Image(uiImage: self.image)
             .resizable()
@@ -18,12 +17,11 @@ struct UserImageComponent: View {
             .background(Color.black.opacity(0.2))
             .aspectRatio(contentMode: .fill)
             .clipShape(Rectangle())
-            //.transition(.slide)
     }
 }
 
-//struct UserImageComponent_Previews: PreviewProvider {
+// struct UserImageComponent_Previews: PreviewProvider {
 //    static var previews: some View {
 //        UserImageComponent(image: <#UIImage#>)
 //    }
-//}
+// }

@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct MenuItem: Identifiable{
+struct MenuItem: Identifiable {
     var id =  UUID()
     let text: String
     let imageName: String
 }
 
-struct MenuContent: View{
-    @State var selection: String? = nil
-    let items : [MenuItem] = [
+struct MenuContent: View {
+    @State var selection: String?
+    let items: [MenuItem] = [
         MenuItem(text: "Home", imageName: "house.fill"),
         MenuItem(text: "Cars", imageName: "car.2.fill"),
         MenuItem(text: "Photos", imageName: "camera.fill"),
@@ -25,27 +25,33 @@ struct MenuContent: View{
         MenuItem(text: "My Storage", imageName: "tray.full.fill")
     ]
     let toggleMenu: () -> Void
-    let currentViewName : String
-    
-    var body: some View{
-        ZStack{
+    let currentViewName: String
+    var body: some View {
+        ZStack {
             Color("PrimaryGreen")
-            VStack(alignment: .leading, spacing: 0){
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Home"){HomeView()}, tag:"Home", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Cars"){CarsView()}, tag:"Cars", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Photos"){PhotosView()}, tag:"Photos", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Cars For Sale"){CarsForSale()}, tag:"Cars For Sale", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Messages"){MessagesView()}, tag:"Messages", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "Documents"){Documents()}, tag:"Documents", selection: $selection) {}
-                NavigationLink(destination: NavbarContainerView(currentViewName: "My Storage"){MyStorageView()}, tag:"My Storage", selection: $selection) {}
+            VStack(alignment: .leading, spacing: 0) {
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Home") {
+                    HomeView()}, tag: "Home", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Cars") {
+                    CarsView()}, tag: "Cars", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Photos") {
+                    PhotosView()}, tag: "Photos", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Cars For Sale") {
+                    CarsForSale()}, tag: "Cars For Sale", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Messages") {
+                    MessagesView()}, tag: "Messages", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "Documents") {
+                    Documents()}, tag: "Documents", selection: $selection) {}
+                NavigationLink(destination: NavbarContainerView(currentViewName: "My Storage") {
+                    MyStorageView()}, tag: "My Storage", selection: $selection) {}
                 ForEach(items) { item in
-                    Button(action: {handleButtonTab(itemText: item.text)}) {
-                        HStack{
+                    Button(action: { handleButtonTab(itemText: item.text) }, label: {
+                        HStack {
                             Image(systemName: item.imageName)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundColor(Color("WhiteTextColor"))
-                                .frame(width:32, height: 32, alignment: .center)
+                                .frame(width: 32, height: 32, alignment: .center)
                             Text(item.text)
                                 .foregroundColor(Color("WhiteTextColor"))
                                 .bold()
@@ -53,7 +59,7 @@ struct MenuContent: View{
                                 .multilineTextAlignment(.leading)
                             Spacer()
                         }
-                    }
+                    })
                     .padding()
                     Divider()
                 }
@@ -64,31 +70,27 @@ struct MenuContent: View{
     }
 }
 
-struct SideMenu: View{
+struct SideMenu: View {
     let width: CGFloat
     let menuOpened: Bool
     let toggleMenu: () -> Void
     let currentViewName: String
-    
-    
-    var body: some View{
-        ZStack{
-            GeometryReader{ _ in
+    var body: some View {
+        ZStack {
+            GeometryReader { _ in
                 EmptyView()
             }
             .background(Color.gray.opacity(0.15))
             .opacity(self.menuOpened ? 1 : 0)
             .animation(Animation.easeIn.delay(0.25), value: menuOpened)
-            .onTapGesture{
+            .onTapGesture {
                 self.toggleMenu()
             }
-            
-            HStack{
+            HStack {
                 MenuContent(toggleMenu: toggleMenu, currentViewName: currentViewName)
                     .frame(width: width)
                     .offset(x: menuOpened ? UIScreen.main.bounds.width - width : UIScreen.main.bounds.width + width)
                     .animation(.default, value: menuOpened)
-                
                 Spacer()
             }
         }
@@ -97,13 +99,12 @@ struct SideMenu: View{
 
 struct SideMenuView: View {
     @State var menuOpened = false
-    
     var body: some View {
         ZStack {
             if !menuOpened {
                 Button(action: {
                     self.menuOpened.toggle()
-                },label: {
+                }, label: {
                     Text("Open Menu")
                         .bold()
                         .foregroundColor(Color.white)
@@ -111,12 +112,12 @@ struct SideMenuView: View {
                         .background(Color.mint)
                 })
             }
-            SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu, currentViewName: "Home")
+            SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened,
+                     toggleMenu: toggleMenu, currentViewName: "Home")
         }
         .edgesIgnoringSafeArea(.all)
     }
-    
-    func toggleMenu(){
+    func toggleMenu() {
         menuOpened.toggle()
     }
 }

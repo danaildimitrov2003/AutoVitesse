@@ -8,38 +8,34 @@
 import Foundation
 import RealmSwift
 
-extension EditForm{
-    
-    func handleSaveButton(){
+extension EditForm {
+    func handleSaveButton() {
         let utils = Utils()
         let completionData = [isEmailCompleted, isPasswordCompleted]
-        if(utils.checkBools(completionData)){
+        if utils.checkBools(completionData) {
             errorMessage = ""
             saveUserEdit()
             presentationMode.wrappedValue.dismiss()
-        }else{
+        } else {
             errorMessage = "Please fill out the form!"
         }
     }
-    
-    func saveUserEdit(){
-        do{
+    func saveUserEdit() {
+        do {
             let utils = Utils()
             let realm = try Realm()
             let user = utils.getCurrentUser()
             try realm.write {
                 user.thaw()?.email = userEdit.email
-                if(userEdit.password != ""){
+                if userEdit.password != "" {
                     user.thaw()?.password = utils.hashString(userEdit.password)
                 }
                 user.thaw()?.country = userEdit.country
                 user.thaw()?.city = userEdit.city
             }
             appSession.currentUser = user
-        }
-        catch{
+        } catch {
             print("Error updating user: \(error)")
         }
     }
-    
 }

@@ -19,23 +19,23 @@ struct MessagesView: View {
     ) var buyingDialogues
     let utils = Utils()
     var body: some View {
-        
         NavigationStack {
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
-                VStack{
-                    ScrollView{
+                VStack {
+                    ScrollView {
                         Text("Messages as a Seller:")
                             .font(.title2)
                             .foregroundColor(Color("TextColor"))
-                        if(sellingDialogues.count >= 1){
+                        if sellingDialogues.count >= 1 {
                             ForEach(sellingDialogues.reversed()) { dialogue in
-                                NavigationLink(value: dialogue){
-                                    DualogueComponent(lastMessage: dialogue.messages.last?.message ?? "", senderId: dialogue.buyerId, carId: dialogue.carForSaleId)
+                                NavigationLink(value: dialogue) {
+                                    DualogueComponent(lastMessage: dialogue.messages.last?.message ?? "",
+                                                      senderId: dialogue.buyerId, carId: dialogue.carForSaleId)
                                         .padding(.horizontal)
                                 }
                             }
-                        }else{
+                        } else {
                             Text("No messages received about your cars for sale.")
                                 .font(.title)
                                 .foregroundColor(Color("TextColor"))
@@ -43,21 +43,24 @@ struct MessagesView: View {
                         Text("Messages as a Buyer:")
                             .font(.title2)
                             .foregroundColor(Color("TextColor"))
-                        if(buyingDialogues.count >= 1){
+                        if buyingDialogues.count >= 1 {
                             ForEach(buyingDialogues.reversed()) { dialogue in
-                                NavigationLink(value: dialogue){
-                                    DualogueComponent(lastMessage: dialogue.messages.last?.message ?? "", senderId: dialogue.sellerId, carId: dialogue.carForSaleId)
+                                NavigationLink(value: dialogue) {
+                                    DualogueComponent(lastMessage: dialogue.messages.last?.message ?? "",
+                                                      senderId: dialogue.sellerId, carId: dialogue.carForSaleId)
                                         .padding(.horizontal)
                                 }
                             }
-                        }else{
+                        } else {
                             Text("No messages about cars for sale.")
                                 .font(.title)
                                 .foregroundColor(Color("TextColor"))
                         }
                     }
-                    .navigationDestination(for: Dialogue.self){ dialogue in
-                        DialogueDetailView(dialogue: dialogue, messages: Array(dialogue.messages), car: utils.getCarForSaleByID(carForSaleID: dialogue.carForSaleId) ?? CarForSale())
+                    .navigationDestination(for: Dialogue.self) { dialogue in
+                        DialogueDetailView(dialogue: dialogue, messages: Array(dialogue.messages),
+                                           car: utils.getCarForSaleByID(carForSaleID: dialogue.carForSaleId)
+                                           ?? CarForSale())
                     }
                 }
             }
@@ -65,8 +68,8 @@ struct MessagesView: View {
     }
 }
 
-//struct MessagesView_Previews: PreviewProvider {
+// struct MessagesView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        MessagesView()
 //    }
-//}
+// }

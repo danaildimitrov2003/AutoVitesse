@@ -10,9 +10,9 @@ import FBSDKLoginKit
 
 struct FacebookButton: View {
     @State var manager = LoginManager()
-    var buttonText : String
-    @Binding var showHomeView : Bool
-    @Binding var showFacebookSignUp : Bool
+    var buttonText: String
+    @Binding var showHomeView: Bool
+    @Binding var showFacebookSignUp: Bool
     var body: some View {
         Button(action: facebookSignIn) {
             Text(buttonText)
@@ -24,6 +24,7 @@ struct FacebookButton: View {
 
 struct FacebookButton_Previews: PreviewProvider {
     static var previews: some View {
-        FacebookButton(buttonText: "Sign in with Facebook", showHomeView: .constant(false), showFacebookSignUp: .constant(false))
+        FacebookButton(buttonText: "Sign in with Facebook",
+                       showHomeView: .constant(false), showFacebookSignUp: .constant(false))
     }
 }

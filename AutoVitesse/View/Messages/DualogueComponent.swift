@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct DualogueComponent: View {
-    var lastMessage : String
-    var senderId : String
-    var carId : String
+    var lastMessage: String
+    var senderId: String
+    var carId: String
     let utils = Utils()
-    
     var body: some View {
-        HStack{
+        HStack {
             Spacer()
-            VStack(alignment: .leading){
-                HStack{
+            VStack(alignment: .leading) {
+                HStack {
                     Text(utils.getUserByID(userID: senderId)?.username ?? "Username")
                         .foregroundColor(Color("BlackTextColor"))
                     Text("About")
@@ -39,12 +38,12 @@ struct DualogueComponent: View {
         .padding()
         .background(Color("PrimaryGreen"))
         .cornerRadius(15)
-        
     }
 }
 
 struct DualogueComponent_Previews: PreviewProvider {
     static var previews: some View {
-        DualogueComponent(lastMessage: "Hello, message, Hello, message,Hello, message, Hello, message", senderId: "12345", carId: "12345")
+        DualogueComponent(lastMessage: "Hello, message, Hello, message,Hello, message, Hello, message",
+                          senderId: "12345", carId: "12345")
     }
 }

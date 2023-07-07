@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccentColorButtonText: View {
-    let buttonText : String
+    let buttonText: String
     var body: some View {
         Text(buttonText)
             .padding()

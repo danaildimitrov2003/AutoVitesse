@@ -10,9 +10,7 @@ import SwiftUI
 struct CustomCheckBox: View {
     var isChecked: Bool
     @Binding var selectedNumbers: [Int]
-    var number : Int
-    
-    
+    var number: Int
     var body: some View {
         Button(action: {
             if selectedNumbers.contains(number) {
@@ -21,16 +19,15 @@ struct CustomCheckBox: View {
                 selectedNumbers.append(number)
             }
             print(selectedNumbers)
-        }) {
-            HStack{
+        }, label: {
+            HStack {
                 Text(String(number))
                 Image(systemName: isChecked ? "checkmark.square.fill" : "square")
                     .resizable()
                     .foregroundColor(Color("AccentColor"))
                     .frame(width: 24, height: 24)
             }
-            
-        }
+        })
         .buttonStyle(PlainButtonStyle())
     }
 }

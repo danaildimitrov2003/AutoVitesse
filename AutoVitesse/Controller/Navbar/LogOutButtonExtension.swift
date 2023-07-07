@@ -9,10 +9,9 @@ import Foundation
 import SwiftyDropbox
 
 extension LogOutButton {
-    
-    func logOut(){
+    func logOut() {
         showLogOutView = true
-        if(DropboxClientsManager.authorizedClient != nil) {
+        if DropboxClientsManager.authorizedClient != nil {
             DropboxClientsManager.unlinkClients()
         }
     }

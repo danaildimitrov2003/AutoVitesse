@@ -9,8 +9,8 @@ import SwiftUI
 import Combine
 
 struct NumericTextField: View {
-    var title : String
-    @Binding var value : String
+    var title: String
+    @Binding var value: String
     var body: some View {
         TextField(title, text: $value)
             .keyboardType(.numberPad)

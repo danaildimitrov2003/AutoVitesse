@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension FilterView{
-    func saveFilter(){
+extension FilterView {
+    func saveFilter() {
         if minYear > maxYear {
             errorMessage = "Please enter a valid years range!"
         } else {
@@ -30,8 +30,7 @@ extension FilterView{
             }
         }
     }
-    
-    func clearFilters(){
+    func clearFilters() {
         make = ""
         model = ""
         model2 = ""

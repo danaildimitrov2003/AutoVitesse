@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBarCarsForSale: View {
-    @Binding var search : String
+    @Binding var search: String
     let searchCars: () -> Void
     var body: some View {
         HStack {
@@ -16,15 +16,14 @@ struct SearchBarCarsForSale: View {
                 .disableAutocorrectAndAutocapitalize()
                 .font(.title)
                 .frame(width: 220)
-                .onChange(of: search) { newValue in
+                .onChange(of: search) { _ in
                     searchCars()
                 }
-            Image(systemName:"magnifyingglass")
+            Image(systemName: "magnifyingglass")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                //.foregroundColor(.gray)
                 .foregroundColor(Color("TextColor"))
-                .frame(width:32, height: 32, alignment: .center)
+                .frame(width: 32, height: 32, alignment: .center)
         }
     }
 }

@@ -9,22 +9,20 @@ import SwiftUI
 
 struct SearchBarTextField: View {
     @State var search = ""
-    
     var body: some View {
         HStack {
             TextField("Search", text: $search)
                 .disableAutocorrectAndAutocapitalize()
                 .font(.title)
                 .frame(width: 220)
-                .onChange(of: search) { newValue in
+                .onChange(of: search) { _ in
                     handleSearch(search)
                 }
-            Image(systemName:"magnifyingglass")
+            Image(systemName: "magnifyingglass")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                //.foregroundColor(.gray)
                 .foregroundColor(Color("TextColor"))
-                .frame(width:32, height: 32, alignment: .center)
+                .frame(width: 32, height: 32, alignment: .center)
         }
     }
 }

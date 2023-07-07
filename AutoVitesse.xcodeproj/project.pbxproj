@@ -21,13 +21,13 @@
 		2274161D2A25D03400E0AA78 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161C2A25D03400E0AA78 /* RealmExtension.swift */; };
 		2274161F2A25EE7E00E0AA78 /* MenuContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */; };
 		227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416202A273F8200E0AA78 /* UiImageExtension.swift */; };
-		2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274162D2A2E14CA00E0AA78 /* Enviroment.swift */; };
 		227416312A2F283C00E0AA78 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 227416302A2F283C00E0AA78 /* FacebookLogin */; };
 		227416352A305E6A00E0AA78 /* FacebookSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */; };
 		227416372A3060EC00E0AA78 /* FacebookSignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */; };
 		2276E0602A5556CB0040C0E5 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = 2276E05F2A5556CB0040C0E5 /* SwiftyDropbox */; };
 		2276E0632A555DA50040C0E5 /* MyStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0622A555DA50040C0E5 /* MyStorageView.swift */; };
 		2276E0672A557D630040C0E5 /* MyStorageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0662A557D630040C0E5 /* MyStorageExtension.swift */; };
+		2276E0712A56E4DA0040C0E5 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0702A56E4DA0040C0E5 /* Enviroment.swift */; };
 		22A45B812A456BA5007410C0 /* PDFTron in Frameworks */ = {isa = PBXBuildFile; productRef = 22A45B802A456BA5007410C0 /* PDFTron */; };
 		22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A45B832A45907B007410C0 /* DocumentDetailView.swift */; };
 		22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */; };
@@ -127,13 +127,13 @@
 		2274161C2A25D03400E0AA78 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		2274161E2A25EE7E00E0AA78 /* MenuContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentExtension.swift; sourceTree = "<group>"; };
 		227416202A273F8200E0AA78 /* UiImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtension.swift; sourceTree = "<group>"; };
-		2274162D2A2E14CA00E0AA78 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		227416322A2F312200E0AA78 /* AutoVitesse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoVitesse.entitlements; sourceTree = "<group>"; };
 		227416332A2F52B900E0AA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227416342A305E6A00E0AA78 /* FacebookSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpView.swift; sourceTree = "<group>"; };
 		227416362A3060EC00E0AA78 /* FacebookSignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignUpExtension.swift; sourceTree = "<group>"; };
 		2276E0622A555DA50040C0E5 /* MyStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageView.swift; sourceTree = "<group>"; };
 		2276E0662A557D630040C0E5 /* MyStorageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageExtension.swift; sourceTree = "<group>"; };
+		2276E0702A56E4DA0040C0E5 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enviroment.swift; path = ../../../Enviroment.swift; sourceTree = "<group>"; };
 		22A45B832A45907B007410C0 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
 		22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "e46-m3-owners-manual.pdf"; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 				22A45B852A459F3C007410C0 /* pdfs */,
 				227416332A2F52B900E0AA78 /* Info.plist */,
 				227416322A2F312200E0AA78 /* AutoVitesse.entitlements */,
-				2274162D2A2E14CA00E0AA78 /* Enviroment.swift */,
+				2276E0702A56E4DA0040C0E5 /* Enviroment.swift */,
 				22E5D94D2A12473F0088B869 /* Extensions */,
 				22E26A6F2A0D170D00B21FD8 /* Controller */,
 				22E26A6E2A0D170200B21FD8 /* View */,
@@ -581,6 +581,7 @@
 				22E26A532A0D11E300B21FD8 /* Sources */,
 				22E26A542A0D11E300B21FD8 /* Frameworks */,
 				22E26A552A0D11E300B21FD8 /* Resources */,
+				2276E0742A57E7190040C0E5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -653,6 +654,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2276E0742A57E7190040C0E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22E26A532A0D11E300B21FD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -676,7 +697,6 @@
 				2276E0672A557D630040C0E5 /* MyStorageExtension.swift in Sources */,
 				22E26A5D2A0D11E300B21FD8 /* ContentView.swift in Sources */,
 				22CE49EC2A3868600017E033 /* NumericTextField.swift in Sources */,
-				2274162E2A2E14CA00E0AA78 /* Enviroment.swift in Sources */,
 				22E5D9702A1622ED0088B869 /* Utils.swift in Sources */,
 				22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
@@ -693,6 +713,7 @@
 				22E5D9882A1B68BC0088B869 /* SearchBarTextField.swift in Sources */,
 				22CE49CC2A31E8DA0017E033 /* CarsForSale.swift in Sources */,
 				22174A6B2A45B6450005CCD7 /* Documents.swift in Sources */,
+				2276E0712A56E4DA0040C0E5 /* Enviroment.swift in Sources */,
 				22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */,
 				22E5D9532A1386010088B869 /* ProfileView.swift in Sources */,
 				22E5D95D2A13AAB10088B869 /* SideMenuButton.swift in Sources */,

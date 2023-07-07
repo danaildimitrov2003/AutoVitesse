@@ -8,32 +8,28 @@
 import Foundation
 import RealmSwift
 
-extension FacebookSignUpView{
-    
-    func handleSignUpButton(){
+extension FacebookSignUpView {
+    func handleSignUpButton() {
         let utils = Utils()
         let completionData = [isUsernameCompleted]
         let userData = [country]
         var isFormCompleted = true
         isFormCompleted = utils.checkBools(completionData)
-        for data in userData {
-            if(data == ""){
-                isFormCompleted = false
-                break
-            }
+        for data in userData where data == "" {
+            isFormCompleted = false
+            break
         }
-        if(isFormCompleted){
+        if isFormCompleted {
             errorMessage = ""
             saveUser()
             showHomeView = true
-        }else{
+        } else {
             errorMessage = "Please fill out the form!"
         }
     }
-    
-    func saveUser(){
+    func saveUser() {
         let utils = Utils()
-        do{
+        do {
             let realm = try Realm(configuration: config)
             let user = utils.getCurrentUser()
             user.email = email
@@ -44,10 +40,8 @@ extension FacebookSignUpView{
                 realm.add(user)
             }
             appSession.currentUser = user
-        }
-        catch{
+        } catch {
             print("Error updating user: \(error)")
         }
     }
-    
 }

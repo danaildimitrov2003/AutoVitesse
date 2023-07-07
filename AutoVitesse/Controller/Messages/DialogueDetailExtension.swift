@@ -9,8 +9,8 @@ import Foundation
 import RealmSwift
 import SwiftUI
 
-extension DialogueDetailView{
-    func sendMessage(message : String){
+extension DialogueDetailView {
+    func sendMessage(message: String) {
         do {
             let realm = try Realm()
             guard let realmDialogue = realm.objects(Dialogue.self).filter("id = %@", dialogue.id).first else {
@@ -19,7 +19,7 @@ extension DialogueDetailView{
             let messageToSend = Message()
             messageToSend.message = message
             messageToSend.senderId = utils.getCurrentUser().idString
-            withAnimation(.linear){
+            withAnimation(.linear) {
                 messages.append(messageToSend)
             }
             realm.safeWrite {

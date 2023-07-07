@@ -9,12 +9,23 @@ import Foundation
 import UIKit
 
 extension UIImage {
-    
     func fixOrientation() -> UIImage {
         if self.imageOrientation == .up {
             return self
         }
         var transform = CGAffineTransform.identity
+        transform = applyOrientationTransform(transform)
+        guard let cgImage = self.cgImage,
+              let colorSpace = cgImage.colorSpace,
+              let context = createContext(cgImage: cgImage, colorSpace: colorSpace, transform: transform) else {
+            return self
+        }
+        let newCGImage = context.makeImage()
+        return UIImage(cgImage: newCGImage ?? cgImage)
+    }
+
+    private func applyOrientationTransform(_ transform: CGAffineTransform) -> CGAffineTransform {
+        var transform = transform
         switch self.imageOrientation {
         case .down, .downMirrored:
             transform = transform.translatedBy(x: self.size.width, y: self.size.height)
@@ -25,9 +36,7 @@ extension UIImage {
         case .right, .rightMirrored:
             transform = transform.translatedBy(x: 0, y: self.size.height)
             transform = transform.rotated(by: -.pi / 2)
-        case .up, .upMirrored:
-            break
-        @unknown default:
+        default:
             break
         }
         switch self.imageOrientation {
@@ -40,30 +49,17 @@ extension UIImage {
         default:
             break
         }
-        guard let cgImage = self.cgImage else {
-            return self
-        }
-        guard let colorSpace = cgImage.colorSpace else {
-            return self
-        }
-        let context = CGContext(data: nil,
-                                width: Int(self.size.width),
-                                height: Int(self.size.height),
-                                bitsPerComponent: cgImage.bitsPerComponent,
-                                bytesPerRow: 0,
-                                space: colorSpace,
-                                bitmapInfo: cgImage.bitmapInfo.rawValue)
-        context?.concatenate(transform)
-        switch self.imageOrientation {
-        case .left, .leftMirrored, .right, .rightMirrored:
-            context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: self.size.height, height: self.size.width))
-        default:
-            context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
-        }
-        guard let newCGImage = context?.makeImage() else {
-            return self
-        }
-        return UIImage(cgImage: newCGImage)
+        return transform
     }
-}
 
+    private func createContext(cgImage: CGImage, colorSpace: CGColorSpace, transform: CGAffineTransform) -> CGContext? {
+        return CGContext(data: nil,
+                         width: Int(self.size.width),
+                         height: Int(self.size.height),
+                         bitsPerComponent: cgImage.bitsPerComponent,
+                         bytesPerRow: 0,
+                         space: colorSpace,
+                         bitmapInfo: cgImage.bitmapInfo.rawValue)
+    }
+
+}

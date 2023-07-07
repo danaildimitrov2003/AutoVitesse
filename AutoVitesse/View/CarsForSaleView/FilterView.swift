@@ -8,28 +8,27 @@
 import SwiftUI
 
 struct FilterView: View {
-    @Binding var makeBinding : String
-    @Binding var modelBinding : String
-    @Binding var model2Binding : String
-    @Binding var model3Binding : String
-    @Binding var minYearBinding : Int
-    @Binding var maxYearBinding : Int
-    @Binding var minPriceBinding : String
-    @Binding var maxPriceBinding : String
-    @State var make : String
-    @State var model : String
-    @State var model2 : String
-    @State var model3 : String
-    @State var minYear : Int
-    @State var maxYear : Int
-    @State var minYearInitial : Int
-    @State var maxYearInitial : Int
-    @State var minPrice : String
-    @State var maxPrice : String
+    @Binding var makeBinding: String
+    @Binding var modelBinding: String
+    @Binding var model2Binding: String
+    @Binding var model3Binding: String
+    @Binding var minYearBinding: Int
+    @Binding var maxYearBinding: Int
+    @Binding var minPriceBinding: String
+    @Binding var maxPriceBinding: String
+    @State var make: String
+    @State var model: String
+    @State var model2: String
+    @State var model3: String
+    @State var minYear: Int
+    @State var maxYear: Int
+    @State var minYearInitial: Int
+    @State var maxYearInitial: Int
+    @State var minPrice: String
+    @State var maxPrice: String
     @State var errorMessage = ""
     let filterCars: () -> Void
     let clearFilterCars: () -> Void
-    
     init(makeBinding: Binding<String>,
          modelBinding: Binding<String>,
          model2Binding: Binding<String>,
@@ -42,7 +41,6 @@ struct FilterView: View {
          maxPriceBinding: Binding<String>,
          filterCars: @escaping () -> Void,
          clearFilterCars: @escaping () -> Void) {
-        
         _makeBinding = makeBinding
         _modelBinding = modelBinding
         _model2Binding = model2Binding
@@ -51,7 +49,6 @@ struct FilterView: View {
         _maxYearBinding = maxYearBinding
         _minPriceBinding = minPriceBinding
         _maxPriceBinding = maxPriceBinding
-        
         _make = State(initialValue: makeBinding.wrappedValue)
         _model = State(initialValue: modelBinding.wrappedValue)
         _model2 = State(initialValue: model2Binding.wrappedValue)
@@ -60,16 +57,13 @@ struct FilterView: View {
         _maxYear = State(initialValue: maxYearBinding.wrappedValue)
         _minPrice = State(initialValue: minPriceBinding.wrappedValue)
         _maxPrice = State(initialValue: maxPriceBinding.wrappedValue)
-        
         self.minYearInitial = minYearInitial
         self.maxYearInitial = maxYearInitial
         self.filterCars = filterCars
-        self.clearFilterCars = clearFilterCars
-    } 
-    
+        self.clearFilterCars = clearFilterCars }
     var body: some View {
-        List{
-            VStack{
+        List {
+            VStack {
                 Text("Filter")
                     .font(.title)
                 Picker("Make", selection: $make) {
@@ -81,24 +75,25 @@ struct FilterView: View {
                     TextField("Model", text: $model)
                     TextField("Model", text: $model2)
                     TextField("Model", text: $model3)
-                }else{
+                } else {
                     Text("Please select a make to select models")
                 }
-                RangePicker(title: "Year", minBinding: $minYear, maxBinding: $maxYear, min: minYearInitial, max: maxYearInitial)
+                RangePicker(title: "Year", minBinding: $minYear,
+                            maxBinding: $maxYear, min: minYearInitial, max: maxYearInitial)
                 RangeFields(title: "Price", min: $minPrice, max: $maxPrice)
             }
-            HStack{
+            HStack {
                 Spacer()
-                Button(action: { saveFilter()}) {
+                Button(action: { saveFilter() }, label: {
                     AccentColorButtonText(buttonText: "Save Filters")
-                }
+                })
                 Spacer()
             }
-            HStack{
+            HStack {
                 Spacer()
-                Button(action: { clearFilters()}) {
+                Button(action: { clearFilters() }, label: {
                     AccentColorButtonText(buttonText: "Clear Filters")
-                }
+                })
                 Spacer()
             }
             if errorMessage != "" {
@@ -106,13 +101,16 @@ struct FilterView: View {
                     .foregroundColor(.red)
             }
         }
-        
-        
     }
 }
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView(makeBinding: .constant(""), modelBinding: .constant(""), model2Binding: .constant(""), model3Binding: .constant(""), minYearBinding: .constant(1984), maxYearBinding: .constant(2024), minYearInitial: 1984, maxYearInitial: 2024, minPriceBinding: .constant("1000"), maxPriceBinding: .constant("1000000"), filterCars: {print("Filtered!")}, clearFilterCars: {print("Cleared Filter!")})
+        FilterView(makeBinding: .constant(""), modelBinding: .constant(""),
+                   model2Binding: .constant(""), model3Binding: .constant(""),
+                   minYearBinding: .constant(1984), maxYearBinding: .constant(2024),
+                   minYearInitial: 1984, maxYearInitial: 2024, minPriceBinding:
+                .constant("1000"), maxPriceBinding: .constant("1000000"),
+                   filterCars: {print("Filtered!")}, clearFilterCars: {print("Cleared Filter!")})
     }
 }

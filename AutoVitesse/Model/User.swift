@@ -15,7 +15,6 @@ class User: Object, ObjectKeyIdentifiable {
     @Persisted var email = ""
     @Persisted var country = ""
     @Persisted var city = ""
-    
     var idString: String {
         return id.stringValue
     }

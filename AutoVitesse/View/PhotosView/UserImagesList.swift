@@ -11,16 +11,15 @@ import RealmSwift
 struct UserImagesList: View {
     var utils = Utils()
     @ObservedResults(
-    userImage.self,
+    UserImage.self,
       where: { $0.userId == appSession.currentUser?.idString ?? ""}
     ) var userImages
-    
     var body: some View {
-        if(userImages.count >= 1){
+        if userImages.count >= 1 {
             ForEach(userImages) { image in
                 UserImageComponent(image: utils.getImageFromName(fileName: image.imageId))
             }
-        }else{
+        } else {
             Text("There are no photos")
                 .font(.title)
                 .foregroundColor(Color("TextColor"))

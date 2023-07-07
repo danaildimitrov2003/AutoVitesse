@@ -19,13 +19,13 @@ struct NewMessageTextField: View {
                 .onSubmit {
                     saveMessage()
                 }
-            Button(action: {saveMessage()}) {
-                Image(systemName:"arrowshape.right.fill")
+            Button(action: { saveMessage() }, label: {
+                Image(systemName: "arrowshape.right.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color("SecondaryGreen"))
-                    .frame(width:32, height: 32, alignment: .center)
-            }
+                    .frame(width: 32, height: 32, alignment: .center)
+            })
         }
         .frame(width: UIScreen.main.bounds.width*0.8)
         .padding()
@@ -33,8 +33,6 @@ struct NewMessageTextField: View {
             RoundedRectangle(cornerRadius: 15)
                 .stroke(Color("SecondaryGreen"), lineWidth: 3)
         )
-        
-        
     }
 }
 

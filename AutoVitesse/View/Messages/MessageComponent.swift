@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct MessageComponent: View {
-    let message : String
-    let senderId : String
+    let message: String
+    let senderId: String
     let utils = Utils()
-    
     var body: some View {
         HStack {
-            if(senderId == utils.getCurrentUser().idString){
+            if senderId == utils.getCurrentUser().idString {
                 Spacer()
             }
-            VStack(alignment: senderId == utils.getCurrentUser().idString ? .trailing : .leading){
-                HStack{
+            VStack(alignment: senderId == utils.getCurrentUser().idString ? .trailing : .leading) {
+                HStack {
                     Text(utils.getUserByID(userID: senderId)?.username ?? "Username")
                         .foregroundColor(Color("BlackTextColor"))
                 }
@@ -31,7 +30,7 @@ struct MessageComponent: View {
             .padding()
             .background(Color("PrimaryGreen"))
             .cornerRadius(15)
-            if(senderId != utils.getCurrentUser().idString){
+            if senderId != utils.getCurrentUser().idString {
                 Spacer()
             }
         }

@@ -15,16 +15,15 @@ class Car: Object, ObjectKeyIdentifiable, Codable {
     @Persisted var year = 0
     @Persisted var type = ""
     @Persisted var apiId = 0
-    
     var idString: String {
         return id.stringValue
     }
 }
 
-struct apiCar: Hashable, Codable{
-    var id : Int
-    var make : String
-    var model : String
-    var year : Int
-    var type : String
+struct АpiCar: Hashable, Codable {
+    var id: Int
+    var make: String
+    var model: String
+    var year: Int
+    var type: String
 }

@@ -8,18 +8,15 @@
 import Foundation
 import RealmSwift
 
-extension CarMessageComposeView{
-    
+extension CarMessageComposeView {
     func sendMessage() {
         let message = Message()
         message.senderId = utils.getCurrentUser().idString
         message.message = messageCar
-        
         let dialogue = Dialogue()
         dialogue.buyerId = utils.getCurrentUser().idString
         dialogue.sellerId = carForSale.sellerId
         dialogue.carForSaleId = carForSale.idString
-        
         do {
             let realm = try Realm(configuration: config)
             try realm.write {
@@ -31,7 +28,5 @@ extension CarMessageComposeView{
         } catch {
             print("Unable to save message to Realm: \(error)")
         }
-        
     }
-    
 }

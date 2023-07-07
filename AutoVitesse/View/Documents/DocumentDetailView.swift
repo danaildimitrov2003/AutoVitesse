@@ -5,7 +5,6 @@ import Tools
 struct DocumentView: UIViewControllerRepresentable {
     let fileName: String
     let utils = Utils()
-    
     func makeUIViewController(context: Context) -> UIViewController {
         let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             .appending("/\(fileName)-\(utils.getCurrentUser().idString).pdf")
@@ -15,31 +14,25 @@ struct DocumentView: UIViewControllerRepresentable {
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.navigationBar.isTranslucent = false
         navigationController.toolbar.isTranslucent = false
-        
         documentController.openDocument(with: fileURL)
-        
         return navigationController
     }
-    
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
     }
 }
 
 struct DocumentDetailView: View {
     let fileName: String
     let utils = Utils()
-    
     init(fileName: String) {
         self.fileName = fileName
         mergeXFDFIntoPDF(fileName: fileName)
     }
-    
     var body: some View {
-        ZStack{
+        ZStack {
             Color("BackgroundColor").ignoresSafeArea(.all)
             DocumentView(fileName: fileName)
-                .onDisappear(){
+                .onDisappear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         exportAnnotationsToXFDF(fileName: fileName)
                     }
@@ -47,7 +40,6 @@ struct DocumentDetailView: View {
         }
     }
 }
-
 
 struct DocumentDetailView_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,26 +15,25 @@ struct CarMessageComposeView: View {
     @State var errorMessage = ""
     var body: some View {
         Form {
-            HStack{
+            HStack {
                 Text("Message")
                 .font(.title2)
                 Text(utils.getUserByID(userID: carForSale.sellerId)?.username ?? "")
                     .font(.title2)
             }
             TextEditor(text: $messageCar)
-            HStack{
+            HStack {
                 Spacer()
-                Button(action: {sendMessage()}) {
+                Button(action: { sendMessage() }, label: {
                     AccentColorButtonText(buttonText: "Send Message")
-                }
+                })
                 Spacer()
             }
-            if(errorMessage != ""){
+            if errorMessage != "" {
                 Text(errorMessage)
                     .foregroundColor(.red)
             }
         }
-        
     }
 }
 
@@ -45,7 +44,7 @@ struct CarMessageComposeView_Previews: PreviewProvider {
         carForSale.model = "M5"
         carForSale.year = 2022
         carForSale.type = "Sedan"
-        carForSale.carDescription = "This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan."
+        carForSale.carDescription = "This is a powerful and luxurious sedan.This is a powerful and luxurious sedan."
         carForSale.horsePower = 617
         carForSale.fuel = "Gasoline"
         carForSale.transmission = "Automatic"

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavouritesView: View {
     var body: some View {
-        VStack{
+        VStack {
             Text("Favourites")
                 .font(.title)
                 .foregroundColor(Color("TextColor"))

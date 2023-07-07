@@ -8,22 +8,19 @@
 import Foundation
 import RealmSwift
 
-extension UsernameTextField{
-    
-    func handleUsernameChange(_ username: String ){
-        do{
+extension UsernameTextField {
+    func handleUsernameChange(_ username: String ) {
+        do {
             let realm = try Realm(configuration: config)
-            if (realm.objects(User.self).filter("username = %@", username).first != nil ) {
+            if realm.objects(User.self).filter("username = %@", username).first != nil {
                 errorMessage = "This username has been taken!"
                 isUsernameCompleted = false
-            }else{
+            } else {
                 isUsernameCompleted = true
                 errorMessage = ""
             }
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
-        
-        
     }
 }

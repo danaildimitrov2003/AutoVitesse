@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct CarComponent: View {
-    let carMake : String
-    let carModel : String
-    let carYear : Int
-    let userId : String
-    let carId : String
-    @State var isClicked : Bool
-    @Binding var carsList : [Car]
-    
+    let carMake: String
+    let carModel: String
+    let carYear: Int
+    let userId: String
+    let carId: String
+    @State var isClicked: Bool
+    @Binding var carsList: [Car]
     var body: some View {
-        HStack{
+        HStack {
             Text(carMake)
                 .foregroundColor(Color("TextColor"))
             Text(carModel)
@@ -28,27 +27,27 @@ struct CarComponent: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(Color("AccentColor"))
-                .frame(width:20, height: 20, alignment: .center)
+                .frame(width: 20, height: 20, alignment: .center)
                 .onTapGesture {
-                    if(isClicked == false){
+                    if isClicked == false {
                         handleFavouriteClick(userId: userId, carId: carId)
-                    }else{
+                    } else {
                         handleUnFavouriteClick(userId: userId, carId: carId)
                         carsList = carsList.filter { $0.idString != carId }
                     }
-                    isClicked.toggle()   
+                    isClicked.toggle()
                 }
                 .animation(.default, value: isClicked)
         }
         .padding()
         .background(Color("PrimaryGreen"))
         .cornerRadius(15)
-        
     }
 }
 
 struct CarComponent_Previews: PreviewProvider {
     static var previews: some View {
-        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003, userId: "101", carId: "102", isClicked: false, carsList: .constant([Car()]))
+        CarComponent(carMake: "Porsche", carModel: "911", carYear: 2003,
+                     userId: "101", carId: "102", isClicked: false, carsList: .constant([Car()]))
     }
 }

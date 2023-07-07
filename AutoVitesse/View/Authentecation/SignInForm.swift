@@ -17,18 +17,18 @@ struct SignInFormView: View {
     @State var showHomeView = false
     @State var showFacebookSignUp = false
     @State var manager = LoginManager()
-    
     var body: some View {
-        NavigationView{
+        NavigationView {
             List {
                 TextField("Username", text: $username)
                     .disableAutocorrectAndAutocapitalize()
                 SecureField("Password", text: $password)
-                if(errorMessage != ""){
+                if errorMessage != "" {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 }
-                FacebookButton(buttonText: "Sign in with Facebook", showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
+                FacebookButton(buttonText: "Sign in with Facebook",
+                               showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Sign in")
@@ -38,11 +38,10 @@ struct SignInFormView: View {
                     Button("Sign in") {
                         signIn(username: username, password: password)
                     }
-                    //.disabled(true)
                 }
             }
             .fullScreenCover(isPresented: $showHomeView) {
-                NavbarContainerView(currentViewName: "Home"){
+                NavbarContainerView(currentViewName: "Home") {
                     HomeView()
                 }
             }

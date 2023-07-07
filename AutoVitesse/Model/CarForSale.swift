@@ -22,8 +22,6 @@ class CarForSale: Object, ObjectKeyIdentifiable, Codable {
     @Persisted var price = 0
     @Persisted var sellerId = ""
     @Persisted var photoId = ""
-    
-    
     var idString: String {
         return id.stringValue
     }

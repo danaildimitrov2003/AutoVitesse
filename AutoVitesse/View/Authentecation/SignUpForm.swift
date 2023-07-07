@@ -23,14 +23,18 @@ struct SignUpFormView: View {
     @State var isConfirmPasswordCompleted = false
     @State var showHomeView = false
     @State var showFacebookSignUp = false
-    
     var body: some View {
         NavigationView {
             Form {
-                UsernameTextField(username: $username, usernameState: username, errorMessage: $errorMessage, isUsernameCompleted: $isUsernameCompleted)
-                EmailTextField(email: $email, emailState: email, errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
-                PasswordTextField(password: $password, errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
-                ConfirmPasswordTextField(password: $password, confirmPassword: $confirmPassword, errorMessage: $errorMessage, isConfirmPasswordCompleted: $isConfirmPasswordCompleted)
+                UsernameTextField(username: $username, usernameState: username,
+                                  errorMessage: $errorMessage, isUsernameCompleted: $isUsernameCompleted)
+                EmailTextField(email: $email, emailState: email,
+                               errorMessage: $errorMessage, isEmailCompleted: $isEmailCompleted)
+                PasswordTextField(password: $password,
+                                  errorMessage: $errorMessage, isPasswordCompleted: $isPasswordCompleted)
+                ConfirmPasswordTextField(password: $password, confirmPassword: $confirmPassword,
+                                         errorMessage: $errorMessage,
+                                         isConfirmPasswordCompleted: $isConfirmPasswordCompleted)
                 Picker("Country", selection: $country) {
                     ForEach(countries, id: \.self) { option in
                         Text("\(option)")
@@ -45,11 +49,12 @@ struct SignUpFormView: View {
                 }
                 .foregroundColor(Color("TextColor"))
                 .tint(Color("AccentColor"))
-                if(errorMessage != ""){
+                if errorMessage != "" {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 }
-                FacebookButton(buttonText: "Sign up with Facebook", showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
+                FacebookButton(buttonText: "Sign up with Facebook",
+                               showHomeView: $showHomeView, showFacebookSignUp: $showFacebookSignUp)
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Sign Up")
@@ -59,11 +64,10 @@ struct SignUpFormView: View {
                     Button("Sign Up") {
                         handleSubmitButton()
                     }
-                    //.disabled(true)
                 }
             }
             .fullScreenCover(isPresented: $showHomeView) {
-                NavbarContainerView(currentViewName: "Home"){
+                NavbarContainerView(currentViewName: "Home") {
                     HomeView()
                 }
             }

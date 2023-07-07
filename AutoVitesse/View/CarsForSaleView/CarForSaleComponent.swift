@@ -8,26 +8,25 @@
 import SwiftUI
 
 struct CarForSaleComponent: View {
-    var image : UIImage
-    var make : String
-    var model : String
-    var year : Int
-    var price : Int
-    
+    var image: UIImage
+    var make: String
+    var model: String
+    var year: Int
+    var price: Int
     var body: some View {
-        ZStack{
+        ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color("PrimaryGreen"))
                 .frame(width: 300, height: 100)
                 .offset(y: 140)
-            VStack{
+            VStack {
                 Image(uiImage: self.image)
                     .resizable()
                     .cornerRadius(15)
                     .frame(width: 300, height: 300)
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Rectangle())
-                HStack{
+                HStack {
                     Text(make)
                         .foregroundColor(Color("BlackTextColor"))
                         .font(.title)
@@ -41,12 +40,8 @@ struct CarForSaleComponent: View {
                 Text(String(price)+" $")
                     .foregroundColor(Color("BlackTextColor"))
                     .font(.title)
-                
             }
-            
-            
         }
-        
     }
 }
 

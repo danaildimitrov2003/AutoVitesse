@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct RangePicker: View {
-    var title : String
+    var title: String
     var utils = Utils()
     @Binding var minBinding: Int
     @Binding var maxBinding: Int
     @State var min: Int
     @State var max: Int
-    
     var body: some View {
-        VStack{
+        VStack {
             Text(title)
-            HStack{
+            HStack {
                 Picker(selection: $minBinding, label: Text("")) {
                     ForEach(utils.generateArray(min: min, max: max), id: \.self) { option in
                         Text(String(option))

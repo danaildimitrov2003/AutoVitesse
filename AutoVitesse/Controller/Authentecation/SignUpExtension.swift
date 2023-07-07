@@ -9,10 +9,9 @@ import Foundation
 import RealmSwift
 
 extension SignUpFormView {
-    
-    func signUp (){
+    func signUp () {
         let utils = Utils()
-        do{
+        do {
             let user = User()
             user.username = username
             user.email = email
@@ -24,27 +23,24 @@ extension SignUpFormView {
                 realm.add(user)
             }
             appSession.currentUser = user
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
-       
     }
-    
-    
-    func handleSubmitButton(){
+    func handleSubmitButton() {
         let utils = Utils()
         let userData = [country]
-        let completionData = [isUsernameCompleted, isEmailCompleted, isPasswordCompleted, isConfirmPasswordCompleted, isEmailConfirmed]
+        let completionData = [isUsernameCompleted, isEmailCompleted,
+                              isPasswordCompleted, isConfirmPasswordCompleted, isEmailConfirmed]
         var isFormCompleted = true
         isFormCompleted = utils.checkBools(completionData)
         isFormCompleted = utils.checkBlanks(userData)
-        if(isFormCompleted){
+        if isFormCompleted {
             errorMessage = ""
             signUp()
             showHomeView = true
-        }else{
+        } else {
             errorMessage = "Please fill out the form!"
         }
-        
     }
 }

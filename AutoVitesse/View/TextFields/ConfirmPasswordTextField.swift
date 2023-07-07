@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ConfirmPasswordTextField: View {
-    @Binding var password : String
-    @Binding var confirmPassword : String
+    @Binding var password: String
+    @Binding var confirmPassword: String
     @State var confirmPasswordState = ""
-    @Binding var errorMessage : String
-    @Binding var isConfirmPasswordCompleted : Bool
-    
+    @Binding var errorMessage: String
+    @Binding var isConfirmPasswordCompleted: Bool
     var body: some View {
         SecureField("Confirm Password", text: $confirmPasswordState)
             .foregroundColor(Color("TextColor"))
-            .onChange(of: confirmPasswordState){ newValue in
+            .onChange(of: confirmPasswordState) { _ in
                 confirmPassword = confirmPasswordState
                 handleConfirmPasswordChange(password, confirmPassword)
             }
@@ -26,6 +25,8 @@ struct ConfirmPasswordTextField: View {
 
 struct ConfirmPasswordTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmPasswordTextField(password: .constant("password"), confirmPassword: .constant("password"), errorMessage: .constant("error message"), isConfirmPasswordCompleted: .constant(true))
+        ConfirmPasswordTextField(password: .constant("password"),
+                                 confirmPassword: .constant("password"),
+                                 errorMessage: .constant("error message"), isConfirmPasswordCompleted: .constant(true))
     }
 }

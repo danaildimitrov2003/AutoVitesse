@@ -11,6 +11,6 @@ import RealmSwift
 extension Results {
 
     func toArray() -> [Element] {
-        return self.map{$0}
+        return self.map {$0}
     }
 }

@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-extension PhotosView{
-    
+extension PhotosView {
     func saveImage(image: UIImage) {
         let utils = Utils()
         let fileName = UUID().uuidString
@@ -18,7 +17,7 @@ extension PhotosView{
             do {
                 let realm = try Realm(configuration: config)
                 realm.safeWrite {
-                    let image = userImage()
+                    let image = UserImage()
                     image.userId = utils.getCurrentUser().idString
                     image.imageId = fileName
                     realm.add(image)
@@ -28,4 +27,3 @@ extension PhotosView{
             }
         }
     }
-

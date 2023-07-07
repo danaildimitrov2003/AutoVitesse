@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct EmailTextField: View {
-    @Binding var email : String
-    @State var emailState : String
-    @Binding var errorMessage : String
-    @Binding var isEmailCompleted : Bool
-    
+    @Binding var email: String
+    @State var emailState: String
+    @Binding var errorMessage: String
+    @Binding var isEmailCompleted: Bool
     var body: some View {
         TextField("Email", text: $emailState)
             .disableAutocorrectAndAutocapitalize()
             .foregroundColor(Color("TextColor"))
-            .onChange(of: emailState) { newValue in
+            .onChange(of: emailState) { _ in
                 email = emailState
                 handleEmailChange(email)
             }
@@ -26,6 +25,7 @@ struct EmailTextField: View {
 
 struct EmailTextField_Previews: PreviewProvider {
     static var previews: some View {
-        EmailTextField(email: .constant("email"), emailState: "email", errorMessage: .constant("error message"), isEmailCompleted: .constant(true))
+        EmailTextField(email: .constant("email"), emailState: "email",
+                       errorMessage: .constant("error message"), isEmailCompleted: .constant(true))
     }
 }

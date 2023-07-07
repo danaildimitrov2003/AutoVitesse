@@ -13,22 +13,17 @@ class Dialogue: Object, ObjectKeyIdentifiable {
     @Persisted var carForSaleId = ""
     @Persisted var sellerId = ""
     @Persisted var buyerId = ""
-    @Persisted var messages : List<Message>
-    
+    @Persisted var messages: List<Message>
     var idString: String {
         return id.stringValue
     }
-    
 }
 
-class Message: Object, Identifiable{
+class Message: Object, Identifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var senderId = ""
     @Persisted var message = ""
-    
-    
     var idString: String {
         return id.stringValue
     }
-    
 }

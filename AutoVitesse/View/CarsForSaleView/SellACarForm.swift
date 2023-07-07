@@ -24,7 +24,6 @@ struct SellACarForm: View {
     @State private var showLibrary = false
     @State private var showCamera = false
     @SwiftUI.Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         NavigationView {
             List {
@@ -52,16 +51,16 @@ struct SellACarForm: View {
                     }
                 }
                 NumericTextField(title: "Mileage", value: $mileage)
-                Group{
+                Group {
                     NumericTextField(title: "Price", value: $price)
                     Text("Description")
                     TextEditor(text: $description)
                     Text("Photo")
                     HStack {
                         Spacer()
-                        Button(action: {showLibrary.toggle()}) {
+                        Button(action: { showLibrary.toggle() }, label: {
                             AccentColorButtonText(buttonText: "Upload from device")
-                        }
+                        })
                         Spacer()
                             .sheet(isPresented: $showLibrary) {
                                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
@@ -69,9 +68,9 @@ struct SellACarForm: View {
                     }
                     HStack {
                         Spacer()
-                        Button(action: {showCamera.toggle()}) {
+                        Button(action: { showCamera.toggle() }, label: {
                             AccentColorButtonText(buttonText: "Use Camera")
-                        }
+                        })
                         Spacer()
                             .sheet(isPresented: $showCamera) {
                                 ImagePicker(sourceType: .camera, selectedImage: self.$image)
@@ -80,7 +79,9 @@ struct SellACarForm: View {
                     if image != UIImage() {
                         HStack {
                             Spacer()
-                            CarForSaleComponent(image: image, make: make, model: model, year: (year as NSString).integerValue, price: (price as NSString).integerValue)
+                            CarForSaleComponent(image: image, make: make, model: model,
+                                year: (year as NSString).integerValue, price: (price as NSString)
+                                .integerValue)
                             Spacer()
                         }
                     }
@@ -98,7 +99,6 @@ struct SellACarForm: View {
                     Button("Save") {
                         handleSaveButton()
                     }
-                    //.disabled(true)
                 }
             }
         }

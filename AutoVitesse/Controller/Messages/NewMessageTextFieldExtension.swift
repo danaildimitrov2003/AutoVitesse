@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension NewMessageTextField{
-    func saveMessage(){
-        if(newMessage != ""){
+extension NewMessageTextField {
+    func saveMessage() {
+        if newMessage != "" {
             sendMessage(newMessage)
             newMessage = ""
         }

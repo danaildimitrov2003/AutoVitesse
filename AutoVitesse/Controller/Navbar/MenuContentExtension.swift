@@ -7,12 +7,11 @@
 
 import Foundation
 
-extension MenuContent{
-    
-    func handleButtonTab(itemText : String){
-        if(itemText == currentViewName){
+extension MenuContent {
+    func handleButtonTab(itemText: String) {
+        if itemText == currentViewName {
             toggleMenu()
-        }else{
+        } else {
             selection = itemText
         }
     }

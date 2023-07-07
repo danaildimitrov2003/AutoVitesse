@@ -8,55 +8,53 @@
 import SwiftUI
 
 struct CopyDocumentView: View {
-    var documentItems : [DocumentItem]
+    var documentItems: [DocumentItem]
     @State var documentSelection = "e46-m3-owners-manual"
     @State var selectedNumbers: [Int] = []
     @State var isSelectAllChecked = false
-    
     @State var pageCount = 170
-    
     var body: some View {
-        Form{
+        Form {
             Picker("Documents", selection: $documentSelection) {
                 ForEach(documentItems, id: \.text) { option in
                     Text("\(option.text)")
                 }
             }
             Text("Select which pages you want to copy.")
-            Button(action: {selectAllPages() }) {
-                HStack{
+            Button(action: { selectAllPages() }, label: {
+                HStack {
                     Text("Select All")
                     Image(systemName: isSelectAllChecked ? "checkmark.square.fill" : "square")
                         .resizable()
                         .foregroundColor(Color("AccentColor"))
                         .frame(width: 24, height: 24)
                 }
-                
-            }
+            })
             .buttonStyle(PlainButtonStyle())
             LazyVGrid(columns: [
                 GridItem(.flexible(minimum: 0, maximum: .infinity)),
                 GridItem(.flexible(minimum: 0, maximum: .infinity)),
                 GridItem(.flexible(minimum: 0, maximum: .infinity)),
-                GridItem(.flexible(minimum: 0, maximum: .infinity)),
+                GridItem(.flexible(minimum: 0, maximum: .infinity))
             ]) {
                 ForEach(1...pageCount, id: \.self) { number in
-                    CustomCheckBox(isChecked: selectedNumbers.contains(number), selectedNumbers: $selectedNumbers, number: number)
+                    CustomCheckBox(isChecked: selectedNumbers.contains(number),
+                                   selectedNumbers: $selectedNumbers, number: number)
                 }
             }
-            if(selectedNumbers != [] ){
-                HStack{
+            if selectedNumbers != [] {
+                HStack {
                     Spacer()
-                    Button(action: {createCopy(fileName: documentSelection)}) {
+                    Button(action: { createCopy(fileName: documentSelection) }, label: {
                         AccentColorButtonText(buttonText: "Save Copy In Documents")
-                    }
+                    })
                     Spacer()
                 }
-            }else{
+            } else {
                 Text("Please select at least one page!")
             }
         }
-        .onChange(of: documentSelection) { newValue in
+        .onChange(of: documentSelection) { _ in
             pageCount = getPDFPagesNum(fileName: documentSelection)
             selectedNumbers = []
         }

@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct DocumentItem: Identifiable, Hashable{
+struct DocumentItem: Identifiable, Hashable {
     var id =  UUID()
     let text: String
 }
 
 struct Documents: View {
-    let documentItems : [DocumentItem] = [
+    let documentItems: [DocumentItem] = [
         DocumentItem(text: "e46-m3-owners-manual"),
         DocumentItem(text: "Porsche-959-Driver-Manual"),
         DocumentItem(text: "2005_M5_Owners_Manual"),
@@ -21,23 +21,23 @@ struct Documents: View {
     ]
     @State var isCopyDocumentOpen = false
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
-                ScrollView{
-                    Button(action: { isCopyDocumentOpen.toggle() }) {
+                ScrollView {
+                    Button(action: { isCopyDocumentOpen.toggle() }, label: {
                         AccentColorButtonText(buttonText: "Copy Document")
-                    }
+                    })
                     Text("Owner's Manuals")
                         .font(.title)
                         .foregroundColor(Color("TextColor"))
                     ForEach(documentItems) { item in
-                        NavigationLink(value: item){
+                        NavigationLink(value: item) {
                             AccentColorButtonText(buttonText: item.text)
                         }
                     }
                 }
-                .navigationDestination(for: DocumentItem.self){ item in
+                .navigationDestination(for: DocumentItem.self) { item in
                     DocumentDetailView(fileName: item.text)
                 }
             }
@@ -45,7 +45,6 @@ struct Documents: View {
                 CopyDocumentView(documentItems: documentItems)
             }
         }
-        
     }
 }
 

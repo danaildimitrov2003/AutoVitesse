@@ -36,56 +36,62 @@ struct CarsForSale: View {
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
                 ScrollView {
-                    VStack{
+                    VStack {
                         SearchBarCarsForSale(search: $search, searchCars: searchCarsForSale)
-                        HStack{
-                            Button(action: {isFilterOpened.toggle()}) {
+                        HStack {
+                            Button(action: { isFilterOpened.toggle() }, label: {
                                 AccentColorButtonText(buttonText: "Filter")
-                            }
-                            Button(action: {isSortOpened.toggle()}) {
+                            })
+                            Button(action: { isSortOpened.toggle() }, label: {
                                 AccentColorButtonText(buttonText: "Sort")
-                            }
+                            })
                         }
-                        Button(action: {isSellACarOpened.toggle()}) {
+                        Button(action: { isSellACarOpened.toggle() }, label: {
                             AccentColorButtonText(buttonText: "Sell a car")
-                        }
+                        })
                         .sheet(isPresented: $isFilterOpened) {
-                            FilterView(makeBinding: $make, modelBinding: $model, model2Binding: $model2, model3Binding: $model3, minYearBinding: $minYear, maxYearBinding: $maxYear, minYearInitial: minYearInitial, maxYearInitial: maxYearInitial, minPriceBinding: $minPrice, maxPriceBinding: $maxPrice, filterCars: filterCarsForSale, clearFilterCars: clearFilterCarsForSale)
+                            FilterView(makeBinding: $make, modelBinding: $model, model2Binding: $model2,
+                                       model3Binding: $model3, minYearBinding: $minYear, maxYearBinding: $maxYear,
+                                       minYearInitial: minYearInitial, maxYearInitial: maxYearInitial,
+                                       minPriceBinding: $minPrice, maxPriceBinding: $maxPrice,
+                                       filterCars: filterCarsForSale, clearFilterCars: clearFilterCarsForSale)
                         }
                         .sheet(isPresented: $isSortOpened) {
-                            SortView(alphabeticalSortOrder: $alphabeticalSortOrder, priceSortOrder: $priceSortOrder, yearSortOrder: $yearSortOrder, sortCars: sortCarsForSale)
+                            SortView(alphabeticalSortOrder: $alphabeticalSortOrder, priceSortOrder: $priceSortOrder,
+                                     yearSortOrder: $yearSortOrder, sortCars: sortCarsForSale)
                         }
                         .sheet(isPresented: $isSellACarOpened) {
                             SellACarForm()
                         }
-                        if(carsForSaleArray.count >= 1){
+                        if carsForSaleArray.count >= 1 {
                             ForEach(carsForSaleArray) { car in
-                                NavigationLink(value: car){
-                                    CarForSaleComponent(image: utils.getImageFromName(fileName: car.photoId), make: car.make, model: car.model, year: car.year, price: car.price)
+                                NavigationLink(value: car) {
+                                    CarForSaleComponent(image: utils.getImageFromName(fileName: car.photoId),
+                                                        make: car.make, model: car.model, year: car.year,
+                                                        price: car.price)
                                 }
                             }
-                        }else{
+                        } else {
                             Text("There are currently no cars for sale")
                                 .font(.title)
                                 .foregroundColor(Color("TextColor"))
                         }
                     }
                 }
-                .navigationDestination(for: CarForSale.self){ car in
+                .navigationDestination(for: CarForSale.self) { car in
                     CarDetailView(carForSale: car, showMessageButton: true)
                 }
-                .onChange(of: carsForSale) { newValue in
+                .onChange(of: carsForSale) { _ in
                     filterCarsForSale()
                 }
 
             }
-            
         }
     }
 }
 
-//struct CarsForSale_Previews: PreviewProvider {
+// struct CarsForSale_Previews: PreviewProvider {
 //    static var previews: some View {
 //        CarsForSale()
 //    }
-//}
+// }

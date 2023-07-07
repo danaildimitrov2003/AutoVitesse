@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct LogOutView: View {
-    @Binding var selection : String
+    @Binding var selection: String
     @SwiftUI.Environment(\.presentationMode) var presentationMode
     var body: some View {
-        VStack{
+        VStack {
             Text("Are you sure you want to log out?")
                 .font(.title2)
                 .foregroundColor(Color("TextColor"))
-            HStack{
-                Button(action: {selection = "LogOut"; presentationMode.wrappedValue.dismiss()}) {
+            HStack {
+                Button(action: {
+                    selection = "LogOut"
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     AccentColorButtonText(buttonText: "Yes")
-                }
-                Button(action: {presentationMode.wrappedValue.dismiss()}) {
+                })
+
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     AccentColorButtonText(buttonText: "No")
-                }
+                })
             }
-           
         }
-        
     }
 }
 

@@ -11,62 +11,52 @@ import RealmSwift
 import UIKit
 import PDFNet
 
-class Utils{
-    
-    func hashString(_ string : String) -> String {
+class Utils {
+    func hashString(_ string: String) -> String {
         guard let data = string.data(using: .utf8) else { return "string" }
         let hashedData = SHA256.hash(data: data)
         let hashedString = hashedData.compactMap { String(format: "%02x", $0) }.joined()
         return hashedString
     }
-    
-    func checkBools(_ bools: [Bool]) -> Bool{
-        for bool in bools {
-            if(bool == false){
-                return false
-            }
+    func checkBools(_ bools: [Bool]) -> Bool {
+        if bools.contains(where: { $0 == false }) {
+            return false
         }
         return true
     }
-    
-    func isCarFavourited(carId : String) -> Bool{
+    func isCarFavourited(carId: String) -> Bool {
         var result = false
         let userId = getCurrentUser().idString
-        do{
+        do {
             let realm = try Realm(configuration: config)
             if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", userId).first {
                 if favouriteCars.carIds.contains(carId) {
                     result =  true
                 }
             }
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
         return result
     }
-    
-    func getCurrentUser() -> User{
+    func getCurrentUser() -> User {
         guard let user = appSession.currentUser else {
             return User()
         }
         return user
     }
-    
-    func generateArray(min : Int, max : Int) -> Array<Int>{
+    func generateArray(min: Int, max: Int) -> [Int] {
         return Array(min...max)
     }
-    
     enum SortOrder {
         case ascending
         case descending
         case none
     }
-    
-    func getImageFromName(fileName: String) -> UIImage{
+    func getImageFromName(fileName: String) -> UIImage {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let url = documentsDirectory.appendingPathComponent(fileName)
         var image = UIImage()
-        
         if let imageData = try? Data(contentsOf: url) {
             if let imageFromData = UIImage(data: imageData) {
                 image = imageFromData
@@ -78,7 +68,6 @@ class Utils{
         }
         return image
     }
-    
     func saveImageLocally(image: UIImage, fileName: String) {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let url = documentsDirectory.appendingPathComponent(fileName)
@@ -90,16 +79,12 @@ class Utils{
             }
         }
     }
-    
-    func checkBlanks(_ strings: [String]) -> Bool{
-        for string in strings {
-            if(string == ""){
-                return false
-            }
+    func checkBlanks(_ strings: [String]) -> Bool {
+        if strings.contains(where: { $0 == "" }) {
+            return false
         }
         return true
     }
-    
     func getUserByID(userID: String) -> User? {
         do {
             let realm = try Realm()
@@ -110,7 +95,6 @@ class Utils{
             return nil
         }
     }
-    
     func getCarForSaleByID(carForSaleID: String) -> CarForSale? {
         do {
             let realm = try Realm()

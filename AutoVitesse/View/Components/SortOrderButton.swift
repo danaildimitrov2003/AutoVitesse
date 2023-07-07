@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SortOrderButton: View {
-    @Binding var sortOrder : Utils.SortOrder
-    @Binding var otherSortOrder : Utils.SortOrder
-    @Binding var otherSortOrder2 : Utils.SortOrder
-    @State var buttonText : String
-    
+    @Binding var sortOrder: Utils.SortOrder
+    @Binding var otherSortOrder: Utils.SortOrder
+    @Binding var otherSortOrder2: Utils.SortOrder
+    @State var buttonText: String
     var body: some View {
         HStack {
             Spacer()
@@ -30,7 +29,7 @@ struct SortOrderButton: View {
                     otherSortOrder = .none
                     otherSortOrder2 = .none
                 }
-            }) {
+            }, label: {
                 switch sortOrder {
                 case .ascending:
                     Image(systemName: "arrow.up.circle")
@@ -39,7 +38,7 @@ struct SortOrderButton: View {
                 case .none:
                     Image(systemName: "minus.circle")
                 }
-            }
+            })
             .buttonStyle(PlainButtonStyle())
             Spacer()
         }
@@ -48,6 +47,8 @@ struct SortOrderButton: View {
 
 struct SortOrderButton_Previews: PreviewProvider {
     static var previews: some View {
-        SortOrderButton(sortOrder: .constant(Utils.SortOrder.none), otherSortOrder:.constant(Utils.SortOrder.none) , otherSortOrder2: .constant(Utils.SortOrder.none), buttonText: "Button")
+        SortOrderButton(sortOrder: .constant(Utils.SortOrder.none),
+                        otherSortOrder: .constant(Utils.SortOrder.none),
+                        otherSortOrder2: .constant(Utils.SortOrder.none), buttonText: "Button")
     }
 }

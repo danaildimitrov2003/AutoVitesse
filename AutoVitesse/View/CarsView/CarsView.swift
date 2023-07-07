@@ -10,7 +10,7 @@ import RealmSwift
 
 struct CarsView: View {
     var body: some View {
-        VStack(alignment: .center){
+        VStack(alignment: .center) {
             SearchBarTextField()
             ScrollView {
                 CarsList(cars: [Car()], message: "There are no records")

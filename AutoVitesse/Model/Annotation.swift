@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import RealmSwift
 
 class Annotation: Object, ObjectKeyIdentifiable, Codable {
@@ -15,7 +13,6 @@ class Annotation: Object, ObjectKeyIdentifiable, Codable {
     @Persisted var xfdfString = ""
     @Persisted var userId = ""
     @Persisted var fileName = ""
-    
     var idString: String {
         return id.stringValue
     }

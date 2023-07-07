@@ -8,30 +8,27 @@
 import SwiftUI
 import SwiftyDropbox
 
-
 struct MyStorageView: View {
-    
     @State var isShown = false
     @State var isLogedIn = false
     @State var showFileImporter = false
     @State var fileName = ""
-    @State var importedFile : Data?
-    
+    @State var importedFile: Data?
     var body: some View {
         VStack {
-            if(DropboxClientsManager.authorizedClient != nil || isLogedIn){
-                Button(action: {logOutOfDropBox()}) {
+            if DropboxClientsManager.authorizedClient != nil || isLogedIn {
+                Button(action: { logOutOfDropBox() }, label: {
                     AccentColorButtonText(buttonText: "Logout from Dropbox")
-                }
-            }else{
-                Button(action: {isShown.toggle()}) {
+                })
+            } else {
+                Button(action: { isShown.toggle() }, label: {
                     AccentColorButtonText(buttonText: "Login to Dropbox")
-                }
+                })
             }
-            if(DropboxClientsManager.authorizedClient != nil || isLogedIn){
-                Button(action: {showFileImporter.toggle()}) {
+            if DropboxClientsManager.authorizedClient != nil || isLogedIn {
+                Button(action: { showFileImporter.toggle() }, label: {
                     AccentColorButtonText(buttonText: "Import File")
-                }
+                })
                 .fileImporter(
                     isPresented: $showFileImporter,
                     allowedContentTypes: [.pdf]
@@ -39,13 +36,12 @@ struct MyStorageView: View {
                     switch result {
                     case .success(let file):
                         print(file.absoluteString)
-                        do{
+                        do {
                             importedFile = try Data(contentsOf: file)
                             fileName = try result.get().lastPathComponent
-                        }catch{
+                        } catch {
                             print("Error: \(error.localizedDescription)")
                         }
-                        
                     case .failure(let error):
                         print(error.localizedDescription)
                     }
@@ -54,10 +50,10 @@ struct MyStorageView: View {
             Text(fileName)
                 .font(.title3)
                 .foregroundColor(Color("TextColor"))
-            if (fileName != "") {
-                Button(action: {uploadFileToDropBox()}) {
+            if fileName != "" {
+                Button(action: { uploadFileToDropBox() }, label: {
                     AccentColorButtonText(buttonText: "Upload file")
-                }
+                })
             }
             DropboxView(isShown: $isShown)
         }
@@ -68,8 +64,6 @@ struct MyStorageView: View {
                     case .success:
                         isLogedIn.toggle()
                         isShown.toggle()
-                        //print("Success! User is logged into DropboxClientsManager.")
-                        //fileName = "men"
                     case .cancel:
                         print("Authorization flow was manually canceled by user!")
                     case .error(_, let description):
@@ -84,13 +78,13 @@ struct MyStorageView: View {
 
 struct DropboxView: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
-    
-    @Binding var isShown : Bool
-    
+    @Binding var isShown: Bool
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
         if isShown {
-            let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read", "files.metadata.write", "files.metadata.read", "files.content.write", "files.content.read"], includeGrantedScopes: false)
+            let scopeRequest = ScopeRequest(scopeType: .user, scopes:
+                                                ["account_info.read", "files.metadata.write",
+                                                 "files.metadata.read", "files.content.write", "files.content.read"],
+                                            includeGrantedScopes: false)
             DropboxClientsManager.authorizeFromControllerV2(
                 UIApplication.shared,
                 controller: uiViewController,
@@ -99,7 +93,6 @@ struct DropboxView: UIViewControllerRepresentable {
                 scopeRequest: scopeRequest)
         }
     }
-    
     func makeUIViewController(context _: Self.Context) -> UIViewController {
         return UIViewController()
     }

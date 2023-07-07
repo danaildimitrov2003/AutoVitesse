@@ -7,7 +7,7 @@
 
 import Foundation
 
-let countries = ["Bulgaria", "Germany", "Italy", "Spain", "Greece", "Brunei",]
+let countries = ["Bulgaria", "Germany", "Italy", "Spain", "Greece", "Brunei"]
 
 let carMakes = [
     "Acura",
@@ -61,4 +61,3 @@ let carMakes = [
 let carTypes = ["Sedan", "Wagon", "Coupe", "Hatchback", "Convertible", "SUV", "Pickup", "Van", "Minivan"]
 let fuelTypes = ["Gasoline", "Diesel", "Electric", "Hybrid", "Natural Gas", "Biofuel", "Hydrogen", "Flex-Fuel"]
 let transmissionTypes = ["Manual", "Automatic", "CVT", "Semi-Automatic", "Dual-Clutch"]
-

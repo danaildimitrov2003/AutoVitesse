@@ -7,8 +7,8 @@
 
 import Foundation
 import RealmSwift
-
-class userImage: Object, ObjectKeyIdentifiable{
+// here
+class UserImage: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var userId = ""
     @Persisted var imageId = ""

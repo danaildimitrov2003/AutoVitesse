@@ -12,9 +12,10 @@ struct LogOutButton: View {
     @State var selection: String? = ""
     @State var selectionBinding = ""
     var body: some View {
-        ZStack{
-            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), tag:"LogOut", selection: $selection) {}
-                .onChange(of: selectionBinding) { newValue in
+        ZStack {
+            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true),
+                           tag: "LogOut", selection: $selection) {}
+                .onChange(of: selectionBinding) { _ in
                     selection = selectionBinding
                 }
             Button(action: logOut) {
@@ -25,11 +26,7 @@ struct LogOutButton: View {
                     .padding(.leading, 10)
             }
             .buttonStyle(PlainButtonStyle())
-            
         }
-        
-        
-        
         .sheet(isPresented: $showLogOutView) {
             LogOutView(selection: $selectionBinding)
         }

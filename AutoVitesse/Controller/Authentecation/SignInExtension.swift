@@ -10,21 +10,20 @@ import RealmSwift
 import FBSDKLoginKit
 
 extension SignInFormView {
-    
-    func signIn (username: String, password: String){
+    func signIn (username: String, password: String) {
         let utils = Utils()
-        do{
+        do {
             let realm = try Realm(configuration: config)
-            //print(Realm.Configuration.defaultConfiguration.fileURL)
-            if let user = realm.objects(User.self).filter("username = %@ AND password = %@", username, utils.hashString(password)).first {
+            // print(Realm.Configuration.defaultConfiguration.fileURL)
+            if let user = realm.objects(User.self).filter("username = %@ AND password = %@",
+                                                          username, utils.hashString(password)).first {
                 appSession.currentUser = user
                 showHomeView = true
-            }else{
+            } else {
                 errorMessage = "Didn't find this username and password combination!"
             }
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
     }
-    
 }

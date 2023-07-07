@@ -8,15 +8,14 @@
 import Foundation
 import SwiftyDropbox
 
-extension MyStorageView{
-    
-    func uploadFileToDropBox(){
+extension MyStorageView {
+    func uploadFileToDropBox() {
         if let client = DropboxClientsManager.authorizedClient {
             guard let importedFile = importedFile else {
                 print("Error: importedFile is nil")
                 return
             }
-            let request = client.files.upload(path: "/AutoVitesse/\(fileName)", input: importedFile)
+            client.files.upload(path: "/AutoVitesse/\(fileName)", input: importedFile)
                 .response { response, error in
                     if let response = response {
                         print(response)
@@ -27,13 +26,11 @@ extension MyStorageView{
                 .progress { progressData in
                     print(progressData)
                 }
-            
         } else {
             print("Error: Dropbox client is nil")
         }
     }
-    
-    func logOutOfDropBox(){
+    func logOutOfDropBox() {
         isLogedIn = false
         DropboxClientsManager.unlinkClients()
         fileName = ""

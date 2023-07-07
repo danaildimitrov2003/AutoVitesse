@@ -8,15 +8,15 @@
 import Foundation
 import RealmSwift
 
-extension FavouritesView{
-    
-    func getFavouriteCars() -> [Car]{
+extension FavouritesView {
+    func getFavouriteCars() -> [Car] {
         let utils = Utils()
-        var carIds : [String] = []
-        var cars : [Car] = []
-        do{
+        var carIds: [String] = []
+        var cars: [Car] = []
+        do {
             let realm = try Realm(configuration: config)
-            if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@", utils.getCurrentUser().idString).first {
+            if let favouriteCars = realm.objects(FavouriteCars.self).filter("userId == %@",
+                                                                            utils.getCurrentUser().idString).first {
                 carIds = Array(favouriteCars.carIds)
             }
             for id in carIds {
@@ -24,10 +24,9 @@ extension FavouritesView{
                     cars.append(car)
                 }
             }
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
-        
         return cars
     }
 }

@@ -11,9 +11,8 @@ struct CarDetailView: View {
     let carForSale: CarForSale
     @State private var carImage: UIImage?
     @State var showCarMassage = false
-    var showMessageButton : Bool
+    var showMessageButton: Bool
     var utils = Utils()
-    
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea(.all)
@@ -32,22 +31,22 @@ struct CarDetailView: View {
                             .foregroundColor(.secondary)
                     }
                     VStack(alignment: .leading, spacing: 10) {
-                        HStack{
+                        HStack {
                             CarDetailItem(title: "Make", value: carForSale.make)
                             CarDetailItem(title: "Model", value: carForSale.model)
                             CarDetailItem(title: "Year", value: String(carForSale.year))
                             CarDetailItem(title: "Horsepower", value: String(carForSale.horsePower))
                         }
-                        HStack{
+                        HStack {
                             CarDetailItem(title: "Type", value: carForSale.type)
                             CarDetailItem(title: "Transmission", value: carForSale.transmission)
                             CarDetailItem(title: "Fuel", value: carForSale.fuel)
                         }
-                        HStack{
+                        HStack {
                             CarDetailItem(title: "Mileage", value: String(carForSale.mileage))
                             CarDetailItem(title: "Price", value: "\(carForSale.price) $")
                         }
-                        VStack(alignment: .leading){
+                        VStack(alignment: .leading) {
                             Text("Description")
                                 .font(.headline)
                                 .foregroundColor(.secondary)
@@ -57,10 +56,10 @@ struct CarDetailView: View {
                                 .foregroundColor(Color("TextColor"))
                         }
                     }
-                    if (showMessageButton && utils.getCurrentUser().idString != carForSale.sellerId){
-                        Button(action: {showCarMassage.toggle()}) {
+                    if showMessageButton && utils.getCurrentUser().idString != carForSale.sellerId {
+                        Button(action: { showCarMassage.toggle() }, label: {
                             AccentColorButtonText(buttonText: "Message Seller")
-                        }
+                        })
                     }
                 }
                 .padding()
@@ -75,8 +74,6 @@ struct CarDetailView: View {
     }
 }
 
-
-
 struct CarDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let carForSale = CarForSale()
@@ -84,7 +81,7 @@ struct CarDetailView_Previews: PreviewProvider {
         carForSale.model = "M5"
         carForSale.year = 2022
         carForSale.type = "Sedan"
-        carForSale.carDescription = "This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan.This is a powerful and luxurious sedan."
+        carForSale.carDescription = "This is a powerful and luxurious sedan.This is a powerful and luxurious sedan."
         carForSale.horsePower = 617
         carForSale.fuel = "Gasoline"
         carForSale.transmission = "Automatic"

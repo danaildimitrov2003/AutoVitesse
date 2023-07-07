@@ -7,12 +7,12 @@
 
 import Foundation
 
-extension ConfirmPasswordTextField{
-    func handleConfirmPasswordChange(_ password: String, _ confirmPassword : String){
-        if(password != confirmPassword){
+extension ConfirmPasswordTextField {
+    func handleConfirmPasswordChange(_ password: String, _ confirmPassword: String) {
+        if password != confirmPassword {
             errorMessage = "The passwords don't match!"
             isConfirmPasswordCompleted = false
-        }else{
+        } else {
             errorMessage = ""
             isConfirmPasswordCompleted = true
         }

@@ -9,32 +9,30 @@ import Foundation
 import UIKit
 import RealmSwift
 
-extension SellACarForm{
-    func handleSaveButton(){
+extension SellACarForm {
+    func handleSaveButton() {
         let utils = Utils()
         let carData = [model, year, description, horsePower, mileage, price]
         var isFormCompleted = true
         isFormCompleted = utils.checkBlanks(carData)
-        if(isFormCompleted){
-            if(image == UIImage()){
+        if isFormCompleted {
+            if image == UIImage() {
                 isFormCompleted = false
                 errorMessage = "Please upload a photo!"
-            }else{
+            } else {
                 errorMessage = ""
                 save()
                 presentationMode.wrappedValue.dismiss()
             }
-        }else{
+        } else {
             errorMessage = "Please fill out the form!"
         }
     }
-    
-    func save(){
+    func save() {
         let utils = Utils()
         let fileName = UUID().uuidString
         utils.saveImageLocally(image: image, fileName: fileName)
-        
-        do{
+        do {
             let carForSale = CarForSale()
             if let yearInt = Int(year) {
                 carForSale.year = yearInt
@@ -60,7 +58,7 @@ extension SellACarForm{
             realm.safeWrite {
                 realm.add(carForSale)
             }
-        }catch let error{
+        } catch let error {
             print("Error initializing Realm: \(error.localizedDescription)")
         }
     }

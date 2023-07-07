@@ -10,17 +10,18 @@ import SwiftUI
 struct DialogueDetailView: View {
     @State var newMessage = ""
     @State var showCarDetailView = false
-    @State var dialogue : Dialogue
-    @State var messages : [Message]
-    var car : CarForSale
+    @State var dialogue: Dialogue
+    @State var messages: [Message]
+    var car: CarForSale
     let utils = Utils()
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea(.all)
-            VStack{
+            VStack {
                 ScrollViewReader { proxy in
-                    ScrollView{
-                        CarForSaleComponent(image: utils.getImageFromName(fileName: car.photoId), make: car.make, model: car.model, year: car.year, price: car.price)
+                    ScrollView {
+                        CarForSaleComponent(image: utils.getImageFromName(fileName: car.photoId),
+                                            make: car.make, model: car.model, year: car.year, price: car.price)
                             .onTapGesture {
                                 showCarDetailView.toggle()
                             }
@@ -33,8 +34,8 @@ struct DialogueDetailView: View {
                     .onAppear {
                         proxy.scrollTo(messages.last?.idString)
                     }
-                    .onChange(of: messages.count){ newValue in
-                        withAnimation(.easeIn){
+                    .onChange(of: messages.count) { _ in
+                        withAnimation(.easeIn) {
                             proxy.scrollTo(messages.last?.idString)
                         }
                     }
