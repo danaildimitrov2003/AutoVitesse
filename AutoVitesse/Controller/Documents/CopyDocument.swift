@@ -7,6 +7,7 @@
 
 import Foundation
 import PDFNet
+import SwiftUI
 
 extension CopyDocumentView {
     func createCopy(fileName: String) {
@@ -26,9 +27,19 @@ extension CopyDocumentView {
                 in_doc.save(toFile: URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                                                              .userDomainMask, true)[0])
                     .appendingPathComponent("\(fileName)-Copy.pdf").path, flags: 0)
+                withAnimation {
+                    message = "You have successfully saved \(fileName) to the documents directory!"
+                    if isSelectAllChecked {
+                        isSelectAllChecked = false
+                    }
+                    selectedNumbers = []
+                }
                 print("Done. Result saved")
             }
         } catch let e as NSError {
+            withAnimation {
+                message = "Errors occurred: \(e)"
+            }
             print("\(e)")
         }
     }

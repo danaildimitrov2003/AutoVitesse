@@ -13,6 +13,7 @@ struct CopyDocumentView: View {
     @State var selectedNumbers: [Int] = []
     @State var isSelectAllChecked = false
     @State var pageCount = 170
+    @State var message = ""
     var body: some View {
         Form {
             Picker("Documents", selection: $documentSelection) {
@@ -53,6 +54,8 @@ struct CopyDocumentView: View {
             } else {
                 Text("Please select at least one page!")
             }
+            Text(message)
+                .font(.title3)
         }
         .onChange(of: documentSelection) { _ in
             pageCount = getPDFPagesNum(fileName: documentSelection)

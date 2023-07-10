@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftyDropbox
+import SwiftUI
 
 extension MyStorageView {
     func uploadFileToDropBox() {
@@ -18,8 +19,14 @@ extension MyStorageView {
             client.files.upload(path: "/AutoVitesse/\(fileName)", input: importedFile)
                 .response { response, error in
                     if let response = response {
+                        withAnimation {
+                            message = "You have successfully uploaded \(fileName) to Dropbox!"
+                        }
                         print(response)
                     } else if let error = error {
+                        withAnimation {
+                            message = "Errors occurred: \(error)"
+                        }
                         print(error)
                     }
                 }
@@ -33,7 +40,10 @@ extension MyStorageView {
     func logOutOfDropBox() {
         isLogedIn = false
         DropboxClientsManager.unlinkClients()
-        fileName = ""
-        importedFile = nil
+        withAnimation {
+            fileName = ""
+            importedFile = nil
+            message = ""
+        }
     }
 }

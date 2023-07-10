@@ -14,6 +14,7 @@ struct MyStorageView: View {
     @State var showFileImporter = false
     @State var fileName = ""
     @State var importedFile: Data?
+    @State var message = ""
     var body: some View {
         VStack {
             if DropboxClientsManager.authorizedClient != nil || isLogedIn {
@@ -55,6 +56,8 @@ struct MyStorageView: View {
                     AccentColorButtonText(buttonText: "Upload file")
                 })
             }
+            Text(message)
+                .font(.title3)
             DropboxView(isShown: $isShown)
         }
         .onOpenURL { url in
