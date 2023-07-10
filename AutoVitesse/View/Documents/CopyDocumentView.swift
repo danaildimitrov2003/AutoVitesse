@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CheckBoxPackage
 
 struct CopyDocumentView: View {
     var documentItems: [DocumentItem]
@@ -22,16 +23,7 @@ struct CopyDocumentView: View {
                 }
             }
             Text("Select which pages you want to copy.")
-            Button(action: { selectAllPages() }, label: {
-                HStack {
-                    Text("Select All")
-                    Image(systemName: isSelectAllChecked ? "checkmark.square.fill" : "square")
-                        .resizable()
-                        .foregroundColor(Color("AccentColor"))
-                        .frame(width: 24, height: 24)
-                }
-            })
-            .buttonStyle(PlainButtonStyle())
+            CustomCheckBoxWithAction(isChecked: isSelectAllChecked, text: "Select All", action: selectAllPages)
             LazyVGrid(columns: [
                 GridItem(.flexible(minimum: 0, maximum: .infinity)),
                 GridItem(.flexible(minimum: 0, maximum: .infinity)),
@@ -39,8 +31,8 @@ struct CopyDocumentView: View {
                 GridItem(.flexible(minimum: 0, maximum: .infinity))
             ]) {
                 ForEach(1...pageCount, id: \.self) { number in
-                    CustomCheckBox(isChecked: selectedNumbers.contains(number),
-                                   selectedNumbers: $selectedNumbers, number: number)
+                    CustomCheckBoxWithAction(isChecked: selectedNumbers.contains(number), text: "\(number)",
+                                             action: {selectPage(number: number)})
                 }
             }
             if selectedNumbers != [] {

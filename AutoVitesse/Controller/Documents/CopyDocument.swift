@@ -66,4 +66,12 @@ extension CopyDocumentView {
         }
         print(selectedNumbers)
     }
+    func selectPage(number: Int) {
+        if selectedNumbers.contains(number) {
+            selectedNumbers.removeAll { $0 == number }
+        } else {
+            selectedNumbers.append(number)
+        }
+        print(selectedNumbers)
+    }
 }
