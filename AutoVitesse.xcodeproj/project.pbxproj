@@ -28,6 +28,8 @@
 		2276E0672A557D630040C0E5 /* MyStorageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0662A557D630040C0E5 /* MyStorageExtension.swift */; };
 		2276E0712A56E4DA0040C0E5 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276E0702A56E4DA0040C0E5 /* Enviroment.swift */; };
 		2276E0952A5C232E0040C0E5 /* CheckBoxPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2276E0942A5C232E0040C0E5 /* CheckBoxPackage */; };
+		229778D92A6FEBD00070BAC9 /* ShowCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229778D82A6FEBD00070BAC9 /* ShowCaseView.swift */; };
+		229778DD2A6FEC670070BAC9 /* ImageFetcherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */; };
 		22A45B812A456BA5007410C0 /* PDFTron in Frameworks */ = {isa = PBXBuildFile; productRef = 22A45B802A456BA5007410C0 /* PDFTron */; };
 		22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A45B832A45907B007410C0 /* DocumentDetailView.swift */; };
 		22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */; };
@@ -133,6 +135,8 @@
 		2276E0622A555DA50040C0E5 /* MyStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageView.swift; sourceTree = "<group>"; };
 		2276E0662A557D630040C0E5 /* MyStorageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStorageExtension.swift; sourceTree = "<group>"; };
 		2276E0702A56E4DA0040C0E5 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enviroment.swift; path = ../../../Enviroment.swift; sourceTree = "<group>"; };
+		229778D82A6FEBD00070BAC9 /* ShowCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCaseView.swift; sourceTree = "<group>"; };
+		229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcherExtension.swift; sourceTree = "<group>"; };
 		22A45B832A45907B007410C0 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
 		22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "e46-m3-owners-manual.pdf"; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
@@ -255,6 +259,22 @@
 				2276E0662A557D630040C0E5 /* MyStorageExtension.swift */,
 			);
 			path = MyStorage;
+			sourceTree = "<group>";
+		};
+		229778D72A6FEB9E0070BAC9 /* ShowCase */ = {
+			isa = PBXGroup;
+			children = (
+				229778D82A6FEBD00070BAC9 /* ShowCaseView.swift */,
+			);
+			path = ShowCase;
+			sourceTree = "<group>";
+		};
+		229778DB2A6FEC4B0070BAC9 /* ShowCase */ = {
+			isa = PBXGroup;
+			children = (
+				229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */,
+			);
+			path = ShowCase;
 			sourceTree = "<group>";
 		};
 		22A45B822A459061007410C0 /* Documents */ = {
@@ -384,6 +404,7 @@
 		22E26A6E2A0D170200B21FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				229778D72A6FEB9E0070BAC9 /* ShowCase */,
 				2276E0612A555D840040C0E5 /* MyStorage */,
 				22A45B822A459061007410C0 /* Documents */,
 				22E415002A41ADB4002C31A1 /* Messages */,
@@ -403,6 +424,7 @@
 		22E26A6F2A0D170D00B21FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				229778DB2A6FEC4B0070BAC9 /* ShowCase */,
 				2276E0652A557D4C0040C0E5 /* MyStorage */,
 				2257D3AC2A4C5EA700F48CE7 /* Documents */,
 				22E4150B2A42FAF7002C31A1 /* Messages */,
@@ -702,6 +724,7 @@
 				22FACA982A209A4000EBF5D2 /* ImagePicker.swift in Sources */,
 				22E5D9652A14C2060088B869 /* ProfileViewExtension.swift in Sources */,
 				22E5D98C2A1B8DA40088B869 /* CarComponent.swift in Sources */,
+				229778DD2A6FEC670070BAC9 /* ImageFetcherExtension.swift in Sources */,
 				22CE49CE2A31F5730017E033 /* FilterView.swift in Sources */,
 				2257D3B22A4EE00500F48CE7 /* CopyDocument.swift in Sources */,
 				22CE49DC2A3338CD0017E033 /* SortOrderButton.swift in Sources */,
@@ -737,6 +760,7 @@
 				22E4150A2A42F52F002C31A1 /* NewMessageTextField.swift in Sources */,
 				227416212A273F8200E0AA78 /* UiImageExtension.swift in Sources */,
 				22FACA9E2A20BE4600EBF5D2 /* UserImageComponent.swift in Sources */,
+				229778D92A6FEBD00070BAC9 /* ShowCaseView.swift in Sources */,
 				22E5D9552A139AD00088B869 /* Navbar.swift in Sources */,
 				22E415022A41ADD2002C31A1 /* MessagesView.swift in Sources */,
 				22E5D9762A1647B10088B869 /* ConfirmPasswordTextFieldExtension.swift in Sources */,
