@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "D24344B1-B873-4BBC-9185-422BA012A807",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AutoVitesse.xcodeproj",
+      "identifier" : "22E26A562A0D11E300B21FD8",
+      "name" : "AutoVitesse"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AutoVitesse.xcodeproj",
+        "identifier" : "229778ED2A725EA40070BAC9",
+        "name" : "AutoVitesseTests"
+      }
+    }
+  ],
+  "version" : 1
+}

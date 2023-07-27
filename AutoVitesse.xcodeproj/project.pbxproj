@@ -30,6 +30,9 @@
 		2276E0952A5C232E0040C0E5 /* CheckBoxPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2276E0942A5C232E0040C0E5 /* CheckBoxPackage */; };
 		229778D92A6FEBD00070BAC9 /* ShowCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229778D82A6FEBD00070BAC9 /* ShowCaseView.swift */; };
 		229778DD2A6FEC670070BAC9 /* ImageFetcherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */; };
+		229778F12A725EA40070BAC9 /* AutoVitesseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229778F02A725EA40070BAC9 /* AutoVitesseTests.swift */; };
+		229778FC2A7273FD0070BAC9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 229778FB2A7273FD0070BAC9 /* Realm */; };
+		229778FE2A7274010070BAC9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 229778FD2A7274010070BAC9 /* RealmSwift */; };
 		22A45B812A456BA5007410C0 /* PDFTron in Frameworks */ = {isa = PBXBuildFile; productRef = 22A45B802A456BA5007410C0 /* PDFTron */; };
 		22A45B842A45907B007410C0 /* DocumentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A45B832A45907B007410C0 /* DocumentDetailView.swift */; };
 		22A45B872A459F47007410C0 /* e46-m3-owners-manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */; };
@@ -114,6 +117,16 @@
 		22FACAA02A20BF7500EBF5D2 /* UserImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FACA9F2A20BF7500EBF5D2 /* UserImagesList.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		229778F22A725EA40070BAC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22E26A4F2A0D11E300B21FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E26A562A0D11E300B21FD8;
+			remoteInfo = AutoVitesse;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		22174A6A2A45B6450005CCD7 /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		22174A6C2A45BB0B0005CCD7 /* Porsche-959-Driver-Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Porsche-959-Driver-Manual.pdf"; sourceTree = "<group>"; };
@@ -137,6 +150,9 @@
 		2276E0702A56E4DA0040C0E5 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enviroment.swift; path = ../../../Enviroment.swift; sourceTree = "<group>"; };
 		229778D82A6FEBD00070BAC9 /* ShowCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCaseView.swift; sourceTree = "<group>"; };
 		229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcherExtension.swift; sourceTree = "<group>"; };
+		229778EE2A725EA40070BAC9 /* AutoVitesseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVitesseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		229778F02A725EA40070BAC9 /* AutoVitesseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVitesseTests.swift; sourceTree = "<group>"; };
+		229778F92A726F4C0070BAC9 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = TestPlan.xctestplan; path = AutoVitesseTests/TestPlan.xctestplan; sourceTree = "<group>"; };
 		22A45B832A45907B007410C0 /* DocumentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailView.swift; sourceTree = "<group>"; };
 		22A45B862A459F47007410C0 /* e46-m3-owners-manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "e46-m3-owners-manual.pdf"; sourceTree = "<group>"; };
 		22C02CC12A0E71B9004FB233 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
@@ -220,6 +236,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		229778EB2A725EA40070BAC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229778FE2A7274010070BAC9 /* RealmSwift in Frameworks */,
+				229778FC2A7273FD0070BAC9 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22E26A542A0D11E300B21FD8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +300,21 @@
 				229778DC2A6FEC670070BAC9 /* ImageFetcherExtension.swift */,
 			);
 			path = ShowCase;
+			sourceTree = "<group>";
+		};
+		229778EF2A725EA40070BAC9 /* AutoVitesseTests */ = {
+			isa = PBXGroup;
+			children = (
+				229778F02A725EA40070BAC9 /* AutoVitesseTests.swift */,
+			);
+			path = AutoVitesseTests;
+			sourceTree = "<group>";
+		};
+		229778FA2A7273FD0070BAC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		22A45B822A459061007410C0 /* Documents */ = {
@@ -347,8 +387,11 @@
 		22E26A4E2A0D11E300B21FD8 = {
 			isa = PBXGroup;
 			children = (
+				229778F92A726F4C0070BAC9 /* TestPlan.xctestplan */,
 				22E26A592A0D11E300B21FD8 /* AutoVitesse */,
+				229778EF2A725EA40070BAC9 /* AutoVitesseTests */,
 				22E26A582A0D11E300B21FD8 /* Products */,
+				229778FA2A7273FD0070BAC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -356,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				22E26A572A0D11E300B21FD8 /* AutoVitesse.app */,
+				229778EE2A725EA40070BAC9 /* AutoVitesseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -595,6 +639,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		229778ED2A725EA40070BAC9 /* AutoVitesseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229778F42A725EA40070BAC9 /* Build configuration list for PBXNativeTarget "AutoVitesseTests" */;
+			buildPhases = (
+				229778EA2A725EA40070BAC9 /* Sources */,
+				229778EB2A725EA40070BAC9 /* Frameworks */,
+				229778EC2A725EA40070BAC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				229778F32A725EA40070BAC9 /* PBXTargetDependency */,
+			);
+			name = AutoVitesseTests;
+			packageProductDependencies = (
+				229778FB2A7273FD0070BAC9 /* Realm */,
+				229778FD2A7274010070BAC9 /* RealmSwift */,
+			);
+			productName = AutoVitesseTests;
+			productReference = 229778EE2A725EA40070BAC9 /* AutoVitesseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		22E26A562A0D11E300B21FD8 /* AutoVitesse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22E26A652A0D11E400B21FD8 /* Build configuration list for PBXNativeTarget "AutoVitesse" */;
@@ -631,6 +697,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					229778ED2A725EA40070BAC9 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 22E26A562A0D11E300B21FD8;
+					};
 					22E26A562A0D11E300B21FD8 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -657,11 +727,19 @@
 			projectRoot = "";
 			targets = (
 				22E26A562A0D11E300B21FD8 /* AutoVitesse */,
+				229778ED2A725EA40070BAC9 /* AutoVitesseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		229778EC2A725EA40070BAC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22E26A552A0D11E300B21FD8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,6 +776,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		229778EA2A725EA40070BAC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229778F12A725EA40070BAC9 /* AutoVitesseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22E26A532A0D11E300B21FD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -800,7 +886,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		229778F32A725EA40070BAC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22E26A562A0D11E300B21FD8 /* AutoVitesse */;
+			targetProxy = 229778F22A725EA40070BAC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		229778F52A725EA40070BAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9HCF88VHS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dany.AutoVitesseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutoVitesse";
+			};
+			name = Debug;
+		};
+		229778F62A725EA40070BAC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9HCF88VHS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dany.AutoVitesseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVitesse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutoVitesse";
+			};
+			name = Release;
+		};
 		22E26A632A0D11E400B21FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -988,6 +1118,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		229778F42A725EA40070BAC9 /* Build configuration list for PBXNativeTarget "AutoVitesseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229778F52A725EA40070BAC9 /* Debug */,
+				229778F62A725EA40070BAC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22E26A522A0D11E300B21FD8 /* Build configuration list for PBXProject "AutoVitesse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1066,6 +1205,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2276E0932A5C232E0040C0E5 /* XCRemoteSwiftPackageReference "CheckBoxWithActionPackage" */;
 			productName = CheckBoxPackage;
+		};
+		229778FB2A7273FD0070BAC9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		229778FD2A7274010070BAC9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22E26A682A0D147D00B21FD8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		22A45B802A456BA5007410C0 /* PDFTron */ = {
 			isa = XCSwiftPackageProductDependency;

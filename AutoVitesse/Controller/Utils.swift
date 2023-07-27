@@ -11,7 +11,7 @@ import RealmSwift
 import UIKit
 import PDFNet
 
-class Utils {
+public class Utils {
     func hashString(_ string: String) -> String {
         guard let data = string.data(using: .utf8) else { return "string" }
         let hashedData = SHA256.hash(data: data)
@@ -46,7 +46,11 @@ class Utils {
         return user
     }
     func generateArray(min: Int, max: Int) -> [Int] {
-        return Array(min...max)
+        if min < max {
+            return Array(min...max)
+        } else {
+            return []
+        }
     }
     enum SortOrder {
         case ascending
